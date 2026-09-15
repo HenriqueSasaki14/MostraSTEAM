@@ -1,0 +1,119 @@
+RetroNet — Uma Viagem pela História da Internet
+Etapa 1 — Pesquisa e Coleta | Fase 8: Era Atual e Tendências Emergentes (c. 2020–presente)
+Grupo: Victor Dias Queiroz, Arthur Gabriel Borille Vieira, Kallany Santos Senabio
+
+1. Como usar este documento
+Este material organiza a pesquisa da Fase 8 nos três eixos exigidos pelo projeto: (1) a história da tecnologia no período, (2) os impactos na sociedade, cultura, economia e política, e (3) a parte técnica (linguagens, softwares e hardware). Ao final há um glossário de termos-chave e sugestões de imagens para buscar e salvar na pasta do Drive — sempre em boa resolução e com nome de arquivo descritivo, por exemplo: fase8_apple-vision-pro_2024.jpg.
+2. Linha do tempo — marcos técnicos e de mercado
+Marcos organizados cronologicamente para virar pontos da linha do tempo interativa do site.
+2.1 IA generativa e agentes de IA
+2020–2021 — Bases da IA generativa moderna
+OpenAI lança as primeiras versões do GPT-3 e o DALL-E (texto-para-imagem). O GitHub Copilot (2021) leva a IA generativa para dentro do trabalho de programadores, sugerindo código em tempo real.
+Sugestão de imagem para o Drive: captura de tela do GitHub Copilot sugerindo código; logo do DALL-E.
+2022 — O ano de virada: Stable Diffusion, Midjourney e ChatGPT
+Em poucos meses, três lançamentos mudam a percepção pública da IA: Stable Diffusion (agosto, código aberto, democratiza a geração de imagens), Midjourney (julho) e o ChatGPT da OpenAI (30 de novembro), que atinge 100 milhões de usuários em dois meses e se torna o aplicativo de crescimento mais rápido da história até então.
+Sugestão de imagem para o Drive: captura de tela da interface do ChatGPT; exemplos de arte gerada por Midjourney/Stable Diffusion (com créditos).
+2023 — Corrida entre modelos e IA multimodal
+Microsoft integra o GPT-4 ao Bing; Meta lança o LLaMA, impulsionando o movimento de IA de código aberto; a OpenAI lança o GPT-4, multimodal, superando recordes de desempenho em benchmarks. O Google e a Anthropic aceleram o desenvolvimento do Gemini e do Claude.
+Sugestão de imagem para o Drive: logos comparativos ChatGPT / Gemini / Copilot / Claude.
+2024–2026 — Ecossistemas multimodais e agentes autônomos
+As gerações de modelos passam a integrar texto, imagem, áudio e vídeo em um único sistema (como a linha GPT-4o), reduzindo o espaço de ferramentas isoladas como o DALL-E autônomo. Surgem 'agentes de IA' capazes de executar tarefas complexas de várias etapas (ex.: Claude Code, ChatGPT Agent), deslocando o debate de 'o modelo consegue fazer isso' para 'como coordenar vários agentes'.
+Sugestão de imagem para o Drive: diagrama simples de um fluxo de agente de IA executando uma tarefa em etapas.
+2.2 Realidade estendida e computação espacial
+2023 (anúncio) / 2024 (lançamento) — Apple Vision Pro
+A Apple anuncia o Vision Pro em junho de 2023 e o lança em 2 de fevereiro de 2024 por US$ 3.499, cunhando o termo 'computação espacial'. Traz o sistema visionOS, controle por olhos, mãos e voz, e telas micro-OLED. As vendas no primeiro ano ficam abaixo do esperado (~450 mil unidades ante uma meta de 700-800 mil), mas o dispositivo segue evoluindo (chip M5, integração com Apple Intelligence) até 2026.
+Sugestão de imagem para o Drive: fotos oficiais do Apple Vision Pro; comparação de preço com o Meta Quest.
+2023–2025 — Meta Quest e a disputa por acessibilidade
+A Meta aposta em preços mais baixos (Quest 3, Quest 3S a partir de US$ 299) para popularizar a realidade mista, em contraste com a estratégia premium da Apple. O mercado se organiza como uma disputa entre um ecossistema fechado (visionOS) e um mais acessível (Meta).
+Sugestão de imagem para o Drive: fotos do Meta Quest 3 / 3S em uso.
+2.3 Web3, blockchain e infraestrutura de rede
+2021–2022 — Boom e correção do Web3/NFT
+NFTs, DAOs e a proposta de uma 'internet descentralizada' (Web3) ganham grande visibilidade midiática e especulativa, seguidos por forte correção de mercado a partir de 2022, o que reduz o hype mas mantém comunidades de desenvolvimento ativas.
+Sugestão de imagem para o Drive: infográfico simples explicando blockchain/NFT (pode ser produzido pelo próprio grupo).
+2019–presente — Internet via satélite e novas redes móveis
+A Starlink (SpaceX) expande o acesso à internet via satélite em áreas remotas. Em paralelo, o 5G se consolida globalmente e testes de 6G começam a surgir, junto com a expansão do edge computing (processamento de dados mais perto do usuário, reduzindo latência).
+Sugestão de imagem para o Drive: imagem de antena Starlink residencial; mapa de cobertura 5G.
+2.4 Computação quântica e criptografia pós-quântica
+2024–2026 — Da teoria à preocupação estratégica
+Estados Unidos, China e União Europeia investem pesado em protótipos de computadores quânticos com centenas de qubits. O temor central é o chamado 'Q-Day': o momento em que máquinas quânticas seriam capazes de quebrar a criptografia atual (RSA), inclusive via ataques do tipo 'colher agora, decifrar depois'. Em resposta, o NIST (EUA) padroniza algoritmos de criptografia pós-quântica a partir de 2024, e bancos e governos iniciam a migração.
+Sugestão de imagem para o Drive: ilustração conceitual de um chip quântico / qubit (banco de imagens).
+2.5 Cibersegurança, deepfakes e regulação de IA
+2022–2026 — Arquitetura de confiança zero e novas ameaças
+Empresas migram para modelos de segurança 'zero trust' (nenhum usuário ou dispositivo é confiável por padrão). Ao mesmo tempo, deepfakes (vídeos e áudios falsos gerados por IA) se tornam uma ameaça relevante para eleições, golpes financeiros e desinformação, pressionando governos a regular. A União Europeia aprova o AI Act, criando um marco regulatório por níveis de risco para sistemas de IA.
+Sugestão de imagem para o Drive: captura de tela de exemplo educativo sobre como identificar deepfakes (sem usar imagem de pessoa real sem consentimento).
+2.6 Digitalização de serviços
+2020–presente — Bancos digitais, telemedicina e governo digital
+A pandemia de Covid-19 acelera a adoção de bancos digitais, telemedicina, ensino remoto e serviços de governo digital. Cidades passam a adotar sensores e dados para se tornarem 'cidades inteligentes', otimizando trânsito, iluminação e segurança pública.
+Sugestão de imagem para o Drive: foto de app de banco digital; foto de painel de cidade inteligente (trânsito/sensores).
+3. Impactos na sociedade, cultura, economia e política
+3.1 Sociedade e cultura
+Democratização da criação: ferramentas de IA generativa permitem que qualquer pessoa produza imagens, textos e vídeos, alterando o mercado de trabalho criativo (design, ilustração, redação) e gerando debates sobre autoria e direitos autorais.
+Novas formas de socialização e entretenimento surgem com realidade aumentada/mista e propostas de metaverso, embora a adoção em massa ainda seja limitada em 2026.
+Desinformação amplificada por deepfakes exige nova alfabetização midiática da população.
+3.2 Economia
+Investimentos bilionários em infraestrutura de IA (data centers, GPUs) reconfiguram o mercado de tecnologia e disparam debates sobre uma possível bolha de investimento em IA.
+Automação de tarefas complexas por agentes de IA pressiona a reorganização de funções administrativas, de atendimento e de programação.
+A corrida quântica é também econômica: quem dominar a tecnologia primeiro ganha vantagem competitiva em setores como farmacêutico, financeiro e de defesa.
+3.3 Política
+Regulação de IA se torna pauta central: a União Europeia lidera com o AI Act; outros países (incluindo o Brasil, com o PL das IAs) discutem marcos próprios sobre transparência, viés algorítmico e responsabilidade.
+Tensões geopolíticas em torno de semicondutores, dados e infraestrutura de satélites (como a Starlink) tornam a tecnologia parte central de disputas internacionais.
+Preocupação com segurança eleitoral diante de deepfakes e desinformação gerada por IA.
+4. Aspectos técnicos
+4.1 Linguagens e ecossistemas de desenvolvimento
+Python — segue dominante em ciência de dados, IA e automações.
+TypeScript — consolidado no desenvolvimento web moderno, adicionando tipagem ao JavaScript.
+Rust — ganha espaço por segurança de memória e desempenho, usado em sistemas críticos e ferramentas de infraestrutura.
+WebAssembly (Wasm) — permite rodar código de alto desempenho (C, C++, Rust) diretamente no navegador.
+4.2 Hardware e infraestrutura
+GPUs e chips especializados em IA (aceleradores) tornam-se o hardware mais estratégico da década.
+Head-mounted displays (Apple Vision Pro, Meta Quest) com telas micro-OLED e rastreamento ocular/manual.
+Qubits e protótipos de processadores quânticos, ainda instáveis e dependentes de temperaturas próximas do zero absoluto.
+Redes 5G em expansão e primeiros testes de 6G; constelações de satélites de baixa órbita (Starlink).
+4.3 Softwares e plataformas de referência
+Assistentes de IA generativa: ChatGPT (OpenAI), Gemini (Google), Claude (Anthropic), Microsoft Copilot.
+Geração de imagem/vídeo/voz: DALL-E, Midjourney, Stable Diffusion.
+Sistemas operacionais de realidade espacial: visionOS (Apple), Horizon OS (Meta).
+5. Glossário de termos-chave (Fase 8)
+Termo
+Definição resumida
+IA Generativa
+Modelos de IA capazes de criar conteúdo novo (texto, imagem, áudio, vídeo) a partir de padrões aprendidos em grandes volumes de dados.
+LLM (Large Language Model)
+Modelo de linguagem de grande escala, treinado para compreender e gerar texto (ex.: GPT, Gemini, Claude).
+Agente de IA
+Sistema de IA capaz de planejar e executar tarefas de várias etapas de forma autônoma, usando ferramentas.
+Computação espacial
+Uso de dispositivos de realidade mista/aumentada para integrar objetos digitais ao ambiente físico.
+Metaverso
+Proposta de ambientes virtuais persistentes e interconectados para socialização, trabalho e entretenimento.
+Web3
+Movimento por uma internet mais descentralizada, baseada em blockchain.
+NFT (Token Não Fungível)
+Registro digital único em blockchain, usado para certificar propriedade de um ativo digital.
+DAO
+Organização Autônoma Descentralizada: grupo coordenado por regras em blockchain, sem hierarquia tradicional.
+Edge computing
+Processamento de dados feito próximo de onde são gerados, reduzindo latência.
+Computação quântica
+Paradigma de computação que usa qubits para resolver certos problemas muito mais rápido que computadores clássicos.
+Criptografia pós-quântica
+Algoritmos de criptografia desenhados para resistir a ataques de computadores quânticos.
+Zero trust
+Modelo de segurança em que nenhum usuário ou dispositivo é confiável por padrão, exigindo verificação constante.
+Deepfake
+Vídeo, áudio ou imagem falsificado de forma realista usando IA.
+Viés algorítmico
+Distorções ou discriminações produzidas por um sistema de IA devido a dados ou desenho enviesados.
+Starlink
+Constelação de satélites de baixa órbita da SpaceX que fornece internet em áreas remotas.
+WebAssembly
+Formato de código binário que permite executar programas de alto desempenho em navegadores.
+6. Roteiro de coleta para a pasta do Drive
+Sugestão de organização de arquivos para facilitar o trabalho da equipe do site:
+Nomeie as imagens como fase8_tema_ano (ex.: fase8_chatgpt-interface_2022.jpg).
+Prefira imagens oficiais (sites das empresas, imprensa especializada) e verifique se podem ser usadas em trabalho escolar (uso educacional).
+Para cada marco da linha do tempo, salve pelo menos 1 imagem em boa resolução (mínimo 1000px de largura).
+Inclua também 1–2 textos curtos de apoio por marco (2–4 frases), já escritos com as próprias palavras do grupo, citando a fonte.
+Evite capturas de tela com marcas d'água ou baixa qualidade.
+7. Fontes consultadas
+Levantamento feito com apoio de buscas na web em agosto de 2026 (Anthropic Claude), reunindo reportagens e artigos especializados sobre IA generativa, computação espacial, computação quântica e cibersegurança publicados entre 2023 e 2026. Recomenda-se que o grupo confirme e complemente essas informações com fontes primárias (sites oficiais da OpenAI, Apple, Meta, SpaceX, NIST, União Europeia) antes da publicação final no site.

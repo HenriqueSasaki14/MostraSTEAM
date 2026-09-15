@@ -1,0 +1,355 @@
+/* ============================================================
+   RetroNet — página inicial
+   ------------------------------------------------------------
+   A home não é uma etapa da linha do tempo: ela situa o visitante
+   em poucos segundos e o empurra para a fase 1 com um clique.
+   Nenhuma cor de fase domina aqui — é a moldura em estado puro,
+   e a viagem no tempo só começa depois do clique.
+   ============================================================ */
+
+/* ============================================================
+   Animação de abertura
+   ------------------------------------------------------------
+   Terminal digitando sozinho enquanto a tela atravessa lampejos
+   das oito estéticas do site, como se passasse pelas décadas em
+   segundos, até estabilizar no fundo escuro padrão.
+
+   A sobreposição só existe quando há JavaScript (a classe .js é
+   posta no <html> por um script inline no <head>). Sem JS, a home
+   aparece direto, em vez de ficar presa atrás de uma tela preta.
+   ============================================================ */
+
+.abertura {
+  display: none;
+}
+
+.js .abertura {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-abertura);
+  display: grid;
+  place-content: center;
+  gap: var(--e-5);
+  padding: var(--e-6);
+  background: #000;
+  cursor: pointer;
+}
+
+/* O lampejo da época: uma lavada de cor sobre a tela preta.
+   A máscara radial esvazia o miolo e concentra a cor nas bordas,
+   para a frase que está sendo digitada nunca perder contraste —
+   nem no verde militar da fase 1, nem no magenta da fase 4. */
+.abertura__lampejo {
+  position: absolute;
+  inset: 0;
+  background: var(--cor-lampejo, transparent);
+  opacity: 0;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transition: background 120ms linear;
+  -webkit-mask-image: radial-gradient(
+    ellipse 70% 60% at center,
+    transparent 10%,
+    #000 85%
+  );
+  mask-image: radial-gradient(
+    ellipse 70% 60% at center,
+    transparent 10%,
+    #000 85%
+  );
+}
+
+.abertura__lampejo--aceso {
+  animation: lampejar 420ms var(--curva) both;
+}
+
+@keyframes lampejar {
+  0% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Linhas horizontais tênues, lembrando monitor de tubo. */
+.abertura::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    180deg,
+    rgb(255 255 255 / 0.035) 0 1px,
+    transparent 1px 3px
+  );
+}
+
+.abertura__terminal {
+  position: relative;
+  z-index: 1;
+  font-family: var(--fonte-mono);
+  font-size: clamp(1rem, 0.8rem + 1.4vw, 1.75rem);
+  color: var(--botao);
+  text-shadow: 0 0 18px rgb(255 176 0 / 0.35);
+  min-height: 1.6em;
+  text-align: center;
+  max-width: 30ch;
+  line-height: 1.4;
+}
+
+.abertura__prompt {
+  opacity: 0.45;
+}
+
+/* A parte ainda não digitada da frase: invisível, mas ocupando o
+   espaço dela, para a quebra de linha não mudar a cada caractere. */
+.abertura__resto {
+  visibility: hidden;
+}
+
+.abertura__cursor {
+  display: inline-block;
+  width: 0.58em;
+  height: 1.05em;
+  margin-left: 0.08em;
+  vertical-align: text-bottom;
+  background: var(--botao);
+  animation: piscar 1.06s steps(1, end) infinite;
+}
+
+/* Contador de anos correndo no canto: reforça a travessia pelas
+   décadas sem precisar de mais texto na tela. */
+.abertura__ano {
+  position: relative;
+  z-index: 1;
+  justify-self: center;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-pequeno);
+  letter-spacing: 0.3em;
+  color: var(--texto);
+  opacity: 0.5;
+  font-variant-numeric: tabular-nums;
+}
+
+.abertura__pular {
+  position: absolute;
+  bottom: var(--e-6);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--titulo);
+  /* A sombra preta garante a leitura mesmo no instante em que um
+     lampejo de cor passa por baixo do aviso. */
+  text-shadow: 0 0 10px #000, 0 0 3px #000;
+  opacity: 0;
+  animation: surgir-devagar 500ms var(--curva) 900ms forwards;
+}
+
+@keyframes surgir-devagar {
+  to {
+    opacity: 0.75;
+  }
+}
+
+.abertura--saindo {
+  animation: abertura-sair var(--mov-lento) var(--curva-saida) forwards;
+}
+
+@keyframes abertura-sair {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ============================================================
+   Miolo da home
+   ============================================================ */
+
+.home {
+  display: grid;
+  gap: var(--e-9);
+  padding-block: clamp(var(--e-7), 7vh, var(--e-9)) var(--e-7);
+}
+
+/* Brilho âmbar bem discreto atrás do logo. É a única licença
+   decorativa da home: o resto é tipografia. */
+.home__hero {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: var(--e-5);
+}
+
+.home__hero::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  /* Nunca mais largo que a tela: a 110% o brilho vazava pelos dois
+     lados e criava rolagem horizontal no celular. */
+  width: min(760px, 100%);
+  aspect-ratio: 2 / 1;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgb(255 176 0 / 0.11),
+    transparent 62%
+  );
+  pointer-events: none;
+}
+
+.home__logo {
+  position: relative;
+  font-family: var(--fonte-mono);
+  font-weight: 700;
+  font-size: var(--t-gigante);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: var(--titulo);
+}
+
+.home__logo-cursor {
+  color: var(--botao);
+  animation: piscar 1.06s steps(1, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home__logo-cursor,
+  .abertura__cursor {
+    animation: none;
+  }
+}
+
+.home__slogan {
+  position: relative;
+  max-width: none;
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-size: var(--t-h3);
+  font-weight: 500;
+  color: var(--destaque-texto);
+  letter-spacing: -0.01em;
+}
+
+.home__intro {
+  position: relative;
+  max-width: 58ch;
+  margin: var(--e-2) 0 0;
+  font-size: var(--t-destaque);
+  text-align: left;
+}
+
+.home__acoes {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-4);
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--e-3);
+}
+
+.home__acoes .botao--discreto {
+  font-family: var(--fonte-texto);
+  font-weight: 600;
+}
+
+/* ============================================================
+   Trilho das oito fases
+   Prévia silenciosa da linha do tempo: a cor de cada época em
+   ordem, clicável. O link "Ver todas as fases" abre o menu com
+   os detalhes; aqui é só o panorama.
+   ============================================================ */
+
+.trilho {
+  display: grid;
+  gap: var(--e-4);
+}
+
+.trilho__titulo {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--texto);
+  opacity: 0.7;
+  margin: 0;
+  max-width: none;
+}
+
+.trilho__lista {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: var(--e-2);
+}
+
+.trilho__item {
+  --cor-item: var(--borda);
+  display: grid;
+  gap: var(--e-2);
+  padding: var(--e-3) 0 var(--e-4);
+  color: var(--texto);
+  text-decoration: none;
+  border-top: 2px solid var(--borda);
+  transition: color var(--mov-rapido) var(--curva),
+    border-color var(--mov-medio) var(--curva);
+}
+
+/* A barra de cor cresce ao passar o mouse: dá a sensação de a
+   linha do tempo "acender" fase por fase. */
+.trilho__item::before {
+  content: "";
+  display: block;
+  height: 3px;
+  margin-top: -5px;
+  background: var(--cor-item);
+  transform: scaleX(0.18);
+  transform-origin: left center;
+  transition: transform var(--mov-medio) var(--curva);
+}
+
+.trilho__item:hover,
+.trilho__item:focus-visible {
+  color: var(--titulo);
+}
+
+.trilho__item:hover::before,
+.trilho__item:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.trilho__numero {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--cor-item);
+}
+
+.trilho__epoca {
+  font-size: var(--t-micro);
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .trilho__lista {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--e-3);
+  }
+}
+
+@media (max-width: 480px) {
+  .trilho__lista {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

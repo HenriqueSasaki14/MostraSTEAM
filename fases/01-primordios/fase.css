@@ -1,0 +1,917 @@
+/* ============================================================
+   RetroNet — Fase 1 (séc. XVIII – 1969)
+   Estética: papel datilografado envelhecido, verde militar e
+   sépia, tudo em fonte monoespaçada, com carimbo de TOP SECRET.
+   ------------------------------------------------------------
+   A moldura (cabeçalho, menu, navegação) continua escura e igual
+   às outras fases. O que muda é o miolo: ele vira um dossiê de
+   papel apoiado sobre essa moldura.
+   ============================================================ */
+
+.fase1 {
+  /* ---------- paleta local do dossiê ---------- */
+  --papel: #e4dbc2;
+  --papel-sombra: #d2c7a8;
+  --papel-borda: #b6a982;
+  --tinta: #26211a; /* datilografia preta, 12,6:1 sobre o papel */
+  --tinta-fraca: #554c3c; /*                  6,4:1 sobre o papel */
+  --carimbo: #8a2b22; /* vermelho de carimbo,  5,3:1 sobre o papel */
+  --verde: #4f6142; /* verde militar escurecido para o papel */
+
+  padding-block: var(--e-7) var(--e-6);
+  font-family: var(--fonte-mono);
+}
+
+/* ============================================================
+   A folha de papel
+   ============================================================ */
+
+.folha {
+  position: relative;
+  background: var(--papel);
+  color: var(--tinta);
+  border-radius: 2px;
+  padding: clamp(var(--e-5), 4vw, var(--e-7));
+  margin-bottom: var(--e-5);
+  box-shadow: 0 1px 0 var(--papel-sombra), 0 18px 40px -22px rgb(0 0 0 / 0.9);
+  /* Fibra do papel: duas tramas cruzadas bem fracas, sem imagem. */
+  background-image: repeating-linear-gradient(
+      90deg,
+      rgb(0 0 0 / 0.016) 0 1px,
+      transparent 1px 3px
+    ),
+    repeating-linear-gradient(0deg, rgb(0 0 0 / 0.016) 0 1px, transparent 1px 4px),
+    radial-gradient(
+      ellipse at 12% 0%,
+      rgb(120 96 48 / 0.11),
+      transparent 55%
+    ),
+    radial-gradient(ellipse at 95% 100%, rgb(120 96 48 / 0.13), transparent 50%);
+}
+
+/* Furos de fichário na margem esquerda, para parecer documento
+   arquivado. Puramente decorativo. */
+.folha--arquivada {
+  padding-left: clamp(var(--e-7), 7vw, 5.5rem);
+}
+
+.folha--arquivada::before {
+  content: "";
+  position: absolute;
+  left: clamp(1rem, 2.4vw, 1.9rem);
+  top: 12%;
+  bottom: 12%;
+  width: 14px;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    var(--fundo) 0 6px,
+    transparent 6px
+  );
+  background-size: 14px 33.33%;
+  background-repeat: repeat-y;
+  opacity: 0.5;
+}
+
+/* Sem declarar cor aqui de proposito: a .folha ja define a cor do
+   texto, e os paragrafos herdam. Fixar a cor em ".folha p" faria
+   este seletor vencer por especificidade os paineis escuros
+   aninhados (painel de fios, maquina, circuito), pintando tinta
+   escura sobre fundo escuro. */
+.folha p,
+.folha li {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* As placas de metal escuro declaram a propria cor de texto; os
+   filhos herdam. */
+.painel,
+.maquina,
+.circuito__palco {
+  color: #c3bba2;
+}
+
+.folha h2,
+.folha h3 {
+  color: var(--tinta);
+  font-family: var(--fonte-mono);
+  letter-spacing: -0.01em;
+}
+
+.folha a {
+  color: var(--carimbo);
+}
+
+.folha a:hover {
+  color: var(--tinta);
+}
+
+/* Etiqueta datilografada de seção, dentro do papel */
+.folha__etiqueta {
+  display: block;
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--verde);
+  margin-bottom: var(--e-3);
+}
+
+.folha__regua {
+  height: 1px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--papel-borda) 0 6px,
+    transparent 6px 12px
+  );
+  margin: var(--e-5) 0;
+  border: 0;
+}
+
+/* ============================================================
+   Cabeçalho da fase
+   ============================================================ */
+
+.dossie {
+  display: grid;
+  gap: var(--e-5);
+}
+
+.dossie__cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--e-5);
+}
+
+.dossie__titulo {
+  font-family: var(--fonte-mono);
+  font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
+  font-weight: 700;
+  color: var(--tinta);
+  letter-spacing: -0.03em;
+  max-width: 16ch;
+  line-height: 1.1;
+}
+
+.dossie__periodo {
+  font-size: var(--t-pequeno);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--tinta-fraca);
+  margin-top: var(--e-2);
+}
+
+/* ---------- carimbo TOP SECRET ---------- */
+.carimbo {
+  flex: none;
+  align-self: flex-start;
+  margin-top: var(--e-2);
+  padding: var(--e-2) var(--e-4);
+  border: 3px solid var(--carimbo);
+  border-radius: 3px;
+  color: var(--carimbo);
+  font-size: clamp(0.8rem, 0.7rem + 0.5vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
+  opacity: 0.82;
+  /* Tinta irregular, como carimbo mal pressionado. */
+  -webkit-mask-image: radial-gradient(
+    ellipse 120% 150% at 30% 40%,
+    #000 60%,
+    rgb(0 0 0 / 0.55) 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 120% 150% at 30% 40%,
+    #000 60%,
+    rgb(0 0 0 / 0.55) 100%
+  );
+}
+
+/* ============================================================
+   Blocos de conteúdo
+   ============================================================ */
+
+.bloco-duplo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--e-5);
+}
+
+.bloco-duplo .folha {
+  margin-bottom: 0;
+}
+
+.destaque-invencao {
+  border-left: 3px solid var(--verde);
+  padding-left: var(--e-4);
+  margin: var(--e-4) 0;
+}
+
+.destaque-invencao p {
+  margin: 0;
+}
+
+/* ============================================================
+   Galeria de pessoas
+   ============================================================ */
+
+.pessoas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+  gap: var(--e-4) var(--e-3);
+}
+
+.pessoa {
+  display: grid;
+  gap: var(--e-2);
+}
+
+.pessoa__moldura {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--papel-sombra);
+  border: 1px solid var(--papel-borda);
+  padding: 4px;
+}
+
+.pessoa__moldura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Sépia: as fotos são de épocas diferentes e precisam parecer
+     um único arquivo fotográfico. */
+  filter: sepia(0.62) contrast(1.06) brightness(0.98);
+}
+
+.pessoa__nome {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--tinta);
+}
+
+.pessoa__anos {
+  display: block;
+  font-size: var(--t-micro);
+  color: var(--tinta-fraca);
+  margin-bottom: 2px;
+}
+
+.pessoa__papel {
+  display: block;
+  font-size: var(--t-micro);
+  line-height: 1.45;
+  color: var(--tinta-fraca);
+}
+
+/* As seis programadoras do ENIAC ganham marcação própria: elas
+   foram apagadas da narrativa por décadas, e a regra do projeto
+   é citar as mulheres relevantes de cada período. */
+.pessoa--eniac .pessoa__moldura {
+  border-color: var(--verde);
+  border-width: 2px;
+}
+
+/* ============================================================
+   ATIVIDADE — painel de fios do Enigma
+   ============================================================ */
+
+.enigma {
+  display: grid;
+  gap: var(--e-5);
+}
+
+.enigma__passo {
+  display: grid;
+  gap: var(--e-4);
+}
+
+.enigma__passo[hidden] {
+  display: none;
+}
+
+.passo-titulo {
+  display: flex;
+  align-items: baseline;
+  gap: var(--e-3);
+  flex-wrap: wrap;
+}
+
+.passo-numero {
+  display: inline-grid;
+  place-items: center;
+  width: 1.6em;
+  height: 1.6em;
+  flex: none;
+  border-radius: 50%;
+  background: var(--verde);
+  color: var(--papel);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+/* ---------- cartão da chave do dia ---------- */
+.chave-do-dia {
+  background: var(--papel-sombra);
+  border: 1px dashed var(--papel-borda);
+  padding: var(--e-4);
+  display: grid;
+  gap: var(--e-3);
+}
+
+.chave-do-dia__titulo {
+  font-size: var(--t-micro);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  /* Verde um degrau mais escuro: sobre o papel-sombra do cartao o
+     --verde normal dava 4,0:1, abaixo do minimo de 4,5:1. */
+  color: #425137;
+  font-weight: 700;
+}
+
+.chave-do-dia__pares {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-2);
+}
+
+.par {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  padding: 0.25em 0.6em;
+  border: 1px solid var(--papel-borda);
+  background: var(--papel);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--tinta);
+}
+
+.par--ligado {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: #f2eeE0;
+}
+
+.par--ligado::after {
+  content: "OK";
+  font-size: 0.6875rem;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+}
+
+/* ---------- o painel de tomadas ---------- */
+.painel {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  gap: var(--e-4) clamp(var(--e-5), 6vw, var(--e-8));
+  align-items: center;
+  max-width: 34rem;
+  margin-inline: auto;
+  padding: var(--e-5) var(--e-4);
+  background: #2f2c24;
+  border: 2px solid #17150f;
+  border-radius: 4px;
+  /* chapa metálica escovada */
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgb(255 255 255 / 0.028) 0 1px,
+    transparent 1px 3px
+  );
+  touch-action: none; /* o arrasto é nosso, não do navegador */
+}
+
+.painel__coluna {
+  display: grid;
+  gap: var(--e-3);
+  z-index: 1;
+}
+
+.tomada {
+  display: flex;
+  align-items: center;
+  gap: var(--e-2);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: grab;
+}
+
+.painel__coluna--direita .tomada {
+  flex-direction: row-reverse;
+}
+
+.tomada__letra {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #cfc7ae;
+  width: 1.2em;
+  text-align: center;
+}
+
+.tomada__furo {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 38%, #0b0a07 0 42%, #1c1a14 43%, #3c382c 100%);
+  border: 2px solid #56503d;
+  box-shadow: inset 0 2px 3px rgb(0 0 0 / 0.8);
+  transition: border-color var(--mov-rapido) var(--curva),
+    box-shadow var(--mov-rapido) var(--curva);
+}
+
+.tomada:hover .tomada__furo,
+.tomada:focus-visible .tomada__furo {
+  border-color: #9fb38c;
+}
+
+.tomada--selecionada .tomada__furo {
+  border-color: var(--botao);
+  box-shadow: 0 0 0 3px rgb(255 176 0 / 0.3), inset 0 2px 3px rgb(0 0 0 / 0.8);
+}
+
+/* Tomada com fio encaixado: acende. */
+.tomada--ligada .tomada__furo {
+  background: radial-gradient(circle at 50% 38%, #dfe8cf 0 40%, #9fb38c 42%, #58694a 100%);
+  border-color: #b9c9a6;
+  box-shadow: 0 0 10px rgb(159 179 140 / 0.55), inset 0 1px 2px rgb(0 0 0 / 0.4);
+}
+
+.tomada--errada .tomada__furo {
+  animation: tomada-recusar 380ms var(--curva);
+}
+
+@keyframes tomada-recusar {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+/* Os cabos, desenhados em SVG por cima do painel. */
+.painel__cabos {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.cabo {
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.55));
+}
+
+.cabo--arrastando {
+  stroke-dasharray: 9 7;
+  opacity: 0.85;
+}
+
+.painel__instrucao {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: var(--t-pequeno);
+  color: #b4ab92;
+  margin: 0;
+  max-width: none;
+}
+
+/* ---------- máquina: rotores e visor ---------- */
+.maquina {
+  display: grid;
+  gap: var(--e-4);
+  padding: var(--e-5);
+  background: #2f2c24;
+  border: 2px solid #17150f;
+  border-radius: 4px;
+  color: #ddd5bd;
+}
+
+.rotores {
+  display: flex;
+  gap: var(--e-3);
+  justify-content: center;
+}
+
+.rotor {
+  display: grid;
+  gap: var(--e-1);
+  justify-items: center;
+}
+
+.rotor__janela {
+  width: 46px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #14120d, #262319 45%, #14120d);
+  border: 2px solid #56503d;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e8e0c8;
+  overflow: hidden;
+}
+
+.rotor__janela span {
+  display: block;
+}
+
+.rotor--girando .rotor__janela span {
+  animation: rotor-girar 200ms var(--curva);
+}
+
+@keyframes rotor-girar {
+  from {
+    transform: translateY(-100%);
+    opacity: 0.2;
+  }
+}
+
+.rotor__nome {
+  font-size: var(--t-micro);
+  letter-spacing: 0.14em;
+  color: #a39b86; /* 5,0:1 sobre a placa de metal */
+}
+
+.teclado-enigma {
+  display: grid;
+  gap: var(--e-3);
+  justify-items: center;
+}
+
+.teclado-enigma label {
+  font-size: var(--t-pequeno);
+  color: #b4ab92;
+}
+
+.entrada-mensagem {
+  width: min(100%, 26rem);
+  padding: var(--e-3) var(--e-4);
+  background: #14120d;
+  border: 2px solid #56503d;
+  border-radius: 3px;
+  color: #e8e0c8;
+  font-family: var(--fonte-mono);
+  font-size: 1.125rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.entrada-mensagem:focus-visible {
+  border-color: var(--botao);
+  outline: none;
+}
+
+.entrada-mensagem::placeholder {
+  color: #6e6754;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- fita de saída ---------- */
+.fitas {
+  display: grid;
+  gap: var(--e-3);
+}
+
+.fita {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--e-2);
+  padding: var(--e-3) var(--e-4);
+  background: var(--papel);
+  border: 1px solid var(--papel-borda);
+  color: var(--tinta);
+}
+
+.fita__rotulo {
+  font-size: var(--t-micro);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--verde);
+  font-weight: 700;
+}
+
+.fita__texto {
+  font-size: clamp(1rem, 0.8rem + 0.9vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  word-break: break-all;
+  min-height: 1.4em;
+}
+
+.fita--antes .fita__rotulo {
+  color: var(--tinta-fraca);
+}
+
+.fita--depois {
+  border-color: var(--carimbo);
+  border-width: 2px;
+}
+
+.fita--depois .fita__rotulo {
+  color: var(--carimbo);
+}
+
+/* Letras que mudaram entre as duas cifragens */
+.mudou {
+  background: rgb(138 43 34 / 0.16);
+  box-shadow: 0 2px 0 var(--carimbo);
+}
+
+.conclusao {
+  padding: var(--e-4);
+  border-left: 3px solid var(--carimbo);
+  background: rgb(138 43 34 / 0.07);
+}
+
+.conclusao p {
+  margin: 0;
+}
+
+/* ============================================================
+   Parte 3 — o circuito de Shannon
+   ============================================================ */
+
+.circuito {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--e-5);
+  align-items: center;
+}
+
+.circuito__palco {
+  display: grid;
+  gap: var(--e-4);
+  justify-items: center;
+  padding: var(--e-5);
+  background: #2f2c24;
+  border: 2px solid #17150f;
+  border-radius: 4px;
+}
+
+.lampada {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 38%, #3a3729 0 55%, #23211a 100%);
+  border: 2px solid #56503d;
+  display: grid;
+  place-items: center;
+  font-size: var(--t-micro);
+  letter-spacing: 0.1em;
+  color: #a29b86; /* 5,0:1 sobre a placa; antes 2,5:1 e ilegivel */
+  transition: background var(--mov-medio) var(--curva),
+    box-shadow var(--mov-medio) var(--curva), color var(--mov-medio) var(--curva);
+}
+
+.lampada--acesa {
+  background: radial-gradient(circle at 50% 38%, #fff3c4 0 45%, #ffd24a 60%, #c79212 100%);
+  border-color: #ffe08a;
+  box-shadow: 0 0 34px rgb(255 210 74 / 0.6);
+  color: #4a370a;
+}
+
+.chaves {
+  display: flex;
+  gap: var(--e-4);
+}
+
+.chave {
+  display: grid;
+  gap: var(--e-2);
+  justify-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #b4ab92;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.12em;
+}
+
+.chave__corpo {
+  width: 40px;
+  height: 66px;
+  border-radius: 4px;
+  background: #14120d;
+  border: 2px solid #56503d;
+  display: grid;
+  align-items: start;
+  padding: 4px;
+  transition: border-color var(--mov-rapido) var(--curva);
+}
+
+.chave__alavanca {
+  width: 100%;
+  height: 26px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #7d7561, #4b4639);
+  transform: translateY(0);
+  transition: transform var(--mov-rapido) var(--curva),
+    background var(--mov-rapido) var(--curva);
+}
+
+.chave[aria-pressed="true"] .chave__alavanca {
+  transform: translateY(28px);
+  background: linear-gradient(180deg, #b9c9a6, #7d8f68);
+}
+
+.chave[aria-pressed="true"] .chave__corpo {
+  border-color: #9fb38c;
+}
+
+.seletor-logica {
+  display: inline-flex;
+  border: 1px solid var(--papel-borda);
+  background: var(--papel-sombra);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.seletor-logica button {
+  padding: var(--e-2) var(--e-5);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-pequeno);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--tinta-fraca);
+}
+
+.seletor-logica button[aria-pressed="true"] {
+  background: var(--verde);
+  color: #f2eee0;
+}
+
+.tabela-verdade {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--t-pequeno);
+  margin-top: var(--e-3);
+}
+
+.tabela-verdade th,
+.tabela-verdade td {
+  border: 1px solid var(--papel-borda);
+  padding: var(--e-2) var(--e-3);
+  text-align: center;
+}
+
+.tabela-verdade th {
+  background: var(--papel-sombra);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.tabela-verdade tr[data-atual="sim"] td {
+  background: var(--verde);
+  color: #f2eee0;
+  font-weight: 700;
+}
+
+/* ============================================================
+   Mitos e fontes
+   ============================================================ */
+
+.mitos {
+  display: grid;
+  gap: var(--e-4);
+}
+
+.mito {
+  display: grid;
+  gap: var(--e-1);
+  padding-left: var(--e-5);
+  position: relative;
+}
+
+.mito::before {
+  content: "✗";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  color: var(--carimbo);
+  font-weight: 700;
+}
+
+.mito__errado {
+  font-weight: 700;
+  color: var(--tinta);
+}
+
+.mito__certo {
+  color: var(--tinta-fraca);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.fontes-lista {
+  display: grid;
+  gap: var(--e-2);
+  font-size: 0.9375rem;
+}
+
+.fontes-lista li {
+  padding-left: var(--e-4);
+  position: relative;
+}
+
+.fontes-lista li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--verde);
+}
+
+/* ============================================================
+   Botões dentro do papel
+   ============================================================ */
+
+.botao-papel {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-2);
+  padding: var(--e-3) var(--e-5);
+  background: var(--verde);
+  color: #f2eee0;
+  border: none;
+  border-radius: 2px;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-pequeno);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--mov-rapido) var(--curva),
+    transform var(--mov-rapido) var(--curva);
+}
+
+.botao-papel:hover {
+  background: #3f4f34;
+  transform: translateY(-1px);
+}
+
+.botao-papel--vazado {
+  background: none;
+  color: var(--verde);
+  border: 1px solid var(--verde);
+}
+
+.botao-papel--vazado:hover {
+  background: var(--verde);
+  color: #f2eee0;
+}
+
+.botao-papel[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.acoes-linha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-3);
+  align-items: center;
+}
+
+/* ============================================================
+   Celular
+   ============================================================ */
+
+@media (max-width: 560px) {
+  .painel {
+    gap: var(--e-5);
+    padding: var(--e-4) var(--e-2);
+  }
+
+  .tomada__furo {
+    width: 22px;
+    height: 22px;
+  }
+
+  .carimbo {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="pt-BR" data-raiz="../../" data-fase="1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Primórdios e pioneirismo — RetroNet</title>
+    <meta
+      name="description"
+      content="Séc. XVIII a 1969: do tear de Jacquard à ARPANET. Cifre uma mensagem no painel de fios do Enigma."
+    />
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D0F12'/%3E%3Crect x='7' y='21' width='18' height='4' fill='%23FFB000'/%3E%3C/svg%3E"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/fontes.css" />
+    <link rel="stylesheet" href="../../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/shell.css" />
+    <link rel="stylesheet" href="./fase.css" />
+  </head>
+
+  <body>
+    <main id="conteudo" class="conteudo-principal">
+      <div class="envoltorio fase1">
+        <!-- ==================================================
+             Abertura do dossiê
+             ================================================== -->
+        <section class="dossie">
+          <div class="folha folha--arquivada">
+            <div class="dossie__cabecalho">
+              <div>
+                <span class="folha__etiqueta">Fase 1 de 8 &middot; Arquivo</span>
+                <h1 class="dossie__titulo">Primórdios e pioneirismo</h1>
+                <p class="dossie__periodo">
+                  Séc. XVIII &ndash; 1969 &middot; do tear de Jacquard à ARPANET
+                </p>
+              </div>
+              <p class="carimbo">Top Secret</p>
+            </div>
+
+            <hr class="folha__regua" />
+
+            <span class="folha__etiqueta">Como era</span>
+            <p>
+              A palavra <em>computador</em> ainda era um cargo: pessoas
+              contratadas para fazer contas à mão. As primeiras máquinas eram de
+              relé ou de válvula, ocupavam salas inteiras e eram reprogramadas
+              religando cabos, o que levava dias. O gargalo real da época não era
+              calcular, era armazenar — a memória ia da linha de retardo de
+              mercúrio ao tubo de Williams, até chegar ao núcleo de ferrite.
+            </p>
+          </div>
+
+          <!-- ==================================================
+               Invenção e impacto
+               ================================================== -->
+          <div class="bloco-duplo">
+            <div class="folha">
+              <span class="folha__etiqueta">Invenção principal</span>
+              <p>
+                Não é uma invenção só: é a sequência que constrói a computação.
+              </p>
+              <div class="destaque-invencao">
+                <p>
+                  O tear de Jacquard (1804) tira o programa de dentro da máquina.
+                  A Máquina Analítica de Babbage (1837) projeta o primeiro
+                  computador de propósito geral. Boole formaliza a lógica (1854),
+                  Turing define o que é computável (1936) e Shannon liga álgebra
+                  booleana a circuitos elétricos (1937). Vêm Z3, Colossus, Harvard
+                  Mark I e ENIAC. Von Neumann publica o programa armazenado
+                  (1945). Fortran, LISP e COBOL surgem entre 1957 e 1960. A fase
+                  fecha em 1969, com o Unix e os quatro primeiros nós da ARPANET.
+                </p>
+              </div>
+              <p>
+                O tear não calcula nada — e é justamente esse o ponto. Pela
+                primeira vez o padrão fica <strong>fora</strong> da máquina, num
+                cartão trocável. Mesma máquina, cartões diferentes, resultado
+                diferente. É a semente da programabilidade.
+              </p>
+            </div>
+
+            <div class="folha">
+              <span class="folha__etiqueta">Impacto</span>
+              <p>
+                É a fundação teórica e material de tudo o que vem depois. Sem
+                Shannon ligando lógica a circuito, a lista de máquinas não teria
+                explicação de por que funciona.
+              </p>
+              <p>
+                É também a fase em que a indústria nasce de dinheiro público —
+                censo, exército e programa espacial —, e não de genialidade
+                isolada. A máquina tabuladora de Hollerith nasceu de um problema
+                de estatística pública: o censo de 1880 levou cerca de oito anos
+                para ser tabulado à mão. A empresa que ele fundou viraria a IBM
+                em 1924.
+              </p>
+            </div>
+          </div>
+
+          <!-- ==================================================
+               Pessoas
+               ================================================== -->
+          <div class="folha folha--arquivada">
+            <span class="folha__etiqueta">Pessoas em destaque</span>
+            <p style="margin-bottom: var(--e-5)">
+              As seis programadoras do ENIAC, marcadas em verde, foram apagadas
+              da narrativa por décadas.
+            </p>
+            <div class="pessoas"></div>
+          </div>
+        </section>
+
+        <!-- ==================================================
+             ATIVIDADE
+             ================================================== -->
+        <section class="folha folha--arquivada enigma" aria-labelledby="titulo-atividade">
+          <span class="folha__etiqueta">Atividade</span>
+          <h2 id="titulo-atividade">Painel de fios do Enigma</h2>
+          <p>
+            O Enigma tinha na frente um painel de tomadas, o
+            <em>Steckerbrett</em>, em que se ligavam cabos entre pares de letras.
+            Esses fios faziam parte da chave do dia: trocá-los mudava a cifra
+            inteira.
+          </p>
+
+          <hr class="folha__regua" />
+
+          <!-- ---------- parte 1 ---------- -->
+          <div class="enigma__passo" data-passo="1">
+            <h3 class="passo-titulo">
+              <span class="passo-numero" aria-hidden="true">1</span>
+              Ligar o painel
+            </h3>
+
+            <div class="chave-do-dia">
+              <span class="chave-do-dia__titulo">Chave do dia &middot; 6 cabos</span>
+              <div class="chave-do-dia__pares"></div>
+            </div>
+
+            <div class="painel"></div>
+          </div>
+
+          <!-- ---------- parte 2 ---------- -->
+          <div class="enigma__passo" data-passo="2" hidden>
+            <hr class="folha__regua" />
+            <h3 class="passo-titulo">
+              <span class="passo-numero" aria-hidden="true">2</span>
+              Ver o efeito
+            </h3>
+
+            <div class="maquina">
+              <div class="rotores">
+                <div class="rotor">
+                  <div class="rotor__janela"><span>A</span></div>
+                  <span class="rotor__nome">Rotor I</span>
+                </div>
+                <div class="rotor">
+                  <div class="rotor__janela"><span>A</span></div>
+                  <span class="rotor__nome">Rotor II</span>
+                </div>
+                <div class="rotor">
+                  <div class="rotor__janela"><span>A</span></div>
+                  <span class="rotor__nome">Rotor III</span>
+                </div>
+              </div>
+
+              <div class="teclado-enigma">
+                <label for="mensagem">Digite uma palavra</label>
+                <input
+                  class="entrada-mensagem"
+                  id="mensagem"
+                  type="text"
+                  maxlength="18"
+                  autocomplete="off"
+                  spellcheck="false"
+                  placeholder="RETRONET"
+                />
+              </div>
+            </div>
+
+            <div class="fitas">
+              <div class="fita fita--antes">
+                <span class="fita__rotulo">Com o painel completo</span>
+                <p class="fita__texto"></p>
+              </div>
+              <div class="fita fita--depois">
+                <span class="fita__rotulo">Com um fio a menos</span>
+                <p class="fita__texto"></p>
+              </div>
+            </div>
+
+            <div class="acoes-linha">
+              <button type="button" class="botao-papel" data-retirar>
+                Retirar um fio
+              </button>
+              <button type="button" class="botao-papel botao-papel--vazado" data-reiniciar>
+                Recomeçar
+              </button>
+            </div>
+
+            <div class="conclusao" hidden></div>
+          </div>
+
+          <!-- ---------- parte 3 ---------- -->
+          <div class="enigma__passo" data-passo="3" hidden>
+            <hr class="folha__regua" />
+            <h3 class="passo-titulo">
+              <span class="passo-numero" aria-hidden="true">3</span>
+              A lógica por trás
+            </h3>
+            <p>
+              Em 1937, Claude Shannon mostrou que um circuito de chaves equivale
+              à álgebra booleana. É o que liga este painel de fios à lógica que
+              rege qualquer computador até hoje.
+            </p>
+
+            <div class="seletor-logica" role="group" aria-label="Tipo de ligação">
+              <button type="button" data-modo="E" aria-pressed="true">
+                Série &middot; E
+              </button>
+              <button type="button" data-modo="OU" aria-pressed="false">
+                Paralelo &middot; OU
+              </button>
+            </div>
+
+            <div class="circuito">
+              <div class="circuito__palco">
+                <div class="lampada">Apagada</div>
+                <div class="chaves">
+                  <button type="button" class="chave" data-chave="1" aria-pressed="false">
+                    <span class="chave__corpo"><span class="chave__alavanca"></span></span>
+                    Chave 1
+                  </button>
+                  <button type="button" class="chave" data-chave="2" aria-pressed="false">
+                    <span class="chave__corpo"><span class="chave__alavanca"></span></span>
+                    Chave 2
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <p>
+                  Em <strong>série</strong>, a corrente precisa passar pelas duas
+                  chaves: a lâmpada só acende com as duas ligadas. Em
+                  <strong>paralelo</strong>, qualquer caminho serve.
+                </p>
+                <table class="tabela-verdade">
+                  <thead>
+                    <tr>
+                      <th>Chave 1</th>
+                      <th>Chave 2</th>
+                      <th>Lâmpada</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr data-estado="00">
+                      <td>desligada</td>
+                      <td>desligada</td>
+                      <td class="saida">apagada</td>
+                    </tr>
+                    <tr data-estado="10">
+                      <td>ligada</td>
+                      <td>desligada</td>
+                      <td class="saida">apagada</td>
+                    </tr>
+                    <tr data-estado="01">
+                      <td>desligada</td>
+                      <td>ligada</td>
+                      <td class="saida">apagada</td>
+                    </tr>
+                    <tr data-estado="11">
+                      <td>ligada</td>
+                      <td>ligada</td>
+                      <td class="saida">acende</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================================================
+             Mitos
+             ================================================== -->
+        <section class="folha">
+          <span class="folha__etiqueta">Três erros que este projeto não repete</span>
+          <div class="mitos">
+            <div class="mito">
+              <p class="mito__errado">"O Colossus quebrou o Enigma."</p>
+              <p class="mito__certo">
+                O Colossus atacava a cifra Lorenz SZ, usada pelo alto comando
+                alemão. O Enigma era tratado pelas <em>bombes</em>
+                eletromecânicas, em Bletchley Park.
+              </p>
+            </div>
+            <div class="mito">
+              <p class="mito__errado">
+                "A ARPANET foi construída para resistir a um ataque nuclear."
+              </p>
+              <p class="mito__certo">
+                Essa era a motivação de Paul Baran, na RAND. A ARPANET foi
+                construída para compartilhar computadores caros e escassos entre
+                centros de pesquisa. Larry Roberts e Bob Taylor disseram isso
+                explicitamente. É o erro mais repetido em trabalhos escolares
+                sobre o tema.
+              </p>
+            </div>
+            <div class="mito">
+              <p class="mito__errado">
+                "A palavra <em>bug</em> vem da mariposa de 1947."
+              </p>
+              <p class="mito__certo">
+                A mariposa foi encontrada no Harvard Mark II, não no Mark I, e o
+                termo já era usado por engenheiros desde a época de Edison. A
+                graça do registro no caderno é justamente a piada com um termo
+                que já existia.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==================================================
+             Fontes
+             ================================================== -->
+        <section class="folha">
+          <span class="folha__etiqueta">Fontes desta fase</span>
+          <ul class="fontes-lista">
+            <li>Computer History Museum — linha do tempo e acervo primário.</li>
+            <li>
+              IEEE Annals of the History of Computing — artigos revisados por
+              pares, onde as disputas de crédito são discutidas com evidência.
+            </li>
+            <li>
+              Datas de vida das pessoas citadas conferidas no Wikidata; crédito
+              das fotos na
+              <a href="../../creditos/index.html">página de créditos</a>.
+            </li>
+          </ul>
+        </section>
+
+        <div data-moldura="navegacao"></div>
+      </div>
+    </main>
+
+    <div data-moldura="rodape"></div>
+
+    <script src="../../assets/js/fases.js"></script>
+    <script src="../../assets/js/som.js"></script>
+    <script src="../../assets/js/shell.js"></script>
+    <script src="../../assets/js/inatividade.js"></script>
+    <script src="../../assets/retratos/creditos.js"></script>
+    <script src="../../assets/js/pessoas.js"></script>
+    <script src="./pessoas.js"></script>
+    <script src="./enigma.js"></script>
+    <script src="./fase.js"></script>
+  </body>
+</html>

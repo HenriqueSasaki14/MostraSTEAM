@@ -1,0 +1,56 @@
+/* ============================================================
+   RetroNet — placa de "em construção"
+   ------------------------------------------------------------
+   Estilo provisório das páginas que ainda não foram feitas. Cada
+   fase apaga este link do seu index.html assim que ganhar o
+   próprio fase.css. Quando as oito estiverem prontas, este
+   arquivo sai do projeto.
+   ============================================================ */
+
+.em-construcao {
+  display: grid;
+  gap: var(--e-5);
+  justify-items: start;
+  padding-block: clamp(var(--e-7), 12vh, var(--e-9));
+  min-height: 52vh;
+  align-content: center;
+}
+
+.em-construcao__titulo {
+  max-width: 20ch;
+}
+
+.em-construcao__marco {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-corpo);
+  color: var(--destaque-texto);
+}
+
+.em-construcao__aviso {
+  display: grid;
+  gap: var(--e-2);
+  padding: var(--e-4) var(--e-5);
+  border: 1px dashed color-mix(in srgb, var(--botao) 45%, transparent);
+  border-radius: var(--raio-m);
+  background: color-mix(in srgb, var(--botao) 6%, transparent);
+  max-width: var(--largura-leitura);
+}
+
+.em-construcao__aviso p {
+  margin: 0;
+  font-size: var(--t-pequeno);
+}
+
+/* Faixa listrada na cor da fase, só para a página não ficar
+   completamente vazia durante a revisão. */
+.em-construcao__faixa {
+  width: 100%;
+  height: 8px;
+  border-radius: var(--raio-total);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--destaque) 0 10px,
+    transparent 10px 20px
+  );
+  opacity: 0.55;
+}

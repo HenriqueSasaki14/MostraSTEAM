@@ -1,0 +1,124 @@
+Fase 1 — Primórdios e Pioneirismo da Computação Do tear programável aos mainframes universitários e ao embrião da internet (séc. XVIII/XIX – anos 1960)
+
+1. Fundamentos mecânicos: a ideia de "instrução separada da máquina" Antecedentes de cálculo mecânico
+● Pascaline (Blaise Pascal, 1642) — soma e subtração por engrenagens.
+● Stepped Reckoner (Leibniz, 1673) — as quatro operações. Leibniz também formaliza o sistema binário (1679), que só seria útil ~260 anos depois. Tear de Jacquard (1804–1805)
+● Joseph-Marie Jacquard aperfeiçoa ideias de Basile Bouchon (1725) e Jean-Baptiste Falcon (1728): um cartão perfurado controla quais fios sobem a cada passagem da lançadeira.
+● Por que importa: o tear não calcula nada. A ruptura conceitual é outra — pela primeira vez o padrão (o "programa") está fora da máquina , em um suporte trocável. Mesma máquina, cartões diferentes, resultado diferente. É a semente da programabilidade.
+● Efeito colateral histórico: revoltas de tecelões (ludismo) — a primeira crise de automação x emprego. Charles Babbage (1791–1871)
+● Máquina Diferencial (proposta 1822, financiada pelo governo britânico, abandonada em 1842): calcularia tabelas de logaritmos e navegação pelo método das diferenças finitas, eliminando erro humano. Nunca concluída — limitações de usinagem da época e conflitos com o engenheiro Joseph Clement. ○ Prova póstuma: o Science Museum de Londres construiu a Difference Engine No. 2 (1991, com tolerâncias da era vitoriana) e ela funcionou . O projeto estava certo; a execução é que falhou.
+● Máquina Analítica (a partir de 1837, nunca construída): o primeiro projeto de computador de propósito geral . ○ mill (unidade de processamento) + store (memória para ~1.000 números de 50 dígitos) ○ entrada por cartões perfurados (inspiração direta em Jacquard) ○ desvio condicional e laços — ou seja, controle de fluxo ○ saída impressa
+● Babbage é o exemplo mais claro da história de ideia certa, tecnologia errada, gestão de projeto pior ainda . Ada Lovelace (1815–1852)
+● 1843: traduz o artigo do italiano Luigi Menabrea sobre a Máquina Analítica e acrescenta "Notas" (A a G) — mais longas que o texto original.
+● Nota G : algoritmo para calcular os números de Bernoulli , com laço e variáveis de trabalho. É rotineiramente citado como o primeiro programa de computador publicado .
+● Onde o mito precisa de cuidado (importante para uma pesquisa séria): ○ Babbage já havia escrito dezenas de programas de teste antes de 1843 — não publicados. ○ Historiadores divergem sobre a autoria das Notas: Bruce Collier as atribui essencialmente a Babbage; Doron Swade e outros defendem a contribuição intelectual real de Ada. ○ A contribuição menos contestável e mais original de Ada não é o algoritmo — é a percepção de que a máquina poderia manipular símbolos , não só números: compor música, gerar gráficos, operar sobre qualquer coisa representável. Isso é a definição de computação de propósito geral, um século antes de existir uma. ○ A "objeção de Lovelace" (a máquina não origina nada, apenas executa o que mandamos) foi respondida diretamente por Alan Turing em 1950 no artigo do Teste de Turing. Herman Hollerith (1860–1929)
+● Censo dos EUA de 1880 : ~8 anos para tabular manualmente. Com crescimento populacional, o censo de 1890 corria risco de não terminar antes do de 1900.
+● Hollerith cria a máquina tabuladora eletromecânica com cartões perfurados lidos por contatos elétricos através de mercúrio.
+● Resultado: a contagem populacional bruta saiu em ~6 semanas ; a tabulação completa levou ~2 a 3 anos (contra 8). Números variam por fonte — cite a faixa, não um valor exato.
+● Tabulating Machine Company (1896) → funde-se em 1911 na CTR → renomeada IBM em 1924. A indústria de processamento de dados nasce de um problema de estatística pública, não de ciência. Elo teórico que quase sempre falta nesse trecho:
+● George Boole (1854, Laws of Thought ) — álgebra booleana.
+● Claude Shannon (dissertação de mestrado no MIT, 1937) — mostra que circuitos de relés implementam álgebra booleana . É a ponte entre lógica e eletrônica; sem ela, nada do que vem depois existe.
+● Alan Turing (1936, On Computable Numbers ) — máquina de Turing, computabilidade, problema da parada. Define o que é possível computar antes de existir hardware para computar. 2. 1930–1945: as primeiras máquinas de verdade Máquina An o País Tecnolo gia Programáve l? Eletrô nic a? Zuse Z3 19 4 1 Alema nh a relés Sim (fita) Não ABC (Atanasoff– Berry) 19 4 2 EUA válvulas Não Sim Colossus Mk I 19 4 3 / 4 4 Reino Uni do válvulas Parcial (plugues ) Sim Harvard Mark I 19 4 4 EUA eletrome cânic a Sim (fita) Não ENIAC 19 4 5 / 4 6 EUA válvulas Sim (cabos/c haves) Sim Konrad Zuse
+● Z1 (1938): mecânica, binária , ponto flutuante — pioneiro em usar binário quando todos usavam decimal.
+● Z3 (1941): primeiro computador programável, automático e plenamente operacional do mundo (relés). Destruído em bombardeio em 1943. ○ Nuance técnica: o Z3 não tinha desvio condicional, então não era Turing-completo na prática. Raúl Rojas provou em 1998 que ele poderia ser, com truques de programação.
+● Plankalkül (1945): primeira linguagem de alto nível já projetada — só foi implementada de fato em ~2000. Isolamento pela guerra e derrota alemã tiraram Zuse da linha principal da história. ABC — Atanasoff–Berry Computer (Iowa State, 1937–42)
+● Primeiro dispositivo digital eletrônico de cálculo; usava capacitores regenerativos (ancestral da DRAM). Não era programável.
+● Em 1973 , na ação Honeywell v. Sperry Rand , um tribunal federal invalidou a patente do ENIAC , decidindo que Mauchly havia derivado ideias de Atanasoff. Juridicamente, "quem inventou o computador eletrônico" tem uma resposta que quase ninguém cita. Colossus (Bletchley Park, Tommy Flowers, 1943–44)
+● ~1.600 (Mk I) a ~2.400 (Mk II) válvulas. Primeiro computador eletrônico digital programável em operação.
+● Erro comum a evitar: Colossus não quebrava o Enigma. Ele atacava a cifra Lorenz SZ (comunicações do alto comando alemão). O Enigma era tratado pelas bombes eletromecânicas.
+● Mantido em segredo até os anos 1970, com máquinas destruídas por ordem de Churchill — por isso não influenciou a evolução pública da computação. Um caso didático de como sigilo mata impacto tecnológico. Harvard Mark I / ASCC (Howard Aiken + IBM, 1944)
+● ~15 m de comprimento, eletromecânico, decimal. Grace Hopper foi uma das primeiras programadoras.
+● O "primeiro bug" (mariposa colada num relé, 1947) foi no Mark II , e o termo bug já era usado por engenheiros desde Edison. Bom exemplo de folclore repetido sem checagem. ENIAC (Eckert & Mauchly, Univ. da Pensilvânia, operacional 1945, público 1946)
+● ~17.468 válvulas , ~30 t, ~150 kW. Financiado pelo Exército dos EUA para tabelas de artilharia.
+● Decimal, não binário. Reprogramar significava religar cabos e chaves — dias de trabalho.
+● Programadoras: Kay McNulty, Betty Jennings, Betty Snyder, Marlyn Wescoff, Fran Bilas e Ruth Lichterman — apagadas da narrativa por décadas.
+
+3. Arquitetura de von Neumann (1945)
+● "First Draft of a Report on the EDVAC" (John von Neumann, junho de 1945).
+● Conceito central — programa armazenado: instruções e dados vivem na mesma memória , no mesmo formato. O programa deixa de ser fiação e vira dado manipulável.
+● Componentes: memória · unidade de controle · unidade lógico-aritmética (ULA) · entrada/saída.
+● Controvérsia de crédito: o rascunho circulou apenas com o nome de von Neumann, embora as ideias tenham surgido no grupo com Eckert e Mauchly . Efeito prático: a circulação pública impediu o patenteamento , jogando o conceito em domínio público — provavelmente acelerou toda a indústria.
+● Gargalo de von Neumann (termo cunhado por John Backus em 1977): a CPU fica limitada pela largura de banda até a memória. É a razão de existirem caches, pipelines e prefetch até hoje.
+● Contraste: arquitetura Harvard (memórias separadas para código e dados) — ainda usada em microcontroladores, incluindo os AVR dos Arduino. Primeiras implementações reais (etapa que costuma ser pulada):
+● Manchester Baby / SSEM — 21/6/1948: primeira máquina a rodar um programa armazenado .
+● EDSAC (Cambridge, Maurice Wilkes, 1949) — primeiro de uso prático e regular; berço da ideia de biblioteca de sub-rotinas .
+● EDVAC (1951) e Whirlwind (MIT, 1951) — este último em tempo real, e onde Jay Forrester consolida a memória de núcleo de ferrite , que dominaria os 20 anos seguintes.
+
+4. Comercialização, hardware e mainframes UNIVAC I (1951)
+● Primeiro computador comercial dos EUA; 46 unidades vendidas; primeiro cliente: o Census Bureau .
+● Eleição de 1952: previu a vitória de Eisenhower com 1% da apuração. A CBS não confiou e segurou o resultado no ar. "UNIVAC" virou sinônimo popular de computador. Gerações de hardware
+
+1. Válvulas (1945–~1958): quentes, frágeis, caras.
+
+2. Transistor (Bardeen, Brattain e Shockley — Bell Labs, dez/1947): menor, mais frio, mais confiável. Nobel de 1956.
+
+3. Circuito integrado : Jack Kilby (Texas Instruments, 1958, germânio) e Robert Noyce (Fairchild, 1959, processo planar de silício — o que realmente permitiu produção em massa). Kilby recebeu o Nobel em 2000; Noyce havia morrido em 1990.
+
+4. Lei de Moore (1965): observação empírica/econômica, não lei física — distinção que a maioria dos textos erra. Máquinas de referência
+● IBM 650 (1954): ~2.000 unidades, o primeiro computador "de massa"; espalhou-se pelas universidades.
+● IBM 7090 (1959): versão transistorizada do 709; cavalo de batalha científico e da NASA no programa Mercury.
+● IBM System/360 (1964): a decisão empresarial mais importante da era. ○ Família compatível de máquinas: mesmo conjunto de instruções, do modelo barato ao caro. Separa arquitetura de implementação — conceito que estrutura a computação até hoje. ○ Custo de desenvolvimento estimado em ~US$ 5 bilhões da época, mais que o Projeto Manhattan. Quase quebrou a IBM; garantiu seu domínio por 20 anos. ○ Introduziu o byte de 8 bits como padrão de fato e o EBCDIC .
+● DEC PDP-1 (1959): ~US$ 120.000 (contra milhões de um mainframe), ~53 unidades. Minicomputador interativo com tela CRT. ○ Roda Spacewar! (1962, Steve Russell e o grupo do MIT) — primeiro videogame digital amplamente difundido, e distribuído de graça : proto-open source. ○ Consolida a cultura hacker do MIT: uso interativo, exploratório, individual da máquina — oposto do lote burocrático dos mainframes.
+
+5. Linguagens de programação Antes das linguagens de alto nível: código de máquina → assembly e montadores (a partir de ~1949, EDSAC). Grace Hopper cria o A-0 (1952), primeiro compilador/link-loader. Lingua ge m An o Autor / origem Contribuição decisiva Ainda em uso? Fortra n 19 5 7 John Backus, IBM Primeira de alto nível amplamente adotada. Provou que compilador gera código eficiente — a objeção central da época Sim (HPC, engenh aria) LISP 19 5 8 John McCarthy, MIT Listas, recursão , coleta de lixo, código como dado (homoiconicidade). Base da IA simbólica Sim (Clojure , Scheme , Emacs) ALGO L 58/ 60 19 5 8 / 6 0 Comitê internacio nal Blocos, escopo léxico, recursão, BNF (Backus–Naur). Pouco usada, mas é a avó sintática de C, Pascal, Java, C#, JS Não diretam ente COBO L 19 5 9 / 6 0 CODASYL (forte influência de Grace Hopper via FLOW-MA TIC) Negócios, sintaxe verbosa em inglês, portabilidade entre fabricantes Sim — bancos e governo s, inclusiv e no Brasil BASIC 19 6 4 Kemeny e Kurtz, Dartmouth Feita para ensinar ; nasce junto com o time-sharing DTSS. Democratiza o acesso Legado / VB.NET Simula 67 19 6 7 Nygaard e Dahl, Noruega Classes e objetos — inventa a orientação a objetos Via descen dentes (C++, Java) Observação crítica: Hoare descreveu ALGOL 60 como um avanço não só sobre seus antecessores, mas sobre boa parte de seus sucessores — crítica que segue válida sobre a qualidade de projeto de linguagens.
+
+6. Sistemas operacionais Processamento em lote (batch)
+● Anos 1950: o operador humano é o "sistema operacional". Surgem monitores residentes ; o GM-NAA I/O (1956, General Motors + North American Aviation, para IBM 704) é geralmente apontado como o primeiro sistema operacional .
+● Problema econômico: o computador custava milhões e ficava ocioso entre jobs. Isso motiva tudo o que vem a seguir. CTSS — Compatible Time-Sharing System (MIT, Fernando Corbató, demonstrado em 1961, em uso em 1963)
+● Primeiro sistema de tempo compartilhado de sucesso: vários usuários, terminais simultâneos, ilusão de máquina dedicada.
+● Introduz senhas de usuário e, em 1965, o comando MAIL — ancestral do e-mail. Multics (1965 — MIT + Bell Labs + General Electric)
+● Ambição de "computação como utilidade pública", igual a água e eletricidade. Inovações: ○ memória virtual segmentada , sistema de arquivos hierárquico , anéis de proteção (segurança), escrito em linguagem de alto nível (PL/I) , suporte a hot-swap.
+● Fracasso comercial relativo: complexo demais, caro demais, atrasado. A Bell Labs abandona o projeto em 1969.
+● Mas quase todo conceito de SO moderno vem daqui. Lição de engenharia: o projeto que "fracassa" pode definir o padrão que os vencedores copiam. Unix (1969 — Ken Thompson e Dennis Ritchie, Bell Labs, num PDP-7 ocioso)
+● Reação minimalista ao Multics — o nome UNICS era uma piada com "Multics castrado".
+● Filosofia: programas pequenos, uma tarefa cada, compostos por pipes ; tudo é arquivo .
+● 1973: reescrito em C → primeiro SO realmente portável entre arquiteturas. Ruptura estrutural.
+● O decreto antitruste de 1956 impedia a AT&T de vender software, então o Unix foi distribuído às universidades a custo simbólico, com o código-fonte . Daí saem BSD, Linux, macOS, iOS, Android e boa parte da internet.
+● Nota de escopo: 1969 é o limite superior desta fase — o Unix é a ponte para a Fase 2.
+
+7. Redes: o embrião da internet Contexto
+● Sputnik (out/1957) → EUA criam a ARPA (fev/1958) para não perder outra corrida tecnológica.
+● J.C.R. Licklider (1960, Man-Computer Symbiosis ; 1963, memorando da "Intergalactic Computer Network" ) — primeiro diretor do IPTO, define a visão. Sucessores: Bob Taylor e Larry Roberts . Comutação de pacotes — três origens independentes
+● Paul Baran (RAND, 1960–64): redes distribuídas e "blocos de mensagem", motivadas por sobrevivência a ataque nuclear.
+● Donald Davies (NPL, Reino Unido, 1965): mesma ideia, motivada por eficiência de uso de linhas; cunha o termo "packet" .
+● Leonard Kleinrock (MIT, 1961–62): teoria de filas aplicada a redes de dados.
+● Contraste com circuito comutado (telefonia): o circuito reserva um caminho fixo e o desperdiça em silêncio; o pacote divide a mensagem, roteia cada pedaço pelo melhor caminho e remonta no destino. Mais robusto e muito mais eficiente para tráfego em rajadas. Mito a corrigir na sua pesquisa: a ARPANET não foi construída "para resistir a um ataque nuclear". Essa era a motivação de Baran , na RAND. A ARPANET foi construída para compartilhar computadores caros e escassos entre centros de pesquisa financiados pela ARPA. Larry Roberts e Bob Taylor disseram isso explicitamente. É o erro factual mais repetido em trabalhos escolares sobre o tema. Construção
+● IMPs ( Interface Message Processors ) — minicomputadores Honeywell DDP-516 fazendo o papel de roteadores; contrato com a BBN (1968–69).
+● 29/10/1969: primeira mensagem, de UCLA (Kleinrock) para o SRI . Tentaram digitar LOGIN ; o sistema travou depois de LO .
+● Dez/1969 — 4 nós: UCLA, SRI, UC Santa Barbara, Universidade de Utah.
+● NCP ( Network Control Program/Protocol ): protocolo host-a-host, finalizado por volta de 1970–72. Substituído por TCP/IP em 1º/1/1983 (o "flag day").
+● Ray Tomlinson (BBN, 1971): e-mail entre máquinas e a escolha do @ .
+● Redes paralelas que importaram: CYCLADES (França, Louis Pouzin) — datagramas e princípio fim-a-fim, influência direta no TCP; ALOHAnet (Havaí, 1971) → base conceitual da Ethernet .
+
+8. As universidades como motor
+● MIT — Whirlwind e SAGE (defesa aérea, tempo real, núcleo de ferrite); CTSS , Projeto MAC , Multics ; laboratório de IA ( Minsky , McCarthy ); TMRC e a cultura hacker; Spacewar! ; Kleinrock e o nó da ARPANET.
+● Stanford — SAIL (McCarthy, 1963); no SRI , Douglas Engelbart e a "Mother of All Demos" (9/12/1968): mouse, hipertexto, videoconferência, edição colaborativa em tempo real — 90 minutos que descrevem a computação dos 50 anos seguintes. A equipe migra depois para o Xerox PARC .
+● Berkeley — Projeto Genie (time-sharing no SDS 940), que desemboca no BSD e no movimento de software livre.
+● Reino Unido — Manchester (Baby, Williams e Kilburn), Cambridge ( EDSAC , Wilkes), Bletchley Park.
+● Padrão econômico que sustenta tudo isso: ENIAC, Whirlwind, SAGE, ARPANET, circuitos integrados (impulsionados por Minuteman e Apollo) — quase toda a fase é financiada por orçamento militar e espacial . Sem esse dado, a cronologia parece movida por genialidade individual, o que é falso.
+
+9. Linha do tempo condensada Ano Marco 1804 Tear de Jacquard — programa em cartão perfurado 1822/1 83 7 Babbage: Máquina Diferencial / Analítica 1843 Ada Lovelace publica as Notas e a Nota G 1854 Boole — álgebra booleana 1890 Hollerith mecaniza o censo dos EUA 1924 CTR passa a se chamar IBM 1936 Turing — máquina de Turing e computabilidade 1937 Shannon liga álgebra booleana a circuitos elétricos 1941 Zuse Z3 1943/4 4 Colossus (Lorenz, não Enigma) 1944 Harvard Mark I 1945 ENIAC; rascunho do EDVAC (von Neumann) 1947 Transistor (Bell Labs) 1948 Manchester Baby — 1º programa armazenado executado 1949 EDSAC 1951 UNIVAC I; Whirlwind 1956 GM-NAA I/O — 1º sistema operacional 1957 Fortran; Sputnik 1958 ARPA; LISP; CI de Kilby 1959 CI planar de Noyce; PDP-1; IBM 7090; COBOL 1960– 65 Comutação de pacotes (Baran, Davies, Kleinrock) 1961/6 3 CTSS — time-sharing 1962 Spacewar! 1964 IBM System/360; BASIC 1965 Multics; Lei de Moore 1968 Mother of All Demos (Engelbart) 1969 ARPANET (4 nós); nasce o Unix
+
+10. Pontos cegos do roteiro original (o que acrescentar) 1. A base teórica está ausente. Sem Boole, Shannon e Turing, o texto vira uma lista de máquinas sem explicação de por que funcionam. Shannon (1937) é o elo perdido mais grave.
+
+2. Falta o ABC de Atanasoff e a decisão judicial de 1973 que derrubou a patente do ENIAC.
+
+3. Falta o passo entre von Neumann e o UNIVAC: Manchester Baby (1948) e EDSAC (1949) foram quem implementou a arquitetura. Pular direto para o UNIVAC salta a prova de conceito.
+
+4. Memória quase nunca é citada, e era o gargalo real: linha de retardo de mercúrio → tubo de Williams → núcleo de ferrite (Forrester). O limite da época era armazenar, não calcular.
+
+5. Trabalho invisível: as "computers" humanas, as seis programadoras do ENIAC, Grace Hopper , Jean Sammet , Margaret Hamilton (software da Apollo, e quem popularizou o termo "engenharia de software").
+
+6. Financiamento militar como motor central — omitir isso é contar uma história romântica e incorreta.
+
+7. Viés anglo-americano: Zuse (Alemanha), Pouzin (França), a URSS (MESM, 1951, de Lebedev). No Brasil, o "Patinho Feio" (USP/Escola Politécnica, 1972) é o marco nacional — fora do recorte, mas útil como fechamento.
+
+8. Mitos a não repetir: Colossus × Enigma; ARPANET × guerra nuclear; Ada como "primeira programadora" sem nuance; a mariposa como origem da palavra bug .
+
+11. Fontes para verificação
+● Computer History Museum (computerhistory.org) — timeline e acervo primário.
+● IEEE Annals of the History of Computing — artigos revisados por pares; é onde as disputas de crédito são discutidas com evidência.
+● Internet Society , Brief History of the Internet (Leiner, Cerf, Kahn et al.) — escrito pelos próprios envolvidos.
+● Science Museum / Londres — acervo Babbage e a Difference Engine No. 2.
+● Bell Labs / Unix Heritage Society — documentos originais de Multics e Unix.
+● Livros: Os Inovadores (Walter Isaacson), A Informação (James Gleick), Turing's Cathedral (George Dyson), Where Wizards Stay Up Late (Hafner e Lyon — sobre a ARPANET). Nota de confiabilidade: datas de "primeiro X" nesta fase são quase sempre disputadas, porque dependem da definição adotada (eletrônico? programável? de propósito geral? operacional?). Em trabalho acadêmico, declare o critério antes de declarar o pioneiro — é o que separa uma pesquisa de uma cópia de blog. -

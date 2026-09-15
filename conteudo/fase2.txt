@@ -1,0 +1,53 @@
+A Segunda Fase da computação transformou o computador de uma máquina industrial de grande porte em um objeto pessoal e doméstico, estabelecendo as bases tecnológicas e mercadológicas da era digital.
+Microprocessadores: O Motor da Miniaturização
+A migração de circuitos integrados simples para microprocessadores em um único chip de silício reduziu drasticamente custos, tamanho e consumo de energia.
+* Intel 4004 (1971) & 8080 (1974): O 4004 foi o primeiro microprocessador comercial do mundo (4 bits). Seu sucessor de 8 bits, o 8080, ofereceu capacidade de processamento suficiente para construir o Altair 8800, o marco zero da computação pessoal.
+* MOS 6502 (1975): Lançado por apenas US$ 25 (enquanto concorrentes custavam cerca de US$ 175), barateou radicalmente a produção de hardware. Foi o cérebro do Apple II, Commodore PET, Atari 800 e, posteriormente, do console Nintendo (NES).
+* Zilog Z80 (1976): Criado por ex-engenheiros da Intel, era mais rápido e totalmente compatível com o código do Intel 8080. Dominou o ecossistema corporativo de 8 bits com o sistema CP/M e alimentou computadores como o ZX Spectrum e a arquitetura MSX.
+* Intel 8086 / 8088 (1978–1979): Inauguraram a arquitetura x86. A IBM optou pelo 8088 (versão de 16 bits com barramento externo de 8 bits) para reduzir os custos da placa-mãe do IBM PC.
+* Motorola 68000 (1979): Processador de arquitetura híbrida de 16/32 bits com alto desempenho. Viabilizou a futura onda de computadores focados em interface gráfica, como o Apple Lisa, Macintosh, Amiga e Atari ST.
+Hardware e a Massificação dos Computadores
+A transição ocorreu em três ondas: máquinas em kit para entusiastas, sistemas prontos para consumo doméstico e a padronização corporativa.
+Modelo
+	Lançamento
+	Processador
+	Relevância Histórica
+	Altair 8800
+	1975
+	Intel 8080
+	Vendido em kit para montagem; operado por chaves no painel. Deu origem ao Homebrew Computer Club e motivou a criação da Microsoft.
+	Apple II
+	1977
+	MOS 6502
+	Suportava cores, som e slots de expansão. Tornou-se um sucesso comercial duradouro em escolas e escritórios.
+	Commodore PET
+	1977
+	MOS 6502
+	Projeto integrado com monitor, gravador de fita k7 e teclado no mesmo gabinete (all-in-one).
+	TRS-80
+	1977
+	Zilog Z80
+	Vendido pela rede Radio Shack com distribuição massiva; dominou as vendas nos EUA no final dos anos 70.
+	IBM PC (5150)
+	1981
+	Intel 8088
+	Validou o setor para o mercado corporativo. Usou arquitetura aberta, permitindo o surgimento de clones "compatíveis IBM".
+	Softwares, Sistemas Operacionais e Linguagens
+A evolução do software permitiu que usuários comuns operassem as máquinas sem a necessidade de desenhar circuitos ou usar cartões perfurados.
+Sistemas Operacionais
+* CP/M (Control Program for Microcomputers): Desenvolvido por Gary Kildall (Digital Research), tornou-se o primeiro sistema operacional padrão da indústria para chips de 8 bits.
+* MS-DOS / PC-DOS: A Microsoft adquiriu o QDOS (Quick and Dirty Operating System) da Seattle Computer Products, adaptou-o para a IBM e manteve os direitos de licenciamento não exclusivos. Isso permitiu vender o MS-DOS para os fabricantes de clones do PC, criando o monopólio da empresa.
+* Apple DOS: Criado especificamente para gerenciar o armazenamento em discos flexíveis (floppy disks) de 5,25 polegadas no Apple II.
+Linguagens de Programação
+* BASIC: Linguagem de fácil aprendizado integrada à memória ROM de quase todos os microcomputadores da época, permitindo programação imediata ao ligar o aparelho.
+* Pascal: Amplamente adotada no ambiente acadêmico por impor uma estrutura lógica rigorosa e limpa.
+* C: Criada nos laboratórios Bell para redesenhar o UNIX, permitiu a escrita de softwares portáveis com desempenho próximo ao da linguagem de máquina.
+* Assembly: Linguagem de baixo nível indispensável para extrair o máximo desempenho de hardware com recursos extremamente limitados.
+As Primeiras "Killer Apps"
+* VisiCalc (1979): A primeira planilha eletrônica da história. Transformou o computador pessoal de brinquedo de hobbista em ferramenta de análise financeira indispensável nas empresas.
+* WordStar (1978): O primeiro processador de texto com recursos avançados de edição em tela, padronizando a produção de documentos em escritórios.
+Interfaces Gráficas Experimentais e Redes
+Embora o terminal em modo texto (linha de comando) fosse o padrão comercial, as bases da navegação moderna foram estabelecidas neste período.
+* Xerox PARC (Alto & Star): O laboratório da Xerox criou a interface WIMP (Windows, Icons, Menus, Pointer), a navegação por mouse, a edição WYSIWYG (What You See Is What You Get), a programação orientada a objetos (Smalltalk) e a rede Ethernet local. Esse conceito inspirou diretamente a criação do Apple Lisa (1983) e Macintosh (1984).
+* BBS (Bulletin Board Systems): Servidores amadores operados por modems discados via linha telefônica. Permitiam a troca de mensagens, notícias e arquivos, formando as primeiras comunidades virtuais.
+* Usenet e E-mail Acadêmico: Redes descentralizadas operadas sobre a infraestrutura da ARPANET e CSNET, permitindo a discussão de fóruns temáticos (newsgroups) e comunicação entre pesquisadores e universidades em todo o mundo.

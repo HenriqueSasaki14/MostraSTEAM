@@ -1,0 +1,354 @@
+Web 2.0
+O que é?
+A Web 2.0 é o nome dado à fase em que a Internet ficou mais interativa e participativa.
+Antes, os sites eram principalmente usados para ler informações. Com a Web 2.0, os usuários começaram a produzir seus próprios conteúdos.
+Principais características
+Usuários criavam conteúdos.
+Pessoas podiam comentar e compartilhar.
+Sites ficaram mais interativos.
+Surgiram redes sociais populares.
+Vídeos e fotos passaram a ser compartilhados facilmente.
+Aplicações começaram a funcionar diretamente pela Internet.
+Exemplo
+Web antiga:
+A empresa publica uma informação → usuário lê.
+Web 2.0:
+Usuário publica → outras pessoas comentam → compartilham → criam novos conteúdos.
+Blogs
+O que eram?
+Blogs eram páginas na Internet onde as pessoas podiam publicar textos, opiniões, notícias e experiências pessoais.
+Eles ficaram muito populares no começo dos anos 2000.
+Por que foram importantes?
+Os blogs permitiram que pessoas comuns publicassem informações sem precisar trabalhar em um jornal ou saber programar.
+Isso ajudou a transformar o usuário em produtor de conteúdo.
+Exemplos de conteúdos
+Notícias
+Opiniões
+Tutoriais
+Histórias pessoais
+Tecnologia
+Música
+Jogos
+Wikipédia e Wikis
+Wikipédia
+A Wikipédia foi criada em 2001 e se tornou um dos maiores exemplos de conteúdo colaborativo na Internet.
+Qualquer usuário poderia ajudar a criar e melhorar artigos.
+Como funcionava?
+Uma pessoa cria um artigo.
+Depois:
+Outra pessoa corrige → outra adiciona informações → outra coloca referências.
+Assim, várias pessoas trabalham juntas para construir o conteúdo.
+Importância
+A Wikipédia mostrou que a Internet poderia ser usada para construir conhecimento de forma colaborativa.
+Redes Sociais
+O que mudou?
+Na década de 2000, começaram a surgir redes sociais que permitiam criar perfis e conectar pessoas.
+Alguns exemplos foram:
+Friendster
+MySpace
+Orkut
+Facebook
+Twitter
+O que as pessoas faziam?
+Os usuários podiam:
+Criar um perfil
+Adicionar amigos
+Publicar mensagens
+Compartilhar fotos
+Participar de comunidades
+Comentar publicações
+Isso mudou a forma como as pessoas se comunicavam pela Internet.
+Orkut
+O que foi?
+O Orkut foi uma das redes sociais mais populares no Brasil durante os anos 2000.
+Foi lançado em 2004.
+Comunidades
+Uma das principais características eram as comunidades.
+Existiam comunidades sobre praticamente qualquer assunto:
+Futebol
+Música
+Filmes
+Escolas
+Jogos
+Cidades
+Humor
+Importância no Brasil
+O Orkut teve uma grande participação dos brasileiros e ajudou a popularizar o uso de redes sociais no país.
+Facebook
+Surgimento
+O Facebook foi lançado em 2004.
+No início, era utilizado principalmente por estudantes, mas depois passou a ser utilizado por pessoas de todo o mundo.
+O que trouxe?
+A plataforma permitia:
+Criar perfis
+Adicionar amigos
+Publicar fotos
+Escrever mensagens
+Compartilhar conteúdos
+Curtir publicações
+O crescimento do Facebook ajudou a transformar as redes sociais em uma parte importante da Internet.
+
+YouTube
+Surgimento
+O YouTube foi criado em 2005.
+Sua principal ideia era permitir que as pessoas enviassem vídeos para a Internet e compartilhassem com outras pessoas.
+O que mudou?
+Antes, publicar vídeos na Internet era mais complicado.
+Com o YouTube:
+Gravar vídeo → enviar para o site → outras pessoas assistem.
+Impacto
+O YouTube ajudou a criar uma nova cultura de produção de conteúdo.
+Começaram a crescer:
+Vídeos educativos
+Tutoriais
+Videoclipes
+Humor
+Gameplays
+Vlogs
+Criadores de conteúdo
+
+AJAX
+O que é?
+AJAX é uma tecnologia que permitiu criar páginas muito mais interativas.
+Antes, quando o usuário fazia alguma ação, muitas vezes a página inteira precisava carregar novamente.
+Com AJAX, era possível atualizar apenas uma parte da página.
+Exemplo simples
+Antes:
+Clicar → página inteira recarrega.
+Com AJAX:
+Clicar → apenas a informação necessária é atualizada.
+Importância
+AJAX ajudou os sites a ficarem mais parecidos com programas instalados no computador.
+
+APIs REST
+O que é uma API?
+API é uma forma de permitir que diferentes sistemas se comuniquem.
+Por exemplo:
+Aplicativo → API → servidor → banco de dados.
+Um aplicativo pode pedir uma informação para um servidor através de uma API.
+Por que foi importante?
+As APIs ajudaram diferentes serviços a trabalharem juntos.
+Isso permitiu criar:
+Aplicativos
+Sites conectados
+Sistemas de mapas
+Serviços online
+Redes sociais integradas
+
+RSS
+O que era?
+RSS era uma tecnologia usada para acompanhar atualizações de sites.
+Em vez de entrar em vários sites procurando novidades, o usuário podia utilizar um leitor de RSS.
+Exemplo
+Site publica uma notícia → RSS informa a atualização → leitor mostra a novidade.
+Foi muito utilizado em:
+Blogs
+Sites de notícias
+Podcasts
+Sites especializados
+
+Computação em Nuvem
+O que é?
+Computação em nuvem significa utilizar servidores, armazenamento e programas através da Internet.
+Antes, uma empresa precisava comprar seus próprios servidores.
+Com a nuvem, ela poderia utilizar servidores de uma empresa especializada.
+Antes
+Empresa → compra computador/servidor → instala → mantém.
+Com a nuvem
+Empresa → Internet → serviço de nuvem.
+Vantagens
+Menor necessidade de equipamentos próprios.
+Fácil aumento de capacidade.
+Acesso pela Internet.
+Manutenção feita pelo provedor.
+Possibilidade de pagar pelo uso.
+
+ AWS
+O que é?
+A AWS, da Amazon, tornou-se uma das principais empresas de computação em nuvem.
+Em 2006, lançou serviços como:
+Amazon S3
+Amazon EC2
+Amazon S3
+Serviço utilizado para armazenar arquivos e dados na nuvem.
+Amazon EC2
+Permitia utilizar computadores virtuais pela Internet.
+Importância
+Esses serviços ajudaram empresas e programadores a utilizarem infraestrutura de computadores sem precisar comprar todos os equipamentos.
+
+Google App Engine
+O que era?
+O Google App Engine surgiu em 2008.
+Ele permitia que desenvolvedores colocassem suas aplicações na infraestrutura do Google.
+Funcionamento
+O programador:
+Cria o programa → envia para a plataforma → aplicação fica disponível na Internet.
+Isso facilitou a criação e hospedagem de aplicações online.
+
+SaaS
+O que significa?
+SaaS significa Software as a Service, ou "Software como Serviço".
+A ideia é utilizar um programa pela Internet, sem precisar instalar tudo no computador.
+Software tradicional
+Comprar → instalar → atualizar → utilizar.
+SaaS
+Entrar no serviço → utilizar pela Internet.
+Exemplo
+A Salesforce foi uma das empresas pioneiras nesse modelo, oferecendo sistemas empresariais pela Internet.
+
+Napster e P2P
+O que era o Napster?
+O Napster foi um serviço muito popular de compartilhamento de músicas pela Internet.
+Ele utilizava o conceito de P2P, ou Peer-to-Peer.
+O que significa P2P?
+É uma forma de comunicação em que computadores podem compartilhar arquivos diretamente entre si.
+Importância
+O Napster mostrou que a Internet poderia ser utilizada para distribuir grandes quantidades de arquivos entre usuários.
+Também provocou grandes discussões sobre direitos autorais e pirataria digital.
+
+BitTorrent
+O que é?
+O BitTorrent também utiliza o conceito de P2P.
+Em vez de um único servidor enviar um arquivo para todos, diferentes usuários podem compartilhar partes do arquivo entre si.
+Exemplo simples
+Usuário A → parte do arquivo
+Usuário B → parte do arquivo
+Usuário C → parte do arquivo
+        ↓
+     Usuário D
+Isso permitia distribuir arquivos grandes de maneira mais eficiente.
+
+Google e PageRank
+O que é PageRank?
+PageRank foi uma tecnologia importante utilizada pelo Google para ajudar a organizar os resultados das buscas.
+Uma das ideias era analisar os links entre páginas para ajudar a determinar a importância delas.
+Consequência
+Os sites começaram a se preocupar cada vez mais com a posição nos resultados de busca.
+Assim, o SEO ganhou importância.
+SEO significa:
+Search Engine Optimization
+Ou seja, técnicas para melhorar a posição de um site nos mecanismos de busca.
+
+Segurança Digital
+Com o crescimento da Internet, também aumentaram os problemas de segurança.
+Principais ameaças
+Vírus
+Worms
+Spam
+Phishing
+Malware
+Roubo de contas
+Por que aumentou?
+Mais pessoas começaram a utilizar Internet, e cada vez mais informações pessoais passaram a ficar online.
+Por isso, segurança digital deixou de ser um problema apenas para especialistas e passou a fazer parte da vida dos usuários comuns.
+
+Frameworks e programação
+A Web 2.0 também trouxe mudanças na programação.
+Ruby on Rails
+Framework utilizado para facilitar a criação de aplicações Web utilizando Ruby.
+Django
+Framework para desenvolvimento Web utilizando Python.
+jQuery
+Biblioteca JavaScript lançada em 2006.
+Facilitou a criação de páginas interativas e o uso de AJAX.
+
+Impacto Social
+A Web 2.0 mudou a maneira como as pessoas utilizavam a Internet.
+Comunicação
+As pessoas passaram a se comunicar mais através de:
+Redes sociais
+Mensageiros
+Blogs
+Fóruns
+E-mail
+Produção de conteúdo
+Qualquer pessoa poderia criar e publicar conteúdo.
+Conhecimento
+Projetos como a Wikipédia permitiram que milhares de pessoas colaborassem para criar informações.
+Relacionamentos
+As redes sociais facilitaram a criação e manutenção de contatos pela Internet.
+
+Impacto Cultural
+A Web 2.0 mudou a cultura da Internet.
+Antes:
+Poucas empresas produziam grande parte do conteúdo.
+Depois:
+Milhões de usuários passaram a produzir e compartilhar conteúdo.
+Isso ajudou a popularizar:
+Memes
+Vídeos virais
+Blogs
+Comunidades online
+Criadores de conteúdo
+Redes sociais
+Fóruns
+A cultura passou a se espalhar pela Internet em uma velocidade muito maior.
+
+Impacto Econômico
+A Web 2.0 também criou novas oportunidades de negócios.
+Novos modelos
+Publicidade online
+Redes sociais
+Comércio eletrônico
+Serviços por assinatura
+Computação em nuvem
+Software como serviço
+Plataformas digitais
+Empresas passaram a depender cada vez mais da Internet para vender produtos, divulgar marcas e oferecer serviços.
+
+Principais tecnologias da Fase 5
+Tecnologia
+Função
+Web 2.0
+Tornou a Web mais participativa
+AJAX
+Criou páginas mais dinâmicas
+API REST
+Permitiu comunicação entre sistemas
+RSS
+Acompanhou atualizações de sites
+Cloud Computing
+Ofereceu recursos pela Internet
+SaaS
+Permitiu utilizar softwares online
+P2P
+Permitiu compartilhamento entre usuários
+SEO
+Melhorou a posição nos mecanismos de busca
+Ruby on Rails
+Framework para desenvolvimento Web
+Django
+Framework Web para Python
+jQuery
+Facilitou a programação JavaScript
+
+Linha do tempo
+2001 — Wikipédia
+A Wikipédia é criada e começa a crescer como uma enciclopédia colaborativa.
+2004 — Orkut
+O Orkut é lançado e se torna extremamente popular no Brasil.
+2004 — Facebook
+O Facebook é criado e começa sua expansão como rede social.
+2005 — YouTube
+O YouTube surge permitindo o compartilhamento de vídeos.
+2006 — jQuery
+O jQuery é lançado e facilita o desenvolvimento de páginas interativas.
+2006 — AWS
+A Amazon amplia seus serviços de computação em nuvem com S3 e EC2.
+2008 — Google App Engine
+O Google apresenta uma plataforma para hospedagem de aplicações na nuvem.
+
+A Fase 5 foi o período em que a Internet ficou mais social, participativa e acessível.
+As principais mudanças foram:
+Web 2.0 — usuários começaram a produzir conteúdo.
+Blogs — qualquer pessoa podia publicar textos.
+Wikis — pessoas passaram a construir conhecimento juntas.
+Redes sociais — pessoas passaram a criar perfis e comunidades.
+YouTube — vídeos passaram a ser publicados facilmente.
+AJAX e APIs — sites ficaram mais interativos e conectados.
+Computação em nuvem — servidores e armazenamento passaram a ser oferecidos pela Internet.
+SaaS — programas passaram a ser utilizados como serviços online.
+P2P — usuários passaram a compartilhar arquivos diretamente.
+Segurança digital — vírus, spam e golpes passaram a fazer parte da preocupação dos usuários.
+Ideia principal para apresentar
+A Web 2.0 transformou a Internet de um espaço onde as pessoas principalmente consumiam informações em uma plataforma onde elas também podiam criar, compartilhar, conversar e colaborar. Ao mesmo tempo, a computação em nuvem começou a mudar a forma como programas, dados e servidores eram utilizados.

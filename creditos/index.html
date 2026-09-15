@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR" data-raiz="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Créditos e fontes — RetroNet</title>
+    <meta
+      name="description"
+      content="Integrantes do grupo, fontes históricas e crédito das imagens usadas na RetroNet."
+    />
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D0F12'/%3E%3Crect x='7' y='21' width='18' height='4' fill='%23FFB000'/%3E%3C/svg%3E"
+    />
+
+    <link rel="stylesheet" href="../assets/css/fontes.css" />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/shell.css" />
+    <link rel="stylesheet" href="../assets/css/construcao.css" />
+
+    <style>
+      /* Provisório: a página de créditos é a etapa 5 do plano.
+         Por enquanto ela já lista o crédito de cada imagem, que é
+         a parte que não pode faltar — nenhuma fase vai ao ar sem
+         as referências visíveis (regra de negócio). */
+      .creditos {
+        display: grid;
+        gap: var(--e-6);
+        padding-block: var(--e-7) var(--e-8);
+      }
+      .creditos__imagens {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: var(--e-3);
+        margin: 0;
+      }
+      .credito {
+        padding: var(--e-3) var(--e-4);
+        border: var(--borda-fina);
+        border-radius: var(--raio-m);
+        background: var(--fundo-elevado);
+        font-size: var(--t-micro);
+        line-height: 1.5;
+      }
+      .credito__assunto {
+        display: block;
+        font-family: var(--fonte-titulo);
+        font-size: var(--t-pequeno);
+        font-weight: 700;
+        color: var(--titulo);
+        margin-bottom: 2px;
+      }
+      .credito__licenca {
+        color: var(--destaque-texto);
+        font-family: var(--fonte-mono);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main id="conteudo" class="conteudo-principal">
+      <div class="envoltorio creditos">
+        <p class="etiqueta">RetroNet</p>
+        <h1>Créditos e fontes</h1>
+
+        <div class="em-construcao__aviso">
+          <p><span class="marcador-pendente">PÁGINA INCOMPLETA</span></p>
+          <p>
+            Etapa 5 do plano. Faltam os nomes dos integrantes e a lista de
+            fontes históricas de cada fase. O crédito das imagens, abaixo, já
+            está completo e é gerado automaticamente.
+          </p>
+        </div>
+
+        <section>
+          <h2>Integrantes</h2>
+          <p>
+            <span class="marcador-pendente">PENDENTE: nomes dos integrantes</span>
+            — 3º Ano A, Curso Técnico Integrado ao Ensino Médio. Matéria:
+            Modelagem de Sistemas.
+          </p>
+        </section>
+
+        <section>
+          <h2>Fontes históricas</h2>
+          <p>
+            <span class="marcador-pendente">PENDENTE: referências por fase</span>
+            — toda data, nome e invenção precisa estar confirmada em pelo menos
+            duas fontes independentes antes de entrar no site.
+          </p>
+        </section>
+
+        <section>
+          <h2>Imagens</h2>
+          <p>
+            Todas as imagens vêm do Wikimedia Commons e estão em domínio público
+            ou sob licença Creative Commons. A lista é gerada por
+            <code>ferramentas/baixar_retratos.py</code>, que recusa qualquer
+            arquivo sem licença livre confirmada.
+          </p>
+          <ul class="creditos__imagens"></ul>
+        </section>
+
+        <div data-moldura="navegacao"></div>
+      </div>
+    </main>
+
+    <div data-moldura="rodape"></div>
+
+    <script src="../assets/js/fases.js"></script>
+    <script src="../assets/js/som.js"></script>
+    <script src="../assets/js/shell.js"></script>
+    <script src="../assets/retratos/creditos.js"></script>
+    <script>
+      /* Monta a lista de crédito das imagens. */
+      (function () {
+        var lista = document.querySelector(".creditos__imagens");
+        var imagens = (window.RetroNet && window.RetroNet.CREDITOS_IMAGENS) || [];
+
+        function limpar(txt) {
+          return String(txt == null ? "" : txt).replace(/[&<>"]/g, function (c) {
+            return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+          });
+        }
+
+        lista.innerHTML = imagens
+          .map(function (img) {
+            return (
+              '<li class="credito">' +
+              '<span class="credito__assunto">' +
+              limpar(img.assunto) +
+              "</span>" +
+              "Autoria: " +
+              limpar(img.autor) +
+              "<br />" +
+              '<span class="credito__licenca">' +
+              limpar(img.licenca) +
+              "</span><br />" +
+              '<a href="' +
+              limpar(img.pagina) +
+              '" target="_blank" rel="noopener">Ver no Wikimedia Commons</a>' +
+              "</li>"
+            );
+          })
+          .join("");
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+/* ============================================================
+   RetroNet — base
+   Reset enxuto, tipografia padrão e os poucos componentes que
+   valem para o site inteiro (botão, link, foco visível).
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* Trava de segurança contra rolagem horizontal. As estéticas mais
+     agressivas (o marquee da fase 4, por exemplo) tendem a vazar para
+     fora da tela. "clip" corta sem criar um contêiner de rolagem, e
+     por isso não quebra o position:sticky do cabeçalho — "hidden"
+     quebraria. Isto não substitui arrumar o vazamento na origem. */
+  overflow-x: clip;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-size: var(--t-corpo);
+  line-height: var(--altura-linha);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: var(--titulo);
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  line-height: var(--altura-linha-titulo);
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--t-h1);
+}
+h2 {
+  font-size: var(--t-h2);
+}
+h3 {
+  font-size: var(--t-h3);
+}
+
+p {
+  margin: 0 0 var(--e-4);
+  max-width: var(--largura-leitura);
+  text-wrap: pretty;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  color: var(--destaque-texto);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color var(--mov-rapido) var(--curva);
+}
+
+a:hover {
+  color: var(--titulo);
+}
+
+/* ------------------------------------------------------------
+   Foco visível. Anel duplo — escuro por fora, âmbar por dentro —
+   para aparecer tanto sobre o fundo escuro quanto sobre as
+   estéticas claras das fases 3 e 4.
+   ------------------------------------------------------------ */
+:focus-visible {
+  outline: 2px solid var(--botao);
+  outline-offset: 2px;
+  border-radius: var(--raio-p);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ------------------------------------------------------------
+   Pular para o conteúdo — primeiro elemento focável da página.
+   ------------------------------------------------------------ */
+.pular-para-conteudo {
+  position: absolute;
+  left: var(--e-4);
+  top: var(--e-4);
+  z-index: calc(var(--z-menu) + 1);
+  padding: var(--e-2) var(--e-4);
+  background: var(--botao);
+  color: var(--botao-texto);
+  font-weight: 600;
+  border-radius: var(--raio-p);
+  transform: translateY(calc(-100% - var(--e-5)));
+  transition: transform var(--mov-medio) var(--curva);
+}
+
+.pular-para-conteudo:focus {
+  transform: translateY(0);
+  color: var(--botao-texto);
+}
+
+/* ------------------------------------------------------------
+   Só para leitor de tela.
+   ------------------------------------------------------------ */
+.so-leitor-de-tela {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================================
+   Botões
+   ============================================================ */
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-3);
+  padding: var(--e-3) var(--e-6);
+  font-family: var(--fonte-titulo);
+  font-size: var(--t-destaque);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  border-radius: var(--raio-m);
+  transition: transform var(--mov-rapido) var(--curva),
+    box-shadow var(--mov-rapido) var(--curva),
+    background-color var(--mov-rapido) var(--curva);
+}
+
+.botao--principal {
+  background: var(--botao);
+  color: var(--botao-texto);
+  box-shadow: 0 0 0 0 rgb(255 176 0 / 0.45);
+}
+
+.botao--principal:hover {
+  color: var(--botao-texto);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgb(255 176 0 / 0.7);
+}
+
+.botao--principal:active {
+  transform: translateY(0);
+}
+
+.botao--discreto {
+  color: var(--texto);
+  border: var(--borda-fina);
+  font-size: var(--t-corpo);
+  padding: var(--e-3) var(--e-5);
+}
+
+.botao--discreto:hover {
+  color: var(--titulo);
+  border-color: var(--destaque);
+  background: var(--fundo-elevado);
+}
+
+/* Seta do botão principal: anda um pouco no hover, reforçando
+   a ideia de avançar no tempo. */
+.botao__seta {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  transition: transform var(--mov-medio) var(--curva);
+}
+
+.botao:hover .botao__seta {
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   Rótulo monoespaçado usado como etiqueta de seção
+   ("FASE 1 / 8", "ARQUIVO", "CHAVE DO DIA"...)
+   ============================================================ */
+.etiqueta {
+  display: inline-block;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--destaque-texto);
+}

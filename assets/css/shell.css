@@ -1,0 +1,542 @@
+/* ============================================================
+   RetroNet — moldura
+   ------------------------------------------------------------
+   Cabeçalho, menu das oito fases, indicador de progresso,
+   navegação anterior/próxima e a transição entre páginas.
+   Este arquivo é igual nas oito fases. Não edite para agradar a
+   estética da sua fase: use --destaque no miolo.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   Largura padrão do conteúdo
+   ------------------------------------------------------------ */
+.envoltorio {
+  width: min(100% - var(--e-8), 1180px);
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  .envoltorio {
+    width: min(100% - var(--e-5), 1180px);
+  }
+}
+
+/* ============================================================
+   Cabeçalho
+   ============================================================ */
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-cabecalho);
+  height: var(--altura-cabecalho);
+  display: flex;
+  align-items: center;
+  gap: var(--e-5);
+  padding-inline: var(--e-5);
+  background: color-mix(in srgb, var(--fundo) 88%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: var(--borda-fina);
+}
+
+/* Fio fino na cor da fase, logo abaixo do cabeçalho: é o único
+   ponto da moldura que muda de época, e é de propósito. */
+.cabecalho::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -1px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--destaque) 20%,
+    var(--destaque) 80%,
+    transparent
+  );
+  opacity: 0.75;
+  transition: background var(--mov-lento) var(--curva);
+}
+
+/* ---------- logo ---------- */
+.logo {
+  display: inline-flex;
+  align-items: baseline;
+  font-family: var(--fonte-mono);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  letter-spacing: -0.02em;
+  color: var(--titulo);
+  text-decoration: none;
+  flex: none;
+}
+
+.logo:hover {
+  color: var(--titulo);
+}
+
+.logo__cursor {
+  color: var(--botao);
+  animation: piscar 1.06s steps(1, end) infinite;
+}
+
+@keyframes piscar {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo__cursor {
+    animation: none;
+  }
+}
+
+/* ============================================================
+   Indicador de progresso — "Fase 3 de 8"
+   Puramente posicional: mostra onde o visitante está na linha do
+   tempo, sem guardar nada. O site não usa localStorage nem
+   qualquer outro armazenamento (regra de negócio: sem cadastro,
+   sem coleta de dados).
+   ============================================================ */
+
+.progresso {
+  display: flex;
+  align-items: center;
+  gap: var(--e-4);
+  margin-inline: auto;
+}
+
+.progresso__rotulo {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texto);
+  white-space: nowrap;
+}
+
+.progresso__rotulo b {
+  color: var(--destaque-texto);
+}
+
+.progresso__trilho {
+  display: flex;
+  gap: 3px;
+}
+
+.progresso__marca {
+  width: 26px;
+  height: 4px;
+  border-radius: var(--raio-total);
+  background: var(--borda);
+  transition: background var(--mov-medio) var(--curva),
+    transform var(--mov-medio) var(--curva);
+}
+
+/* fases já percorridas até aqui, na ordem da linha do tempo */
+.progresso__marca--passada {
+  background: color-mix(in srgb, var(--destaque) 45%, var(--borda));
+}
+
+.progresso__marca--atual {
+  background: var(--destaque);
+  transform: scaleY(1.75);
+}
+
+@media (max-width: 860px) {
+  .progresso__trilho {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Ações do cabeçalho (som e menu)
+   ============================================================ */
+
+.cabecalho__acoes {
+  display: flex;
+  align-items: center;
+  gap: var(--e-2);
+  margin-left: auto;
+  flex: none;
+}
+
+.acao {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-2);
+  height: 34px;
+  padding-inline: var(--e-3);
+  border: var(--borda-fina);
+  border-radius: var(--raio-p);
+  color: var(--texto);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color var(--mov-rapido) var(--curva),
+    border-color var(--mov-rapido) var(--curva),
+    background-color var(--mov-rapido) var(--curva);
+}
+
+.acao:hover {
+  color: var(--titulo);
+  border-color: var(--destaque);
+  background: var(--fundo-elevado);
+}
+
+.acao svg {
+  width: 15px;
+  height: 15px;
+  flex: none;
+}
+
+.acao--som[aria-pressed="true"] {
+  color: var(--botao);
+  border-color: color-mix(in srgb, var(--botao) 55%, transparent);
+}
+
+@media (max-width: 560px) {
+  .acao__texto {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Menu das oito fases (sobreposição)
+   ============================================================ */
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-menu);
+  display: grid;
+  place-items: start center;
+  padding: var(--e-7) var(--e-5) var(--e-6);
+  overflow-y: auto;
+  background: color-mix(in srgb, var(--fundo) 96%, transparent);
+  backdrop-filter: blur(18px);
+}
+
+.menu[hidden] {
+  display: none;
+}
+
+.menu__caixa {
+  width: min(100%, 980px);
+  animation: menu-entrar var(--mov-medio) var(--curva) both;
+}
+
+@keyframes menu-entrar {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
+.menu__topo {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--e-5);
+  margin-bottom: var(--e-6);
+  padding-bottom: var(--e-4);
+  border-bottom: var(--borda-fina);
+}
+
+.menu__titulo {
+  font-size: var(--t-h3);
+}
+
+.menu__lista {
+  display: grid;
+  gap: var(--e-3);
+}
+
+/* ---------- cartão de fase ---------- */
+.fase-item {
+  --cor-item: var(--borda);
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--e-5);
+  padding: var(--e-4) var(--e-5);
+  border: var(--borda-fina);
+  border-left: 3px solid var(--cor-item);
+  border-radius: var(--raio-m);
+  background: var(--fundo-elevado);
+  color: var(--texto);
+  text-decoration: none;
+  transition: border-color var(--mov-rapido) var(--curva),
+    transform var(--mov-rapido) var(--curva),
+    background-color var(--mov-rapido) var(--curva);
+}
+
+.fase-item:hover {
+  color: var(--texto);
+  transform: translateX(4px);
+  border-color: color-mix(in srgb, var(--cor-item) 60%, var(--borda));
+  border-left-color: var(--cor-item);
+  background: color-mix(in srgb, var(--cor-item) 8%, var(--fundo-elevado));
+}
+
+.fase-item[aria-current="page"] {
+  background: color-mix(in srgb, var(--cor-item) 14%, var(--fundo-elevado));
+  border-color: color-mix(in srgb, var(--cor-item) 45%, var(--borda));
+}
+
+.fase-item__numero {
+  font-family: var(--fonte-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-item);
+  text-align: center;
+  /* O número é decorativo: o nome da fase já está no link. */
+  font-variant-numeric: tabular-nums;
+}
+
+.fase-item__texto {
+  min-width: 0;
+}
+
+.fase-item__epoca {
+  display: block;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texto);
+  opacity: 0.72;
+  margin-bottom: 2px;
+}
+
+.fase-item__titulo {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-size: var(--t-destaque);
+  font-weight: 700;
+  color: var(--titulo);
+  line-height: 1.25;
+}
+
+.fase-item__resumo {
+  display: block;
+  font-size: var(--t-pequeno);
+  margin-top: 2px;
+}
+
+.fase-item__interacao {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-2);
+  padding: var(--e-1) var(--e-3);
+  border: 1px solid color-mix(in srgb, var(--cor-item) 40%, transparent);
+  border-radius: var(--raio-total);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  color: var(--cor-item);
+  white-space: nowrap;
+}
+
+.fase-item__pendente {
+  border-style: dashed;
+  opacity: 0.8;
+}
+
+@media (max-width: 760px) {
+  .fase-item {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: var(--e-4);
+  }
+  .fase-item__interacao {
+    grid-column: 2;
+  }
+  .fase-item__resumo {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Navegação anterior / próxima (rodapé das fases)
+   ============================================================ */
+
+.navegacao-fases {
+  display: flex;
+  gap: var(--e-4);
+  justify-content: space-between;
+  align-items: stretch;
+  padding: var(--e-6) 0 var(--e-8);
+}
+
+.nav-seta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 0;
+  max-width: 320px;
+  padding: var(--e-4) var(--e-5);
+  border: var(--borda-fina);
+  border-radius: var(--raio-m);
+  background: var(--fundo-elevado);
+  color: var(--texto);
+  text-decoration: none;
+  transition: border-color var(--mov-rapido) var(--curva),
+    background-color var(--mov-rapido) var(--curva);
+}
+
+.nav-seta:hover {
+  color: var(--texto);
+  border-color: var(--destaque);
+  background: color-mix(in srgb, var(--destaque) 8%, var(--fundo-elevado));
+}
+
+.nav-seta--proxima {
+  margin-left: auto;
+  text-align: right;
+}
+
+.nav-seta__rotulo {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.nav-seta__titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  color: var(--titulo);
+  line-height: 1.25;
+}
+
+/* ============================================================
+   Rodapé
+   ============================================================ */
+
+.rodape {
+  border-top: var(--borda-fina);
+  padding: var(--e-6) 0;
+  font-size: var(--t-pequeno);
+}
+
+.rodape__conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-3) var(--e-6);
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.rodape__integrantes {
+  max-width: none;
+  margin: 0;
+}
+
+/* Marcador de conteúdo que ainda não existe. Some quando o
+   grupo preencher o dado de verdade. Ver também .pendencia. */
+/* Fundo âmbar sólido com texto quase preto: 10,5:1 sobre qualquer
+   superfície. Antes era texto âmbar sem fundo, o que funcionava na
+   moldura escura mas sumia nas fases de fundo claro (o papel da
+   fase 1, o plástico bege da fase 2). */
+.marcador-pendente {
+  display: inline-block;
+  padding: 2px var(--e-2);
+  border-radius: var(--raio-p);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--botao-texto);
+  background: var(--botao);
+}
+
+/* ============================================================
+   Transição entre fases — sensação de avanço no tempo
+   ------------------------------------------------------------
+   Um único movimento, contínuo, atravessando duas páginas:
+
+     SAÍDA     a cor da fase de destino entra pela esquerda e
+               cobre a tela inteira. Só então navegamos.
+     CHEGADA   na página nova, a mesma cor já está cobrindo tudo
+               e se recolhe para a direita, revelando o conteúdo.
+
+   Como as duas metades andam para o mesmo lado, o visitante vê
+   uma faixa de cor varrendo a tela — e não um corte seco.
+
+   A chegada é feita em CSS puro, sem JavaScript, de propósito: se
+   dependesse de script ela só começaria depois do DOMContentLoaded
+   e a página nova piscaria antes de ser coberta.
+   ============================================================ */
+
+/* ---------- saída ---------- */
+.travessia {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-travessia);
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    var(--cor-travessia, var(--botao)),
+    color-mix(in srgb, var(--cor-travessia, var(--botao)) 62%, var(--fundo))
+  );
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.travessia--saindo {
+  animation: travessia-cobrir var(--mov-travessia) var(--curva-saida) forwards;
+}
+
+@keyframes travessia-cobrir {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ---------- chegada ----------
+   A cor é a --destaque da própria página que está chegando, que é
+   exatamente a mesma cor usada na saída. Origem à direita: a borda
+   esquerda da faixa varre para a direita, continuando o movimento.
+
+   Fica no ::before do <html> para existir desde o primeiro quadro
+   pintado. As fases não devem usar este pseudo-elemento. */
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  /* Logo ABAIXO da animação de abertura: no primeiro carregamento da
+     home a tela preta do terminal tem que vir por cima, senão a
+     abertura começaria com uma varredura âmbar atravessando ela.
+     Acima de tudo o resto, inclusive do cabeçalho. */
+  z-index: calc(var(--z-abertura) - 1);
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    var(--destaque),
+    color-mix(in srgb, var(--destaque) 62%, var(--fundo))
+  );
+  /* Parado, fica invisível: se as animações estiverem desligadas,
+     nada cobre a página. */
+  transform: scaleX(0);
+  transform-origin: right center;
+  animation: travessia-revelar var(--mov-revelar) var(--curva) forwards;
+}
+
+@keyframes travessia-revelar {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}

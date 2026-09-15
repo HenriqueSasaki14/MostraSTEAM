@@ -1,0 +1,517 @@
+Fase 8 — Era Atual e Tendências Emergentes
+Período aproximado: anos 2020–presente
+A década de 2020 representa uma nova etapa da transformação digital. A internet deixou de ser apenas um meio para acessar sites e aplicativos e passou a funcionar como uma infraestrutura integrada à vida cotidiana. Inteligência artificial, computação em nuvem e edge computing, realidade aumentada, redes 5G, serviços digitais, automação e sistemas conectados passaram a atuar em conjunto.
+Um dos principais acontecimentos dessa fase foi a popularização da IA generativa, especialmente a partir do lançamento público do ChatGPT em novembro de 2022.
+________________
+
+1. IA generativa e a nova sociedade digital
+A Inteligência Artificial Generativa (IA generativa) é capaz de produzir novos conteúdos a partir de instruções humanas, chamados de prompts. Ela pode gerar textos, imagens, músicas, códigos, vídeos e outros tipos de conteúdo.
+A diferença em relação a sistemas tradicionais de IA é que, em vez de apenas classificar ou analisar informações, os modelos generativos conseguem produzir conteúdo novo.
+Principais tecnologias
+ChatGPT
+ É um sistema conversacional baseado em modelos de linguagem. Tornou-se um dos principais símbolos da popularização da IA generativa depois de seu lançamento em 30 de novembro de 2022.
+Microsoft Copilot
+ Integra IA generativa a produtos e serviços da Microsoft, auxiliando usuários em tarefas como criação de textos, análise de informações, programação e produtividade.
+Google Gemini
+ Família de modelos de IA do Google voltada para tarefas que envolvem linguagem, raciocínio e diferentes tipos de conteúdo.
+O que é um LLM?
+LLM (Large Language Model) significa Grande Modelo de Linguagem.
+É um modelo treinado com grandes quantidades de dados para compreender e produzir linguagem. GPT é uma família de modelos desse tipo.
+De forma simplificada:
+Dados → treinamento → modelo de linguagem → prompt → resposta
+Isso mudou a maneira como as pessoas interagem com computadores. Em vez de aprender comandos específicos, o usuário pode simplesmente descrever o que deseja em linguagem natural.
+________________
+
+2. Geração de imagens, vídeos e voz
+A IA generativa também transformou a produção audiovisual.
+Ferramentas como DALL-E, Midjourney e Stable Diffusion conseguem criar imagens a partir de descrições escritas.
+Por exemplo:
+"Crie uma cidade futurista brasileira em 2050, com carros autônomos e prédios sustentáveis."
+O sistema interpreta o texto e produz uma imagem correspondente.
+O DALL-E 3 representou uma evolução importante porque passou a interpretar melhor detalhes e instruções presentes nos prompts.
+Aplicações
+* publicidade;
+* jogos;
+* cinema;
+* design;
+* educação;
+* criação de personagens;
+* prototipagem;
+* ilustrações;
+* edição de fotografias;
+* produção de vídeos;
+* criação de vozes sintéticas.
+Problema dos deepfakes
+A mesma tecnologia pode ser utilizada para produzir deepfakes: conteúdos falsos extremamente realistas envolvendo rosto, voz ou movimentos de uma pessoa.
+Isso cria problemas relacionados a:
+* desinformação;
+* golpes;
+* falsificação de identidade;
+* manipulação política;
+* fraude;
+* direitos autorais;
+* privacidade.
+A preocupação deixou de ser apenas teórica. Relatórios de segurança recentes mostram grupos criminosos utilizando IA generativa para automatizar engenharia social, reconhecimento de alvos e produção de conteúdos fraudulentos.
+________________
+
+3. Agentes de IA
+Uma das tendências mais importantes depois dos chatbots é o desenvolvimento dos agentes de IA.
+Um chatbot normalmente responde a uma solicitação.
+Um agente pode receber um objetivo, planejar etapas, utilizar ferramentas, consultar informações, executar ações e verificar os resultados.
+Exemplo
+Uma pessoa poderia solicitar:
+"Organize minha viagem para São Paulo."
+Um agente poderia, dependendo das ferramentas disponíveis:
+1. pesquisar opções;
+2. comparar preços;
+3. montar um roteiro;
+4. consultar horários;
+5. organizar informações;
+6. produzir um planejamento final.
+Isso representa uma mudança importante:
+IA tradicional → responde
+IA generativa → cria
+Agente de IA → planeja + utiliza ferramentas + executa tarefas
+Essa tendência pode transformar programação, atendimento ao cliente, administração, pesquisa e automação empresarial.
+________________
+
+4. Realidade aumentada, virtual e mista
+A década de 2020 também trouxe uma evolução dos ambientes imersivos.
+Realidade Virtual — VR
+Coloca o usuário dentro de um ambiente totalmente virtual.
+Exemplo:
+Meta Quest
+O usuário utiliza um headset e visualiza um ambiente digital.
+Realidade Aumentada — AR
+Adiciona elementos digitais ao mundo real.
+Exemplo:
+Uma câmera mostra uma rua real e o sistema coloca informações ou objetos virtuais sobre ela.
+Realidade Mista — MR
+Combina elementos virtuais e físicos de maneira mais integrada.
+O objeto virtual pode parecer estar realmente presente no ambiente.
+O Meta Quest 3/3S, por exemplo, utiliza câmeras para permitir experiências de realidade mista, combinando o ambiente físico com elementos digitais.
+________________
+
+5. Computação espacial
+A computação espacial procura transformar o espaço físico em uma interface para computadores.
+Em vez de interagir apenas através de:
+mouse + teclado + tela
+o usuário pode utilizar:
+olhos + mãos + voz + espaço físico
+Um dos exemplos mais importantes é o Apple Vision Pro, apresentado pela Apple em 2023 e lançado comercialmente nos Estados Unidos em fevereiro de 2024.
+O aparelho utiliza visão, mãos e voz para controlar uma interface tridimensional.
+Aplicações
+* educação;
+* treinamento profissional;
+* arquitetura;
+* medicina;
+* engenharia;
+* jogos;
+* entretenimento;
+* reuniões;
+* visualização de projetos 3D.
+Na indústria, por exemplo, modelos tridimensionais podem ser utilizados para treinamento e manutenção de equipamentos. A Apple já apresentou aplicações empresariais do Vision Pro envolvendo design, treinamento e trabalho remoto.
+________________
+
+6. Metaverso
+O metaverso é uma ideia de ambientes digitais persistentes e interativos nos quais pessoas podem trabalhar, estudar, jogar e socializar utilizando representações digitais.
+É importante não confundir:
+Realidade virtual = tecnologia de imersão.
+Realidade aumentada = adiciona elementos digitais ao mundo real.
+Metaverso = conceito de ambientes digitais persistentes e sociais.
+O metaverso ganhou enorme atenção no início dos anos 2020, mas sua adoção não aconteceu exatamente na velocidade inicialmente prevista. Atualmente, muitos dos conceitos associados a ele continuam presentes em jogos, realidade mista, mundos virtuais, avatares e experiências sociais imersivas.
+________________
+
+7. Web3, blockchain, NFTs e DAOs
+Outra tendência da década foi a chamada Web3.
+A Web3 propõe uma internet mais descentralizada, utilizando tecnologias como:
+* blockchain;
+* criptomoedas;
+* smart contracts;
+* NFTs;
+* DAOs.
+A ideia central é reduzir a dependência de grandes plataformas centralizadas e permitir maior propriedade e controle dos usuários sobre ativos e identidades digitais.
+NFT
+NFT (Non-Fungible Token) é um ativo digital registrado em uma blockchain que possui identificação própria.
+Pode representar:
+* arte digital;
+* itens de jogos;
+* colecionáveis;
+* ingressos;
+* certificados;
+* outros ativos digitais.
+DAO
+DAO (Decentralized Autonomous Organization) é uma organização que utiliza contratos e mecanismos baseados em blockchain para coordenar decisões e recursos de forma descentralizada.
+Em determinadas DAOs, participantes podem utilizar tokens para votar sobre decisões da organização.
+Importante
+A Web3 não significa simplesmente "uma nova versão da internet". É uma visão de como a internet poderia funcionar, baseada em maior descentralização e propriedade digital.
+________________
+
+8. Edge Computing
+Com bilhões de dispositivos conectados, enviar absolutamente todos os dados para grandes servidores centralizados pode gerar problemas de latência e consumo de banda.
+É aí que entra o Edge Computing.
+Em vez de:
+Dispositivo → Internet → Data Center → processamento
+temos:
+Dispositivo → processamento próximo do usuário → resultado
+Isso é especialmente importante para:
+* IoT;
+* carros autônomos;
+* cidades inteligentes;
+* indústria;
+* câmeras inteligentes;
+* realidade aumentada;
+* aplicações de IA em tempo real.
+A IBM define edge computing como uma arquitetura distribuída que aproxima aplicações e processamento das fontes de dados, reduzindo latência e problemas de largura de banda.
+Exemplo
+Uma câmera inteligente de uma cidade pode identificar um acidente localmente e enviar apenas o alerta para o servidor, em vez de transmitir continuamente todo o vídeo.
+________________
+
+9. Computação quântica
+A computação quântica representa uma mudança fundamental em relação aos computadores tradicionais.
+Computadores convencionais trabalham principalmente com bits, representados por 0 ou 1.
+Computadores quânticos utilizam qubits, que exploram propriedades da mecânica quântica.
+Ainda estamos em uma fase inicial da computação quântica. O grande interesse está na possibilidade de resolver determinados problemas que seriam extremamente difíceis para computadores convencionais.
+Possíveis aplicações
+* descoberta de medicamentos;
+* química;
+* otimização;
+* simulações científicas;
+* materiais;
+* criptografia.
+Mas existe também uma preocupação importante:
+computadores quânticos suficientemente poderosos poderiam quebrar determinados sistemas criptográficos atualmente utilizados.
+Por isso surgiu a criptografia pós-quântica.
+________________
+
+10. Criptografia pós-quântica
+A PQC (Post-Quantum Cryptography) busca criar algoritmos criptográficos capazes de resistir a futuros computadores quânticos.
+Em agosto de 2024, o NIST publicou três padrões principais:
+* FIPS 203 — ML-KEM
+* FIPS 204 — ML-DSA
+* FIPS 205 — SLH-DSA
+Eles foram desenvolvidos para proteger sistemas contra futuros ataques de computadores quânticos.
+Em 2025, o NIST também selecionou o algoritmo HQC para padronização adicional.
+Portanto, a segurança digital já está se preparando para uma tecnologia que ainda está em desenvolvimento.
+________________
+
+11. 5G e o início do 6G
+O 5G tornou possível aumentar significativamente a velocidade, capacidade e quantidade de dispositivos conectados.
+Ele é importante para:
+* IoT;
+* carros conectados;
+* fábricas inteligentes;
+* realidade aumentada;
+* cidades inteligentes;
+* automação;
+* comunicação de baixa latência.
+O próximo passo é o 6G, conhecido pela UIT como IMT-2030.
+A UIT publicou o framework do 6G em 2023. Em 2026, os especialistas da organização concluíram os requisitos técnicos de desempenho para a próxima geração.
+Entre os objetivos estão:
+* comunicação imersiva;
+* conectividade onipresente;
+* inteligência artificial integrada às redes;
+* comunicação ultraconfiável;
+* sensoriamento integrado;
+* menor latência;
+* maior eficiência energética.
+A previsão do processo internacional é que os padrões finais do 6G sejam aprovados por volta de 2030.
+________________
+
+12. Internet via satélite
+Outra transformação importante é a expansão da internet via satélite de órbita baixa.
+Empresas como a Starlink utilizam grandes constelações de satélites para fornecer conexão em locais onde redes terrestres são difíceis ou caras de instalar.
+Isso pode ser especialmente importante para:
+* áreas rurais;
+* regiões isoladas;
+* embarcações;
+* aviação;
+* áreas afetadas por desastres;
+* locais sem infraestrutura tradicional.
+A tendência mais ampla é a integração entre redes terrestres + satélites + 5G/6G, criando conectividade mais abrangente.
+________________
+
+13. Cibersegurança e Zero Trust
+Com mais dispositivos, serviços em nuvem e trabalho remoto, o modelo tradicional de segurança tornou-se insuficiente.
+Surge então o conceito de Zero Trust.
+A ideia básica é:
+"Nunca confie automaticamente; sempre verifique."
+Em vez de considerar seguro tudo que está dentro da rede da empresa, cada usuário e dispositivo precisa ser autenticado e autorizado.
+Os principais princípios incluem:
+* verificar continuamente;
+* menor privilégio possível;
+* assumir que uma invasão pode acontecer;
+* segmentar a rede.
+________________
+
+14. Deepfakes e novos riscos digitais
+A IA também aumentou a capacidade de produzir conteúdo falso.
+Um deepfake pode modificar ou gerar:
+* rosto;
+* voz;
+* vídeo;
+* expressões;
+* movimentos.
+Isso pode ser usado tanto para entretenimento quanto para crimes.
+Um dos grandes desafios atuais é determinar:
+"Esse conteúdo foi realmente produzido por uma pessoa ou por uma IA?"
+Por isso estão crescendo tecnologias de:
+* identificação de conteúdo sintético;
+* marcação de conteúdo gerado por IA;
+* autenticação de mídia;
+* rastreamento de origem;
+* segurança de identidade.
+________________
+
+15. Regulação e ética da Inteligência Artificial
+Quanto mais a IA entra na sociedade, maior fica a preocupação com seus impactos.
+Entre os principais problemas estão:
+Viés algorítmico
+Um sistema pode reproduzir ou ampliar preconceitos presentes nos dados utilizados para seu desenvolvimento.
+Privacidade
+Modelos de IA podem lidar com grandes quantidades de dados pessoais.
+Transparência
+Nem sempre é fácil entender por que um sistema chegou a determinada conclusão.
+Direitos autorais
+Surge a discussão sobre utilização de obras existentes no treinamento de modelos generativos.
+Responsabilidade
+Quando uma IA toma uma decisão errada, surge a pergunta:
+Quem é responsável?
+________________
+
+16. Regulamentação da IA
+A regulamentação começou a avançar significativamente durante essa fase.
+Um dos exemplos mais importantes é o AI Act da União Europeia.
+A legislação entrou em vigor em 1º de agosto de 2024 e possui implementação progressiva. Em 2026, grande parte de suas regras começou a entrar em aplicação, incluindo regras de transparência e mecanismos de fiscalização.
+Além da regulamentação, organizações como o NIST desenvolveram estruturas para gerenciamento dos riscos de IA.
+O NIST AI Risk Management Framework possui uma versão específica para IA generativa, publicada em 2024, destinada a ajudar organizações a identificar e administrar riscos relacionados a essas tecnologias.
+________________
+
+17. Digitalização total da sociedade
+A transformação digital deixou de estar concentrada apenas no computador.
+Hoje ela está presente em praticamente todas as áreas.
+Bancos digitais
+Aplicativos permitem:
+* abrir contas;
+* realizar transferências;
+* pagar contas;
+* investir;
+* solicitar crédito;
+* realizar pagamentos instantâneos.
+Os serviços financeiros digitais incluem carteiras digitais, pagamentos eletrônicos, empréstimos, investimentos e seguros.
+No Brasil, o Pix tornou-se um dos exemplos mais importantes dessa transformação.
+________________
+
+18. Telemedicina
+A saúde também passou por forte digitalização.
+A telemedicina permite realizar determinadas consultas, acompanhamentos e serviços médicos à distância.
+Entre os benefícios estão:
+* maior acesso;
+* redução de deslocamentos;
+* acompanhamento remoto;
+* atendimento de regiões afastadas;
+* integração de informações.
+A Organização Mundial da Saúde destaca a telemedicina como uma ferramenta importante para ampliar o acesso aos serviços de saúde, embora sua implementação dependa de infraestrutura, segurança e políticas adequadas.
+________________
+
+19. Educação online
+A educação passou a utilizar cada vez mais:
+* plataformas digitais;
+* videoconferência;
+* ambientes virtuais de aprendizagem;
+* inteligência artificial;
+* simuladores;
+* realidade virtual;
+* conteúdos interativos.
+A IA generativa adicionou uma nova dimensão, podendo auxiliar na criação de materiais, explicação de conteúdos, tradução e personalização da aprendizagem.
+Por outro lado, a UNESCO alerta para questões como privacidade, desigualdade, regulamentação, inclusão e uso responsável da IA na educação.
+________________
+
+20. Governo digital
+Os governos também estão passando por uma transformação digital.
+No Brasil, o GOV.BR reúne milhares de serviços públicos digitais e utiliza recursos como identidade digital, assinatura eletrônica e integração de sistemas.
+A Estratégia Nacional de Governo Digital busca ampliar:
+* eficiência;
+* transparência;
+* acessibilidade;
+* segurança;
+* participação cidadã;
+* integração de dados.
+________________
+
+21. Cidades inteligentes
+Uma cidade inteligente utiliza tecnologia e dados para melhorar seus serviços.
+Pode utilizar:
+Sensores → Internet → Dados → IA → Decisão → Serviço público
+Exemplos
+* semáforos inteligentes;
+* iluminação automática;
+* monitoramento de trânsito;
+* sensores ambientais;
+* coleta inteligente de lixo;
+* gerenciamento de energia;
+* segurança;
+* transporte público conectado.
+A combinação de IoT + 5G + Edge Computing + IA é especialmente importante para esse modelo.
+________________
+
+22. Linguagens de programação atuais
+A década de 2020 também apresenta mudanças no desenvolvimento de software.
+Python
+Continua extremamente importante em:
+* IA;
+* ciência de dados;
+* automação;
+* desenvolvimento web;
+* computação científica.
+Sua sintaxe relativamente simples também facilita o aprendizado.
+TypeScript
+É uma evolução do JavaScript que adiciona tipagem estática, ajudando na construção de aplicações maiores e mais complexas.
+É muito utilizado no desenvolvimento web moderno.
+Rust
+Rust ganhou importância por combinar desempenho elevado com mecanismos de segurança de memória.
+É utilizado especialmente em:
+* sistemas;
+* infraestrutura;
+* aplicações de alto desempenho;
+* ferramentas;
+* segurança.
+A linguagem possui mecanismos que verificam diversas condições de segurança de memória durante a compilação.
+WebAssembly
+O WebAssembly (Wasm) permite executar código de alto desempenho dentro de navegadores.
+Ele pode receber código compilado de linguagens como Rust, C e C++, executando-o com desempenho próximo ao nativo em determinados casos.
+Isso amplia o que aplicações web podem fazer.
+________________
+
+23. Como todas essas tecnologias se conectam?
+O mais importante dessa fase é entender que essas tecnologias não estão isoladas.
+Um exemplo de cidade inteligente do futuro poderia funcionar assim:
+5G/6G
+ ↓
+conecta milhares de sensores
+IoT
+ ↓
+coleta informações
+Edge Computing
+ ↓
+processa informações próximas da fonte
+IA
+ ↓
+analisa os dados
+Agentes de IA
+ ↓
+tomam ou recomendam ações
+Cloud Computing
+ ↓
+armazena e coordena grandes volumes de dados
+Cibersegurança + Zero Trust
+ ↓
+protege a infraestrutura
+Computação espacial
+ ↓
+permite que técnicos visualizem informações em 3D
+Esse é um dos principais aspectos da Era Atual: não existe apenas uma tecnologia dominante, mas um ecossistema de tecnologias trabalhando em conjunto.
+________________
+
+24. Principais tendências para os próximos anos
+A partir do cenário atual, algumas tendências se destacam:
+1. IA cada vez mais integrada
+A IA tende a deixar de ser apenas uma ferramenta acessada separadamente e passar a estar incorporada em sistemas operacionais, aplicativos, carros, dispositivos e serviços.
+2. Agentes autônomos
+A evolução deve ocorrer de sistemas que apenas respondem para sistemas capazes de planejar e executar tarefas.
+3. IA multimodal
+Os sistemas serão capazes de compreender simultaneamente:
+texto + imagem + áudio + vídeo + dados
+4. Computação mais distribuída
+Cloud + Edge + dispositivos locais trabalharão juntos.
+5. Redes inteligentes
+5G e posteriormente 6G deverão integrar cada vez mais IA, comunicação e sensoriamento. A própria visão do IMT-2030 já prevê IA integrada às redes.
+6. Segurança pós-quântica
+Empresas e governos começarão a migrar sistemas criptográficos para padrões resistentes à computação quântica.
+7. Interfaces mais naturais
+O computador tende a depender menos de teclado e mouse e mais de:
+voz + visão + gestos + realidade espacial + IA
+8. Regulamentação
+Governos deverão aumentar a regulamentação sobre:
+* IA;
+* privacidade;
+* deepfakes;
+* dados;
+* algoritmos;
+* segurança digital.
+________________
+
+25. Linha do tempo resumida
+Período
+	Principal acontecimento
+	2020
+	Expansão acelerada da digitalização
+	2021
+	Consolidação de serviços digitais e IA aplicada
+	2022
+	Lançamento do ChatGPT e popularização da IA generativa
+	2023
+	Explosão de ferramentas de IA generativa; apresentação do Apple Vision Pro
+	2024
+	Expansão de IA, realidade mista e regulamentação; primeiros padrões de criptografia pós-quântica
+	2025
+	Avanço de agentes de IA, IA multimodal, automação e preparação para computação pós-quântica
+	2026
+	IA mais integrada a sistemas e serviços; avanço da preparação técnica do 6G
+	Próximos anos
+	Agentes autônomos, 6G, computação espacial, IA multimodal e infraestrutura digital inteligente
+	________________
+
+26. Conclusão
+A Fase 8 — Era Atual e Tendências Emergentes representa uma transformação profunda na relação entre seres humanos e tecnologia.
+A principal mudança não é simplesmente o surgimento de novas ferramentas, mas a integração entre elas. A inteligência artificial passa a trabalhar junto com redes 5G/6G, computação em nuvem, edge computing, IoT, realidade espacial, blockchain e sistemas digitais.
+Ao mesmo tempo em que essas tecnologias oferecem novas possibilidades para educação, saúde, trabalho, entretenimento, cidades e serviços públicos, também criam desafios relacionados à privacidade, segurança, desigualdade digital, desinformação, viés algorítmico, direitos autorais e controle das tecnologias.
+Assim, a sociedade digital dos anos 2020 não pode ser entendida apenas como uma evolução da internet. Ela representa a passagem para uma sociedade na qual computação, inteligência artificial e conectividade estão cada vez mais presentes no ambiente físico e nas atividades cotidianas.
+________________
+
+Termos-chave para estudar
+IA generativa: tecnologia capaz de criar novos conteúdos.
+GPT: família de modelos de linguagem desenvolvidos pela OpenAI.
+LLM: modelo de linguagem treinado com grandes quantidades de dados.
+ChatGPT: sistema conversacional baseado em IA.
+Copilot: assistentes de IA da Microsoft integrados a diferentes produtos e serviços.
+Gemini: família de modelos de IA do Google.
+DALL-E: sistema de geração de imagens por IA.
+Stable Diffusion: tecnologia de geração de imagens por IA.
+Agente de IA: sistema capaz de planejar e executar tarefas utilizando ferramentas.
+Deepfake: conteúdo audiovisual falso ou manipulado por IA.
+Realidade aumentada: adiciona elementos digitais ao mundo físico.
+Realidade virtual: cria um ambiente digital imersivo.
+Realidade mista: combina elementos físicos e virtuais.
+Computação espacial: interação com computadores usando espaço, visão, mãos e voz.
+Metaverso: conceito de ambientes digitais persistentes e interativos.
+Web3: visão de uma internet mais descentralizada baseada em blockchain.
+NFT: ativo digital identificável e registrado em blockchain.
+DAO: organização descentralizada coordenada por regras e mecanismos em blockchain.
+Edge Computing: processamento realizado próximo à origem dos dados.
+Computação quântica: computação baseada em princípios da mecânica quântica.
+Zero Trust: modelo de segurança baseado em verificar continuamente usuários e dispositivos.
+Criptografia pós-quântica: criptografia desenvolvida para resistir a ataques de computadores quânticos.
+5G: quinta geração das redes móveis.
+6G/IMT-2030: próxima geração de redes móveis em desenvolvimento.
+WebAssembly: formato de código que permite executar aplicações de alto desempenho na web.
+Rust: linguagem focada em desempenho e segurança de memória.
+Python: linguagem muito utilizada em IA, automação e ciência de dados.
+TypeScript: linguagem baseada em JavaScript com tipagem estática.
+Governo digital: utilização de tecnologias para oferecer serviços públicos digitais.
+Cidade inteligente: cidade que utiliza dados, sensores e tecnologia para melhorar serviços.
+________________
+
+Fontes principais utilizadas
+* NIST — IA generativa, gerenciamento de riscos e criptografia pós-quântica.
+* UIT/ITU — desenvolvimento do 5G e do 6G/IMT-2030.
+* União Europeia — cronograma de implementação do AI Act.
+* Apple — Apple Vision Pro e computação espacial.
+* Meta — Meta Quest e realidade mista.
+* OpenAI — ChatGPT e DALL-E.
+* Ethereum — conceitos de Web3, NFTs e DAOs.
+* IBM — Edge Computing.
+* OMS/WHO — saúde digital e telemedicina.
+* UNESCO — IA generativa na educação e ética.
+* Governo Federal/GOV.BR — digitalização dos serviços públicos brasileiros.
+* MDN — WebAssembly.

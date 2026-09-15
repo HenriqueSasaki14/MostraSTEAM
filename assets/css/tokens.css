@@ -1,0 +1,159 @@
+/* ============================================================
+   RetroNet — design system
+   ------------------------------------------------------------
+   REGRA DE OURO DO PROJETO: a moldura é neutra e constante, o
+   miolo muda de época. Cabeçalho, menu e navegação usam sempre
+   as cores de base abaixo. Cada fase troca SOMENTE --destaque e
+   --destaque-texto. Se a sua fase precisa mexer em outra coisa
+   da moldura, fale com o grupo antes.
+   ============================================================ */
+
+:root {
+  /* ---------- paleta base (tabela da modelagem) ---------- */
+  --fundo: #0d0f12; /* escuro para as oito estéticas não brigarem */
+  --titulo: #f5f5f0; /* branco levemente quente             17,5:1 */
+  --texto: #a8b0ba; /* cinza de leitura longa               8,8:1 */
+  --botao: #ffb000; /* âmbar de monitor de fósforo         10,5:1 */
+  --botao-texto: #0d0f12;
+  --borda: #2a2f36; /* separações discretas */
+
+  /* superfícies derivadas, para caixas que precisam sair do fundo */
+  --fundo-elevado: #15181e;
+  --fundo-afundado: #090b0e;
+
+  /* ---------- cor de destaque ----------
+     A home é a moldura em estado puro: nenhuma cor de fase
+     domina, então o destaque começa no âmbar da própria marca.
+     --destaque       preenchimento, borda, brilho
+     --destaque-texto mesma cor, clareada quando não alcançava
+                      4,5:1 sobre o fundo (RNF05)             */
+  --destaque: #ffb000;
+  --destaque-texto: #ffb000;
+
+  /* ---------- tipografia ---------- */
+  --fonte-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", "Courier New",
+    monospace;
+  --fonte-titulo: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --fonte-texto: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* O visitante lê em pé, a uns 70 cm da tela: corpo generoso. */
+  --t-micro: 0.75rem; /*  12px  rótulos, legendas de foto      */
+  --t-pequeno: 0.875rem; /*  14px  metadados                     */
+  --t-corpo: clamp(1.0625rem, 1rem + 0.35vw, 1.1875rem); /* 17→19px */
+  --t-destaque: clamp(1.1875rem, 1.1rem + 0.5vw, 1.375rem);
+  --t-h3: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --t-h2: clamp(1.625rem, 1.4rem + 1.1vw, 2.25rem);
+  --t-h1: clamp(2.25rem, 1.7rem + 2.6vw, 3.75rem);
+  --t-gigante: clamp(2.75rem, 1.8rem + 4.6vw, 5.5rem); /* logo da home */
+
+  --altura-linha: 1.65;
+  --altura-linha-titulo: 1.12;
+  --largura-leitura: 62ch; /* blocos curtos, leitura em pé */
+
+  /* ---------- espaçamento (escala de 4px) ---------- */
+  --e-1: 0.25rem;
+  --e-2: 0.5rem;
+  --e-3: 0.75rem;
+  --e-4: 1rem;
+  --e-5: 1.5rem;
+  --e-6: 2rem;
+  --e-7: 3rem;
+  --e-8: 4rem;
+  --e-9: 6rem;
+
+  /* ---------- formas ---------- */
+  --raio-p: 4px;
+  --raio-m: 8px;
+  --raio-g: 16px;
+  --raio-total: 999px;
+  --borda-fina: 1px solid var(--borda);
+
+  /* ---------- movimento ----------
+     Ver o bloco prefers-reduced-motion no fim do arquivo: ele
+     zera estas durações e desliga as animações decorativas. */
+  --mov-rapido: 140ms;
+  --mov-medio: 260ms;
+  --mov-lento: 520ms;
+  /* Transição entre fases, em duas metades: a cor cobre a tela
+     (saída) e depois se retira revelando a página nova (chegada).
+     Somadas dão menos de 1s — o visitante percorre oito páginas em
+     pé, então a travessia precisa ser sentida, não esperada. */
+  --mov-travessia: 420ms;
+  --mov-revelar: 560ms;
+  --curva: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --curva-saida: cubic-bezier(0.55, 0, 0.55, 0.2);
+
+  /* ---------- camadas ---------- */
+  --z-conteudo: 1;
+  --z-cabecalho: 100;
+  --z-menu: 200;
+  --z-abertura: 300;
+  --z-travessia: 310; /* cobre até a animação de abertura */
+
+  --altura-cabecalho: 60px;
+}
+
+/* ============================================================
+   Cor de destaque por fase.
+   O valor de --destaque é exatamente o da modelagem. O valor de
+   --destaque-texto só muda nas fases 1 e 8, onde a cor original
+   não alcançava 4,5:1 sobre o fundo e por isso não pode carregar
+   texto. Contraste medido em ferramentas/conferir_contraste.py.
+   ============================================================ */
+
+[data-fase="1"] {
+  --destaque: #6b7f5c; /* verde militar        4,40:1 */
+  --destaque-texto: #7a9169; /*                5,56:1 */
+}
+[data-fase="2"] {
+  --destaque: #4a9fe0; /* azul 8 bits          6,70:1 */
+  --destaque-texto: #4a9fe0;
+}
+[data-fase="3"] {
+  --destaque: #c9a227; /* bege dos anos 80     7,93:1 */
+  --destaque-texto: #c9a227;
+}
+[data-fase="4"] {
+  --destaque: #ff00cc; /* magenta GIF          5,60:1 */
+  --destaque-texto: #ff00cc;
+}
+[data-fase="5"] {
+  --destaque: #1db8e8; /* azul das redes       8,29:1 */
+  --destaque-texto: #1db8e8;
+}
+[data-fase="6"] {
+  --destaque: #8b8bff; /* azul iOS 6           6,61:1 */
+  --destaque-texto: #8b8bff;
+}
+[data-fase="7"] {
+  --destaque: #22c55e; /* verde flat           8,42:1 */
+  --destaque-texto: #22c55e;
+}
+[data-fase="8"] {
+  --destaque: #8b5cf6; /* roxo gradiente       4,53:1 */
+  --destaque-texto: #9a72f7; /*                5,60:1 */
+}
+
+/* ============================================================
+   Quem pediu menos movimento recebe menos movimento.
+   As animações decorativas (cursor piscando, lampejos da
+   abertura, partículas) são desligadas; o que sobra é curto o
+   bastante para não incomodar.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --mov-rapido: 1ms;
+    --mov-medio: 1ms;
+    --mov-lento: 1ms;
+    --mov-travessia: 1ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

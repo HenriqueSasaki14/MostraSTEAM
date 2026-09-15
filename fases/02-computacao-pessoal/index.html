@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-BR" data-raiz="../../" data-fase="2">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Microprocessadores e computação pessoal — RetroNet</title>
+    <meta
+      name="description"
+      content="1971 a 1981: o computador entra na casa das pessoas. Escreva código BASIC de verdade numa tela de Apple II."
+    />
+
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D0F12'/%3E%3Crect x='7' y='21' width='18' height='4' fill='%23FFB000'/%3E%3C/svg%3E"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/fontes.css" />
+    <link rel="stylesheet" href="../../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/shell.css" />
+    <link rel="stylesheet" href="./fase.css" />
+  </head>
+
+  <body>
+    <main id="conteudo" class="conteudo-principal">
+      <div class="envoltorio fase2">
+        <!-- ==================================================
+             Capa
+             ================================================== -->
+        <section class="capa">
+          <div class="gabinete gabinete--ventilado">
+            <span class="etiqueta-plastico">Fase 2 de 8</span>
+            <h1 class="capa__titulo">Microprocessadores e computação pessoal</h1>
+            <p class="capa__periodo">
+              1971 &ndash; 1981 &middot; do Intel 4004 ao IBM PC
+            </p>
+
+            <p style="margin-top: var(--e-5)">
+              O computador saiu da empresa e entrou na casa das pessoas. As
+              primeiras máquinas vinham em kit e eram operadas por chaves no
+              painel; depois passaram a ligar direto em um BASIC gravado na ROM.
+              Quem comprava precisava programar para fazer qualquer coisa — é por
+              isso que a atividade desta fase é escrever código.
+            </p>
+          </div>
+
+          <div class="blocos">
+            <div class="gabinete">
+              <span class="etiqueta-plastico">Invenção principal</span>
+              <p>O microprocessador: um computador inteiro em um único chip.</p>
+              <div class="destaque-caixa">
+                <p>
+                  Intel 4004 (1971) e 8080 (1974); o MOS 6502 (1975) a apenas 25
+                  dólares, quando os concorrentes custavam cerca de 175; o Zilog
+                  Z80; e a arquitetura x86 do 8086/8088. No hardware, Altair 8800
+                  (1975), Apple II e TRS-80 (1977) e o IBM PC de arquitetura
+                  aberta (1981). No software, CP/M, MS-DOS e as primeiras
+                  aplicações indispensáveis: VisiCalc (1979) e WordStar (1978).
+                </p>
+              </div>
+              <p>
+                O preço é a história toda. O 6502 custar sete vezes menos que a
+                concorrência foi o que permitiu existir um mercado doméstico.
+              </p>
+            </div>
+
+            <div class="gabinete">
+              <span class="etiqueta-plastico">Impacto</span>
+              <p>
+                Barateou o hardware a ponto de criar o usuário comum. A
+                arquitetura aberta do IBM PC gerou os clones compatíveis, e o
+                licenciamento não exclusivo do MS-DOS construiu o domínio da
+                Microsoft: a empresa podia vender o mesmo sistema para todos os
+                fabricantes de clones.
+              </p>
+              <p>
+                No Xerox PARC nascem a interface WIMP, o mouse e a Ethernet, que
+                só se popularizam na fase seguinte. A ideia certa no lugar errado
+                é um padrão que se repete nesta história.
+              </p>
+            </div>
+          </div>
+
+          <!-- ---------- tabela ---------- -->
+          <div class="gabinete">
+            <span class="etiqueta-plastico">As máquinas que definiram a década</span>
+            <div class="rolagem-tabela">
+              <table class="tabela-maquinas">
+                <thead>
+                  <tr>
+                    <th>Máquina</th>
+                    <th>Ano</th>
+                    <th>Processador</th>
+                    <th>Por que importa</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Altair 8800</td>
+                    <td>1975</td>
+                    <td>Intel 8080</td>
+                    <td>
+                      Vendido em kit, operado por chaves no painel. Deu origem ao
+                      Homebrew Computer Club e motivou a criação da Microsoft.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Apple II</td>
+                    <td>1977</td>
+                    <td>MOS 6502</td>
+                    <td>
+                      Cor, som e slots de expansão. Virou sucesso duradouro em
+                      escolas e escritórios.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>TRS-80</td>
+                    <td>1977</td>
+                    <td>Zilog Z80</td>
+                    <td>
+                      Vendido pela rede Radio Shack; dominou as vendas nos EUA no
+                      fim dos anos 70.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>IBM PC (5150)</td>
+                    <td>1981</td>
+                    <td>Intel 8088</td>
+                    <td>
+                      Arquitetura aberta. Validou o setor para o mercado
+                      corporativo e permitiu os clones "compatíveis IBM".
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- ---------- pessoas ---------- -->
+          <div class="gabinete">
+            <span class="etiqueta-plastico">Pessoas em destaque</span>
+            <div class="pessoas"></div>
+          </div>
+        </section>
+
+        <!-- ==================================================
+             ATIVIDADE
+             ================================================== -->
+        <section class="gabinete" aria-labelledby="titulo-atividade">
+          <span class="etiqueta-plastico">Atividade</span>
+          <h2 id="titulo-atividade">Dez linhas de BASIC</h2>
+          <p style="margin-bottom: var(--e-5)">
+            Ao ligar um micro da época, o BASIC já estava lá, gravado na ROM, com
+            o cursor piscando. Não havia área de trabalho nem ícone: ou você
+            programava, ou a máquina não fazia nada. Escreva e aperte RUN.
+          </p>
+
+          <div class="computador">
+            <div>
+              <div class="monitor">
+                <div class="tela">
+                  <p class="tela__texto"></p>
+                </div>
+              </div>
+
+              <div class="editor">
+                <label for="programa">Seu programa</label>
+                <textarea
+                  id="programa"
+                  spellcheck="false"
+                  autocomplete="off"
+                  aria-describedby="ajuda-basic"
+                ></textarea>
+                <div class="editor__acoes">
+                  <button type="button" class="tecla tecla--principal" data-rodar>
+                    Run
+                  </button>
+                  <button type="button" class="tecla" data-limpar>New</button>
+                  <button type="button" class="tecla" data-fita>Load (fita)</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="missoes" id="ajuda-basic"></div>
+          </div>
+        </section>
+
+        <!-- ==================================================
+             Fontes
+             ================================================== -->
+        <section class="gabinete">
+          <span class="etiqueta-plastico">Fontes desta fase</span>
+          <ul class="lista-tracos">
+            <li>
+              <span class="marcador-pendente">PENDENTE</span> — a pesquisa
+              entregue para esta fase não trouxe lista de referências. É preciso
+              confirmar cada data em duas fontes independentes antes da amostra.
+            </li>
+            <li>
+              Datas de vida das pessoas citadas conferidas no Wikidata; crédito
+              das fotos na
+              <a href="../../creditos/index.html">página de créditos</a>.
+            </li>
+            <li>
+              Não existe foto de Gary Kildall com licença livre no Wikimedia
+              Commons, por isso ele aparece sem retrato.
+            </li>
+          </ul>
+        </section>
+
+        <div data-moldura="navegacao"></div>
+      </div>
+    </main>
+
+    <div data-moldura="rodape"></div>
+
+    <script src="../../assets/js/fases.js"></script>
+    <script src="../../assets/js/som.js"></script>
+    <script src="../../assets/js/shell.js"></script>
+    <script src="../../assets/js/inatividade.js"></script>
+    <script src="../../assets/retratos/creditos.js"></script>
+    <script src="../../assets/js/pessoas.js"></script>
+    <script src="./pessoas.js"></script>
+    <script src="./basic.js"></script>
+    <script src="./fase.js"></script>
+  </body>
+</html>

@@ -1,0 +1,581 @@
+/* ============================================================
+   RetroNet — Fase 3 (1982–1990)
+   Estética: preto e branco do primeiro Macintosh, ícones de 1 bit,
+   cinza de trama pontilhada, som de disquete.
+   ------------------------------------------------------------
+   Nota sobre a fonte: a modelagem pede a Chicago, tipografia do
+   Mac original. Ela não tem licença livre, e o projeto não usa
+   arquivo sem procedência — então o "ar" de 1984 vem do desenho
+   da interface (1 bit, sem curva, sem sombra), não da fonte.
+   ============================================================ */
+
+.fase3 {
+  /* Paleta de 1 bit: só existe preto e branco. O cinza da área de
+     trabalho é preto e branco alternados pixel a pixel, como era
+     de verdade. */
+  --preto: #000000;
+  --branco: #ffffff;
+  --papel: #f2f0ea;
+  --cinza-borda: #7d7a72;
+  --bege80: #8a6f10; /* #C9A227 escurecido para texto sobre claro */
+
+  padding-block: var(--e-7) var(--e-6);
+}
+
+/* ============================================================
+   Cartões de conteúdo
+   ============================================================ */
+
+.cartao {
+  position: relative;
+  background: var(--papel);
+  color: var(--preto);
+  border: 2px solid var(--preto);
+  border-radius: 0;
+  padding: clamp(var(--e-5), 4vw, var(--e-6));
+  margin-bottom: var(--e-5);
+  /* Sombra dura, sem desfoque: o Mac desenhava assim. */
+  box-shadow: 5px 5px 0 var(--preto);
+}
+
+.cartao p,
+.cartao li {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.cartao h1,
+.cartao h2,
+.cartao h3 {
+  color: var(--preto);
+  font-family: var(--fonte-titulo);
+  letter-spacing: -0.02em;
+}
+
+.cartao a {
+  color: #6a5307;
+}
+
+.cartao a:hover {
+  color: var(--preto);
+}
+
+.etiqueta-mac {
+  display: inline-block;
+  padding: 2px var(--e-3);
+  background: var(--preto);
+  color: var(--branco);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: var(--e-4);
+}
+
+.capa3__titulo {
+  font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
+  line-height: 1.08;
+  max-width: 18ch;
+}
+
+.capa3__periodo {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-pequeno);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #4a463d;
+  margin-top: var(--e-2);
+}
+
+.blocos3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--e-5);
+}
+
+.blocos3 .cartao {
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   Pessoas
+   ============================================================ */
+
+.pessoas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+  gap: var(--e-4) var(--e-3);
+}
+
+.pessoa {
+  display: grid;
+  gap: var(--e-2);
+}
+
+.pessoa__moldura {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 2px solid var(--preto);
+  background: var(--branco);
+}
+
+.pessoa__moldura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Alto contraste e sem cor: ícone de 1 bit era assim. */
+  filter: grayscale(1) contrast(1.35);
+}
+
+.pessoa__moldura--sem-foto {
+  display: grid;
+  place-items: center;
+  background: repeating-conic-gradient(
+    var(--preto) 0% 25%,
+    var(--branco) 0% 50%
+  );
+  background-size: 4px 4px;
+}
+
+.pessoa__iniciais {
+  background: var(--branco);
+  padding: 0 var(--e-2);
+  border: 2px solid var(--preto);
+  font-family: var(--fonte-titulo);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.pessoa__nome {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.pessoa__anos {
+  display: block;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  color: #4a463d;
+  margin-bottom: 2px;
+}
+
+.pessoa__papel {
+  display: block;
+  font-size: var(--t-micro);
+  line-height: 1.45;
+  color: #4a463d;
+}
+
+/* ============================================================
+   ATIVIDADE — o desktop
+   ============================================================ */
+
+.comparador {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-3);
+  align-items: center;
+  margin-bottom: var(--e-4);
+}
+
+.chave-epoca {
+  display: inline-flex;
+  border: 2px solid var(--preto);
+}
+
+.chave-epoca button {
+  padding: var(--e-2) var(--e-5);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-pequeno);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--preto);
+  background: var(--branco);
+}
+
+.chave-epoca button[aria-pressed="true"] {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.comparador__nota {
+  font-size: var(--t-pequeno);
+  color: #4a463d;
+  margin: 0;
+  max-width: 44ch;
+}
+
+/* ---------- o monitor compacto do Mac ---------- */
+.mac {
+  --moldura: #ded9cd;
+  background: var(--moldura);
+  border: 2px solid var(--preto);
+  border-radius: 14px 14px 6px 6px;
+  padding: var(--e-4) var(--e-4) var(--e-6);
+  box-shadow: 5px 5px 0 var(--preto);
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+.mac__tela {
+  position: relative;
+  height: 27rem;
+  overflow: hidden;
+  background: var(--branco);
+  border: 2px solid var(--preto);
+  /* Trama pontilhada da área de trabalho do System 1: um pixel
+     preto para cada branco, em xadrez. */
+  background-image: repeating-conic-gradient(
+    var(--preto) 0% 25%,
+    var(--branco) 0% 50%
+  );
+  background-size: 4px 4px;
+  touch-action: none;
+  user-select: none;
+}
+
+.mac__legenda {
+  margin: var(--e-3) 0 0;
+  text-align: center;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4a463d;
+}
+
+/* ---------- barra de menus ---------- */
+.menu-mac {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: var(--e-4);
+  height: 22px;
+  padding-inline: var(--e-3);
+  background: var(--branco);
+  border-bottom: 2px solid var(--preto);
+  font-family: var(--fonte-titulo);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.menu-mac svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ---------- ícones da área de trabalho ---------- */
+.icone-mac {
+  position: absolute;
+  z-index: 1;
+  width: 74px;
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: grab;
+  text-align: center;
+}
+
+.icone-mac svg {
+  width: 38px;
+  height: 38px;
+}
+
+.icone-mac__nome {
+  font-family: var(--fonte-titulo);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--preto);
+  background: var(--branco);
+  padding: 0 3px;
+  border: 1px solid var(--branco);
+  line-height: 1.3;
+}
+
+.icone-mac--selecionado .icone-mac__nome {
+  background: var(--preto);
+  color: var(--branco);
+}
+
+.icone-mac--selecionado svg {
+  filter: invert(1);
+}
+
+.icone-mac--arrastando {
+  opacity: 0.65;
+  cursor: grabbing;
+}
+
+/* Lixeira que "incha" quando tem coisa dentro. */
+.icone-mac--lixeira-cheia svg {
+  transform: scaleX(1.18) scaleY(1.06);
+}
+
+/* ---------- janelas ---------- */
+.janela-mac {
+  position: absolute;
+  z-index: 2;
+  min-width: 190px;
+  background: var(--branco);
+  border: 2px solid var(--preto);
+  box-shadow: 3px 3px 0 var(--preto);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.janela-mac__barra {
+  display: flex;
+  align-items: center;
+  gap: var(--e-2);
+  height: 20px;
+  padding-inline: 4px;
+  border-bottom: 2px solid var(--preto);
+  cursor: grab;
+  /* As seis linhas horizontais da barra de título do Mac. */
+  background: repeating-linear-gradient(
+    180deg,
+    var(--preto) 0 1px,
+    var(--branco) 1px 3px
+  );
+}
+
+.janela-mac--arrastando .janela-mac__barra {
+  cursor: grabbing;
+}
+
+.janela-mac__fechar {
+  width: 12px;
+  height: 12px;
+  flex: none;
+  background: var(--branco);
+  border: 2px solid var(--preto);
+  cursor: pointer;
+  padding: 0;
+}
+
+.janela-mac__fechar:hover {
+  background: var(--preto);
+}
+
+.janela-mac__titulo {
+  flex: 1;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  background: var(--branco);
+  padding: 0 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.janela-mac__corpo {
+  padding: var(--e-3);
+  font-family: var(--fonte-titulo);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: var(--preto);
+  max-height: 14rem;
+  overflow-y: auto;
+}
+
+.janela-mac__corpo p {
+  margin: 0 0 var(--e-2);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.janela-mac__corpo p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   Modo "hoje": a mesma área de trabalho com a linguagem visual
+   atual. É a comparação que a modelagem pede.
+   ============================================================ */
+
+.mac--hoje {
+  --moldura: #1b1d22;
+  border-color: #33363d;
+  border-radius: 14px;
+  box-shadow: 0 24px 50px -28px rgb(0 0 0 / 0.9);
+}
+
+.mac--hoje .mac__tela {
+  border-color: #33363d;
+  border-radius: 8px;
+  background-image: linear-gradient(150deg, #2b3a67, #8a4f8f 55%, #c96f55);
+  background-size: auto;
+}
+
+.mac--hoje .menu-mac {
+  height: 28px;
+  background: rgb(255 255 255 / 0.14);
+  backdrop-filter: blur(10px);
+  border-bottom: none;
+  color: #fff;
+  font-family: var(--fonte-texto);
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+}
+
+.mac--hoje .menu-mac svg {
+  filter: invert(1);
+}
+
+.mac--hoje .icone-mac__nome {
+  background: rgb(0 0 0 / 0.42);
+  color: #fff;
+  border-radius: 5px;
+  border-color: transparent;
+  font-family: var(--fonte-texto);
+  font-weight: 600;
+  padding: 1px 5px;
+}
+
+.mac--hoje .icone-mac svg {
+  filter: drop-shadow(0 3px 6px rgb(0 0 0 / 0.5));
+}
+
+.mac--hoje .icone-mac--selecionado .icone-mac__nome {
+  background: #2f7fbe;
+}
+
+.mac--hoje .icone-mac--selecionado svg {
+  filter: drop-shadow(0 3px 6px rgb(0 0 0 / 0.5));
+}
+
+.mac--hoje .janela-mac {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgb(28 30 35 / 0.92);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 22px 46px -18px rgb(0 0 0 / 0.75);
+}
+
+.mac--hoje .janela-mac__barra {
+  background: rgb(255 255 255 / 0.07);
+  border-bottom: 1px solid rgb(255 255 255 / 0.1);
+  height: 30px;
+}
+
+.mac--hoje .janela-mac__fechar {
+  width: 11px;
+  height: 11px;
+  border: none;
+  border-radius: 50%;
+  background: #ff5f57;
+}
+
+.mac--hoje .janela-mac__titulo {
+  background: none;
+  color: #e9ecf1;
+  font-family: var(--fonte-texto);
+  font-weight: 600;
+}
+
+.mac--hoje .janela-mac__corpo {
+  background: none;
+  color: #d6dae2;
+  font-family: var(--fonte-texto);
+}
+
+.mac--hoje .mac__legenda {
+  color: #4a463d;
+}
+
+/* ============================================================
+   Quadro de diferenças
+   ============================================================ */
+
+.diferencas {
+  display: grid;
+  gap: var(--e-3);
+  margin-top: var(--e-5);
+}
+
+.diferenca {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: var(--e-4);
+  padding-bottom: var(--e-3);
+  border-bottom: 1px solid var(--cinza-borda);
+  font-size: 0.9375rem;
+}
+
+.diferenca:last-child {
+  border-bottom: none;
+}
+
+.diferenca dt {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6a5307;
+}
+
+.diferenca dd {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .diferenca {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--e-1);
+  }
+}
+
+/* ============================================================
+   Listas e botões
+   ============================================================ */
+
+.lista-mac {
+  display: grid;
+  gap: var(--e-2);
+  font-size: 0.9375rem;
+}
+
+.lista-mac li {
+  padding-left: var(--e-4);
+  position: relative;
+}
+
+.lista-mac li::before {
+  content: "▪";
+  position: absolute;
+  left: 0;
+  color: var(--preto);
+}
+
+.botao-mac {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-2);
+  padding: var(--e-2) var(--e-5);
+  background: var(--branco);
+  color: var(--preto);
+  border: 2px solid var(--preto);
+  border-radius: 10px;
+  font-family: var(--fonte-titulo);
+  font-size: var(--t-pequeno);
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--preto);
+}
+
+.botao-mac:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}

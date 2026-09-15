@@ -1,0 +1,20 @@
+RetroNet — Fase 4: World Wide Web e Popularização da Internet Descrição do Projeto: Documento de planejamento e fundamentação para o projeto RetroNet — Uma Viagem pela História da Internet , focado na Fase 4 (década de 1990) . Este documento cobre a concepção teórica para o website interativo e o guia prático de implementação da estação interativa física.
+
+1. Concepção do Projeto e Visão Geral Inspirado pelo Centre for Computing History , o objetivo do projeto RetroNet é recriar a atmosfera da revolução da informação da década de 1990 através de duas entregas integradas:
+● Website Interativo: Um portal educativo ricamente ilustrado abordando o impacto social, cultural e técnico da popularização da Web.
+● Estação Interativa: Uma experiência imersiva física contendo hardware vintage, emuladores de sistemas operacionais (Windows 95/98), simuladores de conexão discada e mídias da época.
+
+2. Tópicos Centrais da Pesquisa (Anos 1990) Categoria Tecnologias & Marcos Fundamentais Impacto Cultural / Social Fundamentos da Web World Wide Web (Tim Berners-Lee), HTTP, HTML, URL, CSS Padronização do acesso global à informação e hipermídia. Guerra dos Navegadores NCSA Mosaic, Netscape Navigator, Internet Explorer Navegação gráfica para o usuário comum; disputa corporativa Netscape vs Microsoft. Categoria Tecnologias & Marcos Fundamentais Impacto Cultural / Social Acesso & Infraestrutura Modems dial-up (14.4k a 56k), ISPs, Servidores Apache, IIS, Linux Ritual da conexão discada, cobrança por pulsos, navegação noturna/fim de semana. Comunicação & Portais ICQ, mIRC, Hotmail, Portais (Yahoo!, AltaVista, UOL, AOL) Nascimento das redes de mensagens instantâneas ("Uh-oh!"), salas de bate-papo. Economia & E-commerce Amazon, eBay, Bolha Pontocom (Dot-Com Bubble) Surgimento do comércio eletrônico e especulação financeira das startups de tecnologia.
+
+3. Estrutura do Website Interativo O site funcionará como uma viagem temporal, adaptando seu design conforme a navegação avança pela cronologia da década. 3.1. Recursos Visuais e Técnicos
+● Design Evolutivo: Estilo visual que inicia em HTML simples/cinza (1991) e evolui para designs coloridos com tabelas, GIFs animados e tags clássicas (<marquee> e <blink>).
+● Galeria 3D e Screenshots: Modelos 3D interativos de computadores da época (ex: iMac G3, PCs bege CRT) e capturas de tela dos primeiros navegadores.
+● Exemplos de Código da Época: Trechos de código HTML 2.0/3.2, scripts em Perl e primeiros exemplos de JavaScript (1995). 3.2. Exemplo de Código HTML Típico dos Anos 90 <!-- Exemplo de Página da Web (circa 1996) --> <html> <head> <title>Bem-vindo à minha HomePage!</title> </head> <body bgcolor="#000080" text="#FFFFFF" link="#FF0000" vlink="#800080"> <center> <h1><font face="Comic Sans MS">Minha HomePage Web!</font></h1> <marquee>*** Bem-vindo ao meu site na Web! Em construção ***</marquee> <hr size="3" width="80%" color="#FFD700"> <p>Site otimizado para o <b>Netscape Navigator 3.0</b> em resolução 640x480.</p> <img src="under_construction.gif" alt="Em construção"> </center> </body> </html>
+
+4. Guia de Montagem da Estação Interativa Física 4.1. Hardware e Elementos Físicos
+● Computador da Época: CPU bege, monitor de tubo (CRT), teclado mecânico/memória barulhento e mouse de esfera (com abertura para demonstrar as roldanas e mecânica interna).
+● Hardware Exposto para Manuseio: Disquetes de 3.5", placas de fax modem ISA/PCI, memórias EDO/SDRAM, cabos IDE e processadores (ex: Pentium I/II).
+● Mídias e Impressos: CDs de provedores de acesso (AOL, IG, ZipMail), revistas de informática com CD-ROMs de jogos/softwares e manuais do Windows 95. 4.2. Software e Emulação
+● Emulador de SO: Utilização do v86 ou DOSBox no navegador para rodar Windows 95 ou Windows 98, permitindo aos visitantes testar o Paint, Campo Minado e o som de inicialização de Brian Eno.
+● Simulador de Som e Conexão Discada: Botão ou gatilho que reproduz o ruído característico do modem 56k (handshake) e simula a renderização lenta de imagens linha a linha.
+● Chat Retrô Local: Servidor mIRC ou ICQ rodando em rede local na estação para interação direta entre os visitantes.

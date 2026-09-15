@@ -1,0 +1,48 @@
+Fase 3 — Consolidação das Interfaces Gráficas e Redes Locais (meados a final dos anos 1980)
+A Terceira Fase da computação transformou o computador pessoal em uma máquina visual, multimídia e conectada, abandonando de vez o terminal de linha de comando e estabelecendo os padrões visuais que usamos até hoje.
+O Mac, o Amiga e a Guerra das GUIs
+Se a Xerox PARC plantou a semente da interface gráfica, foi nesta fase que ela floresceu comercialmente. Quatro máquinas dominaram o cenário:
+Modelo
+	Lançamento
+	Processador
+	Relevância Histórica
+	Apple Macintosh
+	1984
+	Motorola 68000
+	Primeiro computador pessoal a popularizar a GUI com mouse. Trouxe o conceito de desktop, lixeira e janelas para o grande público.
+	Commodore Amiga
+	1985
+	Motorola 68000
+	Superiority técnica impressionante: multitarefa real, gráficos coloridos e áudio estéreo. Dominava edição de vídeo amadora e jogos.
+	Atari ST
+	1985
+	Motorola 68000
+	Concorrente direto do Amiga, com custo menor. Muito popular entre músicos pela porta MIDI nativa.
+	Commodore 64
+	1982
+	MOS 6510
+	O computador mais vendido da história até hoje. Cultura gamer e demoscene intensa.
+	Sistemas Operacionais com Interface Gráfica
+A corrida pela melhor GUI definiu o mercado da década:
+* Mac OS (System 1): Lançado junto ao Macintosh em 1984, foi o primeiro sistema operacional gráfico de sucesso comercial. Totalmente controlado por mouse, sem linha de comando visível ao usuário.
+* AmigaOS: Multitarefa preemptiva real em 1985, algo que o Windows só alcançaria anos depois. Muito à frente do seu tempo.
+* Windows 1.x / 2.x: Tentativa da Microsoft de levar a GUI ao IBM PC. Tecnicamente inferior ao Mac OS na época, mas a distribuição massiva do PC garantiu sua sobrevivência.
+* OS/2: Desenvolvido em parceria entre IBM e Microsoft, era tecnicamente robusto mas nunca emplacou com o público geral.
+* GEOS: Sistema gráfico alternativo que rodava até no Commodore 64, provando que GUI não precisava de hardware poderoso.
+Linguagens e o Surgimento da Orientação a Objetos
+A complexidade crescente dos softwares exigiu novas formas de organizar o código:
+* C++: Extensão da linguagem C criada por Bjarne Stroustrup, adicionando os conceitos de classes e objetos. Tornou-se a base da programação de sistemas e jogos por décadas.
+* Objective-C: Adotada pela Apple como linguagem principal do Mac OS. Combinava C com conceitos de Smalltalk e seria a base do iOS até a chegada do Swift em 2014.
+* Smalltalk: Criada no Xerox PARC, foi a linguagem que definiu a programação orientada a objetos. Influenciou praticamente todas as linguagens modernas.
+* Perl: Linguagem de script criada por Larry Wall em 1987, muito usada para processamento de texto e administração de sistemas.
+HyperCard e a Pré-história da Web
+Lançado pela Apple em 1987 e distribuído gratuitamente com todos os Macs, o HyperCard permitia criar "pilhas" de cartões interligados por hiperlinks — uma navegação não-linear entre informações. É considerado um precursor direto da World Wide Web, introduzindo para usuários comuns o conceito de clicar em um link para ir a outro conteúdo.
+Redes Locais: Conectando os Computadores
+Enquanto a internet ainda era restrita a universidades, as empresas criavam suas próprias redes internas:
+* Ethernet: Desenvolvida na Xerox PARC e padronizada pela IEEE em 1983, tornou-se o padrão físico de conexão em rede local (LAN) usado até hoje.
+* Novell NetWare: Sistema operacional de rede dominante nos anos 80, permitia compartilhar arquivos e impressoras entre PCs em escritórios.
+* TCP/IP: O conjunto de protocolos que definiria a internet foi sendo adotado progressivamente durante esta fase, preparando o terreno para a explosão da web nos anos 90.
+* DNS (Domain Name System): Criado em 1983, substituiu as listas manuais de endereços IP por nomes legíveis como "mit.edu", viabilizando o crescimento da rede.
+Impacto Cultural
+O Commodore 64 e o Amiga geraram a demoscene, uma subcultura de programadores que competiam para criar demonstrações audiovisuais impressionantes dentro das limitações do hardware — berço de muitos desenvolvedores e artistas digitais profissionais. O desktop publishing, viabilizado pelo Mac junto à impressora LaserWriter e ao software PageMaker, democratizou a produção gráfica profissional e eliminou etapas inteiras do processo editorial tradicional.
+*
