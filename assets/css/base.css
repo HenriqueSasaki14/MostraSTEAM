@@ -10,6 +10,18 @@
   box-sizing: border-box;
 }
 
+/* O atributo [hidden] do HTML tem a mesma especificidade (0-1-0)
+   que qualquer seletor de classe (".botao8", ".dica-classificar"…).
+   Sem o !important, um elemento com display:flex ou display:grid
+   definido por classe continua visível mesmo com hidden — foi
+   exatamente o bug que escondia mal o botão "O que é isso?" da
+   fase 8. Com esta regra global, "hidden" sempre vence, em
+   qualquer página, sem precisar lembrar de repetir "[hidden]" em
+   cada componente novo. */
+[hidden] {
+  display: none !important;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;

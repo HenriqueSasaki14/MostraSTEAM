@@ -100,10 +100,13 @@ CATALOGO = [
     (5, "mark-zuckerberg", "Mark Zuckerberg", "retrato", "Mark Zuckerberg"),
     (5, "chad-hurley", "Chad Hurley", "retrato", "Chad Hurley"),
     (5, "jawed-karim", "Jawed Karim", "retrato", "Jawed Karim"),
+    (5, "steve-chen", "Steve Chen (YouTube)", "retrato", "Steve Chen"),
     # ---------- Fase 6: era móvel ----------
     (6, "andy-rubin", "Andy Rubin", "retrato", "Andy Rubin"),
     (6, "iphone-1", "File:IPhone First Generation (cropped).jpg", "objeto",
      "iPhone de primeira geração, 2007"),
+    # ---------- Fase 7: plataformas ----------
+    (7, "satya-nadella", "Satya Nadella", "retrato", "Satya Nadella"),
 ]
 
 # Pessoas citadas na modelagem para as quais NÃO existe imagem com licença

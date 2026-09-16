@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Era atual e tendências emergentes — RetroNet</title>
-    <meta name="description" content="2020 – hoje: IA generativa, Web3, quântica." />
+    <meta
+      name="description"
+      content="2020 até hoje: IA generativa e grandes modelos de linguagem. Ensine um classificador de verdade a distinguir dois desenhos seus."
+    />
 
     <script>
       document.documentElement.classList.add("js");
@@ -19,31 +22,207 @@
     <link rel="stylesheet" href="../../assets/css/tokens.css" />
     <link rel="stylesheet" href="../../assets/css/base.css" />
     <link rel="stylesheet" href="../../assets/css/shell.css" />
-
-    <!-- Provisório: trocar por ./fase.css quando esta fase for construída. -->
-    <link rel="stylesheet" href="../../assets/css/construcao.css" />
+    <link rel="stylesheet" href="./fase.css" />
   </head>
 
   <body>
+    <!-- Partículas puramente decorativas: nenhum dado real nelas,
+         por isso ficam fixas no HTML em vez de geradas por JS. -->
+    <div class="particulas" aria-hidden="true">
+      <span style="--x:6%; --tam:3px; --duracao:16s; --atraso:-2s; --op:0.6"></span>
+      <span style="--x:16%; --tam:2px; --duracao:21s; --atraso:-9s; --op:0.4"></span>
+      <span style="--x:27%; --tam:4px; --duracao:14s; --atraso:-4s; --op:0.5"></span>
+      <span style="--x:38%; --tam:2px; --duracao:19s; --atraso:-12s; --op:0.35"></span>
+      <span style="--x:49%; --tam:3px; --duracao:17s; --atraso:-1s; --op:0.55"></span>
+      <span style="--x:61%; --tam:2px; --duracao:22s; --atraso:-15s; --op:0.4"></span>
+      <span style="--x:72%; --tam:4px; --duracao:15s; --atraso:-6s; --op:0.5"></span>
+      <span style="--x:83%; --tam:2px; --duracao:20s; --atraso:-10s; --op:0.4"></span>
+      <span style="--x:92%; --tam:3px; --duracao:18s; --atraso:-3s; --op:0.55"></span>
+      <span style="--x:11%; --tam:2px; --duracao:24s; --atraso:-18s; --op:0.3"></span>
+    </div>
+
     <main id="conteudo" class="conteudo-principal">
-      <div class="envoltorio em-construcao">
-        <p class="etiqueta">Fase 8 de 8 &middot; 2020 – hoje</p>
-        <h1 class="em-construcao__titulo">Era atual e tendências emergentes</h1>
-        <p class="em-construcao__marco">IA generativa, Web3, quântica</p>
-        <div class="em-construcao__faixa" aria-hidden="true"></div>
+      <div class="envoltorio fase8">
+        <!-- ================= capa ================= -->
+        <section>
+          <div class="vidro">
+            <span class="etiqueta8">Fase 8 de 8</span>
+            <h1 class="capa8__titulo">Era atual e tendências emergentes</h1>
+            <p class="capa8__periodo">2020 &ndash; hoje &middot; do ChatGPT aos agentes de IA</p>
+            <p style="margin-top: var(--e-5)">
+              A internet deixou de ser um meio para acessar sites e virou
+              infraestrutura integrada ao cotidiano. Inteligência artificial,
+              nuvem, edge computing, realidade aumentada, redes 5G e automação
+              passaram a operar em conjunto.
+            </p>
+          </div>
 
-        <div class="em-construcao__aviso">
-          <p><span class="marcador-pendente">PÁGINA NÃO CONSTRUÍDA</span></p>
-          <p>Etapa 3 do plano: fase 8, com a atividade Ensine a máquina.</p>
-          <p>
-            A atividade prevista para esta fase é:
-            <strong>Ensine a máquina</strong>. Uma fase só é considerada pronta
-            quando a atividade dela estiver funcionando.
+          <div class="blocos8">
+            <div class="vidro">
+              <span class="etiqueta8">Invenção principal</span>
+              <p>
+                A IA generativa e os grandes modelos de linguagem, que produzem
+                texto, imagem, som e código a partir de instruções em linguagem
+                natural. Junto vêm os agentes de IA, que planejam e executam
+                tarefas; a computação espacial, com o Apple Vision Pro
+                apresentado em 2023; a Web3 com blockchain, NFTs e DAOs; o edge
+                computing; e a computação quântica, ainda inicial.
+              </p>
+            </div>
+
+            <div class="vidro">
+              <span class="etiqueta8">Impacto</span>
+              <p>
+                A forma de operar um computador mudou de novo: em vez de
+                aprender comandos, o usuário descreve o que quer. Junto vêm os
+                problemas — deepfakes, desinformação, golpes, direitos autorais
+                e privacidade —, além do uso de IA generativa por grupos
+                criminosos para automatizar engenharia social.
+              </p>
+            </div>
+          </div>
+
+          <div class="vidro">
+            <span class="etiqueta8">Pessoas em destaque</span>
+            <p>
+              Diferente das fases anteriores, aqui não há um nome só: o feito é
+              coletivo. As equipes por trás dos grandes modelos de linguagem
+              tornaram essa tecnologia pública a partir do lançamento do
+              ChatGPT, em 30 de novembro de 2022 — por isso esta fase não traz
+              galeria de retratos.
+            </p>
+          </div>
+        </section>
+
+        <!-- ================= atividade ================= -->
+        <section class="vidro" aria-labelledby="titulo-atividade">
+          <span class="etiqueta8">Atividade</span>
+          <h2 id="titulo-atividade">Ensine a máquina</h2>
+          <p style="margin-bottom: var(--e-5)">
+            Escolha duas categorias, desenhe cinco exemplos de cada uma e veja
+            o modelo aprender de verdade com os seus traços — sem rede neural,
+            só matemática de pixels.
           </p>
-        </div>
-      </div>
 
-      <div class="envoltorio"><div data-moldura="navegacao"></div></div>
+          <div class="ensinar">
+            <!-- ---------- instruções do passo 1 ---------- -->
+            <div class="passo8" data-passo="1">
+              <h3 class="passo8-titulo">
+                <span class="passo8-numero" aria-hidden="true">1</span>
+                Ensine as duas categorias
+              </h3>
+
+              <div class="rotulos-form">
+                <div class="rotulo-campo">
+                  <label for="rotulo-a">Categoria 1</label>
+                  <input id="rotulo-a" type="text" data-rotulo="A" value="Círculo" maxlength="20" />
+                </div>
+                <div class="rotulo-campo">
+                  <label for="rotulo-b">Categoria 2</label>
+                  <input id="rotulo-b" type="text" data-rotulo="B" value="Quadrado" maxlength="20" />
+                </div>
+              </div>
+            </div>
+
+            <!-- ---------- estação de desenho: única, serve o treino
+                 (passo 1) e o teste (passo 2) sem nunca sair da tela.
+                 Antes o quadro só existia dentro do passo 1: quando o
+                 passo 2 desbloqueava, a página rolava até ele e o quadro
+                 (e o jeito de desenhar de novo) ficava fora da vista. ---------- -->
+            <div class="oficina">
+              <div>
+                <canvas class="quadro" aria-label="Quadro de desenho"></canvas>
+                <div class="quadro-acoes">
+                  <button type="button" class="botao8" data-limpar-quadro>Limpar</button>
+                  <button type="button" class="botao8 botao8--principal" data-salvar-a>
+                    Salvar como Círculo
+                  </button>
+                  <button type="button" class="botao8 botao8--principal" data-salvar-b>
+                    Salvar como Quadrado
+                  </button>
+                  <button type="button" class="botao8 botao8--principal" data-classificar hidden>
+                    O que é isso?
+                  </button>
+                </div>
+                <p class="dica-classificar" hidden>
+                  <span class="passo8-numero" aria-hidden="true">2</span>
+                  Agora desenhe um sexto aqui no mesmo quadro — pode ser
+                  parecido com as categorias, ou bem diferente das duas — e
+                  clique em "O que é isso?".
+                </p>
+              </div>
+
+              <div class="categorias">
+                <div class="categoria">
+                  <div class="categoria__cabecalho">
+                    <span class="categoria__nome" data-titulo-categoria="A">Círculo</span>
+                    <span class="categoria__conta"><strong data-conta-a>0</strong> de 5</span>
+                  </div>
+                  <div class="galeria" data-galeria="A"></div>
+                </div>
+                <div class="categoria">
+                  <div class="categoria__cabecalho">
+                    <span class="categoria__nome" data-titulo-categoria="B">Quadrado</span>
+                    <span class="categoria__conta"><strong data-conta-b>0</strong> de 5</span>
+                  </div>
+                  <div class="galeria" data-galeria="B"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ---------- resultado da classificação ---------- -->
+            <div class="resultado" hidden>
+              <div class="resultado__cabecalho">
+                <span class="resultado__miniatura"><img alt="Seu desenho" width="88" height="88" /></span>
+                <p class="resultado__veredito"></p>
+              </div>
+
+              <div class="barras-confianca"></div>
+
+              <div class="correcao"></div>
+            </div>
+
+            <div class="explicacao-modelo" hidden>
+              <p>
+                O modelo só conhece as duas categorias que você ensinou.
+                Qualquer desenho vira uma das duas — mesmo que não pareça com
+                nenhuma das duas. Ele não tem como responder "não sei": foi
+                assim que aprendeu, e é assim que qualquer classificador
+                treinado por exemplos se comporta.
+              </p>
+            </div>
+          </div>
+
+          <div class="quadro-acoes">
+            <button type="button" class="botao8" data-reiniciar>Recomeçar do zero</button>
+          </div>
+        </section>
+
+        <!-- ================= fontes ================= -->
+        <section class="vidro">
+          <span class="etiqueta8">Fontes desta fase</span>
+          <ul class="lista8">
+            <li>
+              <span class="marcador-pendente">PENDENTE</span> — a pesquisa
+              entregue cita "buscas na web assistidas por IA" como método, não
+              uma lista de fontes verificáveis. Substituir por referências
+              conferíveis antes da amostra.
+            </li>
+            <li>
+              A data do lançamento público do ChatGPT (30 de novembro de 2022)
+              é amplamente documentada e consta do anúncio oficial da OpenAI.
+            </li>
+            <li>
+              O classificador desta página é um algoritmo de vizinho mais
+              próximo do centroide sobre pixels — o código comentado está em
+              <code>fases/08-ia-generativa/classificador.js</code>, para quem
+              quiser ver exatamente como ele decide.
+            </li>
+          </ul>
+        </section>
+
+        <div data-moldura="navegacao"></div>
+      </div>
     </main>
 
     <div data-moldura="rodape"></div>
@@ -52,5 +231,7 @@
     <script src="../../assets/js/som.js"></script>
     <script src="../../assets/js/shell.js"></script>
     <script src="../../assets/js/inatividade.js"></script>
+    <script src="./classificador.js"></script>
+    <script src="./fase.js"></script>
   </body>
 </html>

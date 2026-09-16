@@ -224,9 +224,8 @@
   backdrop-filter: blur(18px);
 }
 
-.menu[hidden] {
-  display: none;
-}
+/* [hidden] agora tem uma regra global com !important em base.css,
+   entao esta sobrescrita local nao e mais necessaria. */
 
 .menu__caixa {
   width: min(100%, 980px);

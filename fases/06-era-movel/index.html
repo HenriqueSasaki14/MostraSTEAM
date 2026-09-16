@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Era móvel e dos smartphones — RetroNet</title>
-    <meta name="description" content="2007 – 2013: iPhone, Android, App Store." />
+    <meta
+      name="description"
+      content="2007 a 2013: o iPhone, o Android e a App Store. Arraste ícones numa tela inicial simulada e compare 2007 com hoje."
+    />
 
     <script>
       document.documentElement.classList.add("js");
@@ -19,31 +22,173 @@
     <link rel="stylesheet" href="../../assets/css/tokens.css" />
     <link rel="stylesheet" href="../../assets/css/base.css" />
     <link rel="stylesheet" href="../../assets/css/shell.css" />
-
-    <!-- Provisório: trocar por ./fase.css quando esta fase for construída. -->
-    <link rel="stylesheet" href="../../assets/css/construcao.css" />
+    <link rel="stylesheet" href="./fase.css" />
   </head>
 
   <body>
     <main id="conteudo" class="conteudo-principal">
-      <div class="envoltorio em-construcao">
-        <p class="etiqueta">Fase 6 de 8 &middot; 2007 – 2013</p>
-        <h1 class="em-construcao__titulo">Era móvel e dos smartphones</h1>
-        <p class="em-construcao__marco">iPhone, Android, App Store</p>
-        <div class="em-construcao__faixa" aria-hidden="true"></div>
+      <div class="envoltorio fase6">
+        <!-- ================= capa ================= -->
+        <section>
+          <div class="cartao6">
+            <span class="etiqueta6">Fase 6 de 8</span>
+            <h1 class="capa6__titulo">Era móvel e dos smartphones</h1>
+            <p class="capa6__periodo">2007 &ndash; 2013 &middot; do iPhone ao Instagram</p>
+            <p style="margin-top: var(--e-5)">
+              Antes de 2007 o celular tinha teclado físico, menus profundos, tela
+              resistiva e uma internet reduzida chamada WAP. As peças já
+              existiam — smartphones, 3G, câmera —, faltava reuni-las em algo
+              simples o bastante para o grande público.
+            </p>
+          </div>
 
-        <div class="em-construcao__aviso">
-          <p><span class="marcador-pendente">PÁGINA NÃO CONSTRUÍDA</span></p>
-          <p>Etapa 4 do plano: fase 6, com a micro-interação da tela inicial.</p>
-          <p>
-            A atividade prevista para esta fase é:
-            <strong>Tela inicial</strong>. Uma fase só é considerada pronta
-            quando a atividade dela estiver funcionando.
+          <div class="blocos6">
+            <div class="cartao6">
+              <span class="etiqueta6">Invenção principal</span>
+              <p>
+                O iPhone, apresentado em 9 de janeiro de 2007, com multitouch,
+                teclado virtual e navegador que abria a web real. A App Store
+                abre em julho de 2008 e o Android Market em outubro, criando a
+                distribuição centralizada com divisão de receita 70/30.
+              </p>
+              <p>
+                Somam-se GPS, acelerômetro e giroscópio, as redes 3G e 4G, o iPad
+                (2010), o Kindle (2007) e aplicativos que definiram a época:
+                WhatsApp, Instagram, Uber e Waze.
+              </p>
+            </div>
+
+            <div class="cartao6">
+              <span class="etiqueta6">Impacto</span>
+              <p>
+                O computador deixou de ser um lugar aonde se vai e virou algo que
+                se carrega. A competição passou a ser entre ecossistemas, não
+                entre aparelhos — Symbian, BlackBerry e Windows Phone perderam
+                por isso.
+              </p>
+              <p>
+                Nasce o modelo freemium, o projeto <em>mobile-first</em> e o
+                debate sobre privacidade de localização.
+              </p>
+            </div>
+          </div>
+
+          <div class="cartao6">
+            <span class="etiqueta6">iOS e Android: a diferença estratégica</span>
+            <div class="rolagem-tabela6">
+              <table class="tabela6">
+                <thead>
+                  <tr>
+                    <th>Aspecto</th>
+                    <th>iOS</th>
+                    <th>Android</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Modelo</td>
+                    <td>Fechado e integrado</td>
+                    <td>Aberto e licenciado</td>
+                  </tr>
+                  <tr>
+                    <td>Base técnica</td>
+                    <td>Derivado do macOS (Unix)</td>
+                    <td>Kernel Linux</td>
+                  </tr>
+                  <tr>
+                    <td>Fabricantes</td>
+                    <td>Só a Apple</td>
+                    <td>Qualquer um, com licença gratuita</td>
+                  </tr>
+                  <tr>
+                    <td>Resultado</td>
+                    <td>Experiência uniforme</td>
+                    <td>Alcance global e diversidade de preços</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="cartao6">
+            <span class="etiqueta6">Pessoas em destaque</span>
+            <div class="pessoas"></div>
+          </div>
+        </section>
+
+        <!-- ================= atividade ================= -->
+        <section class="cartao6" aria-labelledby="titulo-atividade">
+          <span class="etiqueta6">Atividade</span>
+          <h2 id="titulo-atividade">Tela inicial</h2>
+          <p style="margin-bottom: var(--e-5)">
+            Segure um ícone e arraste até outro para trocar os dois de lugar —
+            exatamente o gesto que existe desde o primeiro iPhone. Depois compare
+            o acabamento de 2007 com o de hoje.
           </p>
-        </div>
-      </div>
 
-      <div class="envoltorio"><div data-moldura="navegacao"></div></div>
+          <div class="comparador6">
+            <div class="chave-epoca6" role="group" aria-label="Escolha a época">
+              <button type="button" data-epoca="2007" aria-pressed="true">2007</button>
+              <button type="button" data-epoca="hoje" aria-pressed="false">Hoje</button>
+            </div>
+            <p class="comparador6__nota">Os mesmos ícones, oito anos de acabamento.</p>
+          </div>
+
+          <div class="telefone">
+            <div class="telefone__entalhe"></div>
+            <div class="telefone__tela">
+              <div class="telefone__status">
+                <span>••••</span>
+                <span>12:00</span>
+                <span>100%</span>
+              </div>
+              <div class="telefone__grade"></div>
+              <div class="telefone__doca"></div>
+            </div>
+          </div>
+
+          <dl class="diferencas6">
+            <div class="diferenca6">
+              <dt>2007</dt>
+              <dd>
+                Vidro, brilho e sombra em cada ícone — o design imitava objetos
+                físicos para ensinar a tocar numa tela sem instrução nenhuma.
+              </dd>
+            </div>
+            <div class="diferenca6">
+              <dt>Hoje</dt>
+              <dd>
+                Ícones planos, sem textura. Depois de uma década, ninguém
+                precisa mais que a tela pareça vidro para saber que pode tocar
+                nela.
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <!-- ================= fontes ================= -->
+        <section class="cartao6">
+          <span class="etiqueta6">Fontes desta fase</span>
+          <ul class="lista6">
+            <li>Apple Newsroom — anúncios do iPhone (2007), App Store (2008) e iPad (2010).</li>
+            <li>Open Handset Alliance — anúncio do Android (2007).</li>
+            <li>Google — blog oficial do Android e lançamento do Google Play (2012).</li>
+            <li>Amazon — lançamento do Kindle (2007).</li>
+            <li>Anatel — leilões de 3G (2007) e 4G (2012) no Brasil.</li>
+            <li>ITU — histórico das redes 3G e do padrão IMT-2000.</li>
+            <li>
+              A List Apart — Ethan Marcotte, "Responsive Web Design" (2010).
+            </li>
+            <li>
+              Datas de vida conferidas no Wikidata e cruzadas com a Wikipédia;
+              crédito das fotos na
+              <a href="../../creditos/index.html">página de créditos</a>.
+            </li>
+          </ul>
+        </section>
+
+        <div data-moldura="navegacao"></div>
+      </div>
     </main>
 
     <div data-moldura="rodape"></div>
@@ -52,5 +197,9 @@
     <script src="../../assets/js/som.js"></script>
     <script src="../../assets/js/shell.js"></script>
     <script src="../../assets/js/inatividade.js"></script>
+    <script src="../../assets/retratos/creditos.js"></script>
+    <script src="../../assets/js/pessoas.js"></script>
+    <script src="./pessoas.js"></script>
+    <script src="./fase.js"></script>
   </body>
 </html>

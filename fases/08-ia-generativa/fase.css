@@ -1,0 +1,566 @@
+/* ============================================================
+   RetroNet — Fase 8 (2020–hoje)
+   Estética: dark mode, vidro fosco, gradiente roxo e azul,
+   tipografia limpa, animação de partículas.
+   ------------------------------------------------------------
+   A moldura já é escura; aqui ela ganha um gradiente ambiente
+   atrás de tudo e cartões em vidro fosco (fundo semitransparente
+   com desfoque) por cima.
+   ============================================================ */
+
+.fase8 {
+  position: relative;
+  padding-block: var(--e-7) var(--e-6);
+  isolation: isolate;
+}
+
+/* Gradiente ambiente, fixo atrás de toda a página da fase — não
+   rola com o conteúdo, para não competir com o texto. */
+.fase8::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: radial-gradient(
+      60% 45% at 15% 0%,
+      rgb(139 92 246 / 0.24),
+      transparent 60%
+    ),
+    radial-gradient(55% 45% at 100% 20%, rgb(59 130 246 / 0.18), transparent 60%);
+  pointer-events: none;
+}
+
+/* ---------- partículas ----------
+   Pontos flutuando bem devagar. prefers-reduced-motion já zera a
+   duração das animações no tokens.css; aqui só a opacidade/tamanho
+   variam, então a versão "parada" ainda fica bonita, só sem
+   movimento. */
+.particulas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particulas span {
+  position: absolute;
+  width: var(--tam, 3px);
+  height: var(--tam, 3px);
+  border-radius: 50%;
+  left: var(--x, 50%);
+  top: 100%;
+  background: rgb(196 181 253 / var(--op, 0.5));
+  box-shadow: 0 0 6px rgb(139 92 246 / 0.5);
+  animation: particula-subir var(--duracao, 18s) linear infinite;
+  animation-delay: var(--atraso, 0s);
+}
+
+@keyframes particula-subir {
+  from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-115vh);
+    opacity: 0;
+  }
+}
+
+/* ============================================================
+   Vidro fosco
+   ============================================================ */
+
+.vidro {
+  position: relative;
+  background: rgb(24 22 34 / 0.6);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: 20px;
+  padding: clamp(var(--e-5), 4vw, var(--e-6));
+  margin-bottom: var(--e-5);
+  box-shadow: 0 24px 50px -30px rgb(0 0 0 / 0.6);
+}
+
+.vidro p,
+.vidro li {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.etiqueta8 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--destaque-texto);
+  margin-bottom: var(--e-3);
+}
+
+.capa8__titulo {
+  font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
+  line-height: 1.1;
+  max-width: 20ch;
+  background: linear-gradient(120deg, #f5f5f0, #c4b5fd 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.capa8__periodo {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-pequeno);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--texto);
+  margin-top: var(--e-2);
+}
+
+.blocos8 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--e-5);
+}
+
+.blocos8 .vidro {
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   Pessoas
+   ============================================================ */
+
+.pessoas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+  gap: var(--e-4) var(--e-3);
+}
+
+.pessoa {
+  display: grid;
+  gap: var(--e-2);
+}
+
+.pessoa__moldura {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgb(255 255 255 / 0.12);
+}
+
+.pessoa__moldura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pessoa__moldura--sem-foto {
+  display: grid;
+  place-items: center;
+  background: rgb(139 92 246 / 0.12);
+}
+
+.pessoa__iniciais {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--destaque-texto);
+}
+
+.pessoa__nome {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--titulo);
+}
+
+.pessoa__anos {
+  display: block;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  color: var(--texto);
+  margin-bottom: 2px;
+}
+
+.pessoa__papel {
+  display: block;
+  font-size: var(--t-micro);
+  line-height: 1.45;
+  color: var(--texto);
+}
+
+/* ============================================================
+   ATIVIDADE — ensine a máquina
+   ============================================================ */
+
+.ensinar {
+  display: grid;
+  gap: var(--e-5);
+}
+
+.passo8 {
+  display: grid;
+  gap: var(--e-4);
+}
+
+/* [hidden] agora tem uma regra global com !important em base.css,
+   entao esta sobrescrita local nao e mais necessaria. */
+
+.passo8-titulo {
+  display: flex;
+  align-items: baseline;
+  gap: var(--e-3);
+  flex-wrap: wrap;
+}
+
+.passo8-numero {
+  display: inline-grid;
+  place-items: center;
+  width: 1.6em;
+  height: 1.6em;
+  flex: none;
+  border-radius: 50%;
+  background: var(--destaque);
+  /* Preto puro, não #14101f: o roxo #8b5cf6 dava só 4,41:1 com o
+     tom quase-preto anterior, abaixo do mínimo. Preto puro fecha
+     em 4,96:1. */
+  color: #000;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+/* ---------- rótulos das categorias ---------- */
+.rotulos-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--e-3);
+}
+
+.rotulo-campo {
+  display: grid;
+  gap: 4px;
+}
+
+.rotulo-campo label {
+  font-size: var(--t-micro);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texto);
+  font-weight: 700;
+}
+
+.rotulo-campo input {
+  padding: var(--e-3);
+  border-radius: 10px;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  background: rgb(255 255 255 / 0.06);
+  color: var(--titulo);
+  font-family: var(--fonte-texto);
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.rotulo-campo input:focus-visible {
+  outline: none;
+  border-color: var(--destaque);
+  box-shadow: 0 0 0 3px rgb(139 92 246 / 0.3);
+}
+
+/* ---------- área de desenho ---------- */
+.oficina {
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  gap: var(--e-5);
+  align-items: start;
+}
+
+@media (max-width: 760px) {
+  .oficina {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.quadro {
+  touch-action: none;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  background: rgb(10 9 16 / 0.55);
+  border: 1px dashed rgb(255 255 255 / 0.22);
+  cursor: crosshair;
+}
+
+.quadro-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-2);
+  margin-top: var(--e-3);
+}
+
+/* Aparece ao lado do próprio quadro assim que as 10 amostras estão
+   prontas — nunca exige rolar a página para achar onde desenhar de
+   novo, porque o quadro nunca sai da tela. */
+.dica-classificar {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--e-2);
+  margin-top: var(--e-3);
+  padding: var(--e-3);
+  border-radius: 10px;
+  border: 1px solid rgb(139 92 246 / 0.35);
+  background: rgb(139 92 246 / 0.08);
+  font-size: 0.875rem;
+  color: var(--titulo);
+}
+
+.dica-classificar .passo8-numero {
+  margin-top: 1px;
+}
+
+.botao8 {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-2);
+  padding: var(--e-2) var(--e-4);
+  border-radius: var(--raio-total);
+  border: 1px solid rgb(255 255 255 / 0.16);
+  background: rgb(255 255 255 / 0.06);
+  color: var(--titulo);
+  font-size: var(--t-pequeno);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--mov-rapido) var(--curva),
+    border-color var(--mov-rapido) var(--curva);
+}
+
+.botao8:hover {
+  border-color: rgb(255 255 255 / 0.3);
+  background: rgb(255 255 255 / 0.1);
+}
+
+/* O roxo/azul "puro" da identidade (#8b5cf6, #6366f1) fica entre
+   4,23:1 e 4,47:1 contra branco — abaixo do mínimo de 4,5:1 para
+   texto de 14px em negrito (não é "texto grande" o bastante para
+   a exceção de 3:1). Os dois tons abaixo são a mesma paleta,
+   escurecida até passar com folga nos dois estados. */
+.botao8--principal {
+  background: linear-gradient(135deg, #7c4fe8, #5b4fd8);
+  border-color: transparent;
+  color: #fff;
+  font-weight: 700;
+}
+
+.botao8--principal:hover {
+  background: linear-gradient(135deg, #8a5ff0, #6d5fe0);
+}
+
+/* O ".passo8" pai é um grid, cujo padrão é esticar os filhos para
+   preencher a largura toda — sem isto o botão "O que é isso?"
+   vira uma pílula gigante ocupando a linha inteira, destoando dos
+   outros botões do site (que só têm o tamanho do próprio texto). */
+[data-classificar] {
+  justify-self: start;
+}
+
+.botao8[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- galeria de exemplos salvos ---------- */
+.categorias {
+  display: grid;
+  gap: var(--e-4);
+}
+
+.categoria {
+  display: grid;
+  gap: var(--e-2);
+}
+
+.categoria__cabecalho {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--e-2);
+}
+
+.categoria__nome {
+  font-weight: 700;
+  color: var(--titulo);
+  font-size: 0.9375rem;
+}
+
+.categoria__conta {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  color: var(--texto);
+}
+
+.categoria__conta strong {
+  color: var(--destaque-texto);
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 52px;
+}
+
+.galeria__item {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.16);
+  background: rgb(255 255 255 / 0.04);
+}
+
+.galeria__item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.galeria__vazia {
+  font-size: var(--t-micro);
+  color: var(--texto);
+  align-self: center;
+}
+
+/* ---------- resultado da classificação ---------- */
+.resultado {
+  display: grid;
+  gap: var(--e-4);
+}
+
+.resultado__miniatura {
+  width: 88px;
+  height: 88px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 0.18);
+  background: rgb(255 255 255 / 0.05);
+}
+
+.resultado__miniatura img {
+  width: 100%;
+  height: 100%;
+}
+
+.resultado__cabecalho {
+  display: flex;
+  gap: var(--e-4);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.resultado__veredito {
+  font-size: var(--t-h3);
+  font-weight: 700;
+  color: var(--titulo);
+}
+
+.resultado__veredito strong {
+  color: var(--destaque-texto);
+}
+
+.barras-confianca {
+  display: grid;
+  gap: var(--e-2);
+}
+
+.barra-confianca {
+  display: grid;
+  grid-template-columns: 7rem 1fr 3.5rem;
+  align-items: center;
+  gap: var(--e-3);
+  font-size: 0.875rem;
+}
+
+.barra-confianca__nome {
+  color: var(--texto);
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.barra-confianca__trilho {
+  height: 10px;
+  border-radius: var(--raio-total);
+  background: rgb(255 255 255 / 0.08);
+  overflow: hidden;
+}
+
+.barra-confianca__preenchimento {
+  height: 100%;
+  border-radius: var(--raio-total);
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+  transition: width 500ms var(--curva);
+}
+
+.barra-confianca__numero {
+  font-family: var(--fonte-mono);
+  font-weight: 700;
+  color: var(--titulo);
+}
+
+.correcao {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e-3);
+}
+
+.correcao p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--texto);
+}
+
+.explicacao-modelo {
+  padding: var(--e-4);
+  border-radius: 12px;
+  border: 1px solid rgb(139 92 246 / 0.35);
+  background: rgb(139 92 246 / 0.08);
+}
+
+.explicacao-modelo p {
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+/* ============================================================
+   Fontes
+   ============================================================ */
+
+.lista8 {
+  display: grid;
+  gap: var(--e-2);
+  font-size: 0.9375rem;
+}
+
+.lista8 li {
+  padding-left: var(--e-4);
+  position: relative;
+}
+
+.lista8 li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--destaque-texto);
+}

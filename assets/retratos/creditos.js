@@ -587,6 +587,21 @@ window.RetroNet.CREDITOS_IMAGENS = [
     "altura": 853
   },
   {
+    "arquivo_origem": "File:Steve Chen (2022) 02.png",
+    "autor": "TaiwanPlus",
+    "licenca": "CC BY 3.0",
+    "licenca_url": "https://creativecommons.org/licenses/by/3.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Steve_Chen_(2022)_02.png",
+    "url_original": "https://upload.wikimedia.org/wikipedia/commons/6/63/Steve_Chen_%282022%29_02.png",
+    "id": "steve-chen",
+    "fase": 5,
+    "assunto": "Steve Chen",
+    "tipo": "retrato",
+    "arquivo": "assets/retratos/steve-chen.webp",
+    "largura": 640,
+    "altura": 853
+  },
+  {
     "arquivo_origem": "File:2008 Google Developer Day in Japan - Andy Rubin (cropped).jpg",
     "autor": "Yoichiro Akiyama from Tokyo, Japan",
     "licenca": "CC BY-SA 2.0",
@@ -615,5 +630,20 @@ window.RetroNet.CREDITOS_IMAGENS = [
     "arquivo": "assets/retratos/iphone-1.webp",
     "largura": 765,
     "altura": 510
+  },
+  {
+    "arquivo_origem": "File:MS-Exec-Nadella-Satya-2017-08-31-22 (cropped).jpg",
+    "autor": "Brian Smale and Microsoft",
+    "licenca": "CC BY-SA 4.0",
+    "licenca_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "pagina": "https://commons.wikimedia.org/wiki/File:MS-Exec-Nadella-Satya-2017-08-31-22_(cropped).jpg",
+    "url_original": "https://upload.wikimedia.org/wikipedia/commons/7/78/MS-Exec-Nadella-Satya-2017-08-31-22_%28cropped%29.jpg",
+    "id": "satya-nadella",
+    "fase": 7,
+    "assunto": "Satya Nadella",
+    "tipo": "retrato",
+    "arquivo": "assets/retratos/satya-nadella.webp",
+    "largura": 640,
+    "altura": 853
   }
 ];

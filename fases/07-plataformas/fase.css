@@ -1,0 +1,415 @@
+/* ============================================================
+   RetroNet — Fase 7 (2014–2019)
+   Estética: flat design. Cores chapadas, sem sombra nem textura,
+   tipografia geométrica, ícones de traço fino.
+   ------------------------------------------------------------
+   A moldura escura continua igual. O miolo é deliberadamente o
+   mais "quieto" das oito fases — sem vidro, sem gradiente, sem
+   textura — porque esta é a fase da infraestrutura que amadurece
+   em silêncio, não a da novidade vistosa.
+   ============================================================ */
+
+.fase7 {
+  padding-block: var(--e-7) var(--e-6);
+}
+
+/* ============================================================
+   Cartões
+   ============================================================ */
+
+.cartao7 {
+  position: relative;
+  background: var(--fundo-elevado);
+  border-radius: 4px;
+  padding: clamp(var(--e-5), 4vw, var(--e-6));
+  margin-bottom: var(--e-5);
+}
+
+.cartao7 p,
+.cartao7 li {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.etiqueta7 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--destaque-texto);
+  margin-bottom: var(--e-3);
+}
+
+.capa7__titulo {
+  font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
+  line-height: 1.1;
+  max-width: 20ch;
+}
+
+.capa7__periodo {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-pequeno);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--texto);
+  margin-top: var(--e-2);
+}
+
+.blocos7 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--e-5);
+}
+
+.blocos7 .cartao7 {
+  margin-bottom: 0;
+}
+
+/* ---------- linha de temas ---------- */
+.temas7 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-2);
+  margin-top: var(--e-4);
+}
+
+.tema7 {
+  padding: 4px var(--e-3);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--destaque) 16%, var(--fundo-elevado));
+  color: var(--destaque-texto);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+}
+
+/* ============================================================
+   Pessoas
+   ============================================================ */
+
+.pessoas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(158px, 1fr));
+  gap: var(--e-4) var(--e-3);
+}
+
+.pessoa {
+  display: grid;
+  gap: var(--e-2);
+}
+
+.pessoa__moldura {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.pessoa__moldura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pessoa__moldura--sem-foto {
+  display: grid;
+  place-items: center;
+  background: var(--fundo-afundado);
+}
+
+.pessoa__iniciais {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--destaque-texto);
+}
+
+.pessoa__nome {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--titulo);
+}
+
+.pessoa__anos {
+  display: block;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  color: var(--texto);
+  margin-bottom: 2px;
+}
+
+.pessoa__papel {
+  display: block;
+  font-size: var(--t-micro);
+  line-height: 1.45;
+  color: var(--texto);
+}
+
+/* ============================================================
+   ATIVIDADE — empacote uma vez, rode em qualquer lugar
+   ============================================================ */
+
+.chave-epoca7 {
+  display: inline-flex;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: var(--e-4);
+}
+
+.chave-epoca7 button {
+  padding: var(--e-2) var(--e-5);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-pequeno);
+  font-weight: 700;
+  color: var(--texto);
+  background: var(--fundo-elevado);
+}
+
+.chave-epoca7 button[aria-pressed="true"] {
+  background: var(--destaque);
+  color: #06210f;
+}
+
+.implantacao {
+  display: grid;
+  gap: var(--e-5);
+}
+
+.oficina7 {
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) auto minmax(0, 1fr);
+  gap: var(--e-4);
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .oficina7 {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+}
+
+.bloco-app {
+  touch-action: none;
+  display: grid;
+  justify-items: center;
+  gap: var(--e-2);
+  padding: var(--e-4);
+  border-radius: 8px;
+  background: var(--fundo-elevado);
+  border: 2px dashed var(--borda);
+  cursor: grab;
+  width: 148px;
+}
+
+.bloco-app svg {
+  width: 40px;
+  height: 40px;
+}
+
+.bloco-app__rotulo {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  color: var(--titulo);
+  text-align: center;
+}
+
+.bloco-app--dentro {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.seta7 {
+  width: 28px;
+  height: 28px;
+  color: var(--texto);
+  justify-self: center;
+}
+
+@media (max-width: 720px) {
+  .seta7 {
+    transform: rotate(90deg);
+  }
+}
+
+.contentor {
+  touch-action: none;
+  position: relative;
+  width: 148px;
+  height: 118px;
+  border-radius: 8px;
+  border: 2px solid var(--destaque);
+  background: color-mix(in srgb, var(--destaque) 10%, var(--fundo-elevado));
+  display: grid;
+  place-items: center;
+  justify-self: center;
+}
+
+.contentor__rotulo {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  color: var(--destaque-texto);
+  font-weight: 700;
+}
+
+.contentor--alvo {
+  background: color-mix(in srgb, var(--destaque) 22%, var(--fundo-elevado));
+}
+
+.contentor__app {
+  width: 40px;
+  height: 40px;
+}
+
+/* fantasma de arrasto, reaproveitando o padrão da fase 4 */
+.app-fantasma {
+  position: fixed;
+  z-index: 999;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+}
+
+.app-fantasma svg {
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 6px 10px rgb(0 0 0 / 0.5));
+}
+
+.acoes7 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-3);
+  align-items: center;
+}
+
+.botao7 {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e-2);
+  padding: var(--e-2) var(--e-5);
+  border-radius: 4px;
+  background: var(--fundo-elevado);
+  color: var(--titulo);
+  font-size: var(--t-pequeno);
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--borda);
+}
+
+.botao7--principal {
+  background: var(--destaque);
+  color: #06210f;
+  border-color: transparent;
+}
+
+.botao7[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- os três ambientes ---------- */
+.ambientes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--e-4);
+}
+
+.ambiente {
+  padding: var(--e-4);
+  border-radius: 8px;
+  background: var(--fundo-elevado);
+  display: grid;
+  gap: var(--e-3);
+  justify-items: center;
+  text-align: center;
+}
+
+.ambiente__icone {
+  width: 44px;
+  height: 44px;
+  color: var(--texto);
+}
+
+.ambiente__nome {
+  font-weight: 700;
+  color: var(--titulo);
+  font-size: 0.9375rem;
+}
+
+.ambiente__estado {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  padding: 3px var(--e-3);
+  border-radius: var(--raio-total);
+  background: var(--fundo-afundado);
+  color: var(--texto);
+}
+
+.ambiente--rodando .ambiente__estado {
+  background: color-mix(in srgb, #22c55e 22%, var(--fundo-afundado));
+  color: #6fe39a; /* 12,3:1 sobre --fundo-afundado */
+}
+
+.ambiente--erro .ambiente__estado {
+  background: color-mix(in srgb, #ef4444 22%, var(--fundo-afundado));
+  color: #ff9c93; /* 9,8:1 sobre --fundo-afundado */
+}
+
+.ambiente__checklist {
+  display: grid;
+  gap: 4px;
+  font-size: var(--t-micro);
+  color: var(--texto);
+  text-align: left;
+  width: 100%;
+}
+
+.ambiente__checklist li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.explicacao7 {
+  padding: var(--e-4);
+  border-left: 3px solid var(--destaque);
+  background: color-mix(in srgb, var(--destaque) 8%, transparent);
+}
+
+.explicacao7 p {
+  margin: 0;
+}
+
+/* ============================================================
+   Fontes
+   ============================================================ */
+
+.lista7 {
+  display: grid;
+  gap: var(--e-2);
+  font-size: 0.9375rem;
+}
+
+.lista7 li {
+  padding-left: var(--e-4);
+  position: relative;
+}
+
+.lista7 li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--destaque-texto);
+}

@@ -82,13 +82,9 @@ window.RetroNet.FASES = [
     epoca: "2014 – 2019",
     titulo: "Plataformas, nuvem madura e aprendizado de máquina",
     marco: "Plataformas, nuvem e deep learning",
-    interacao: "A definir",
+    interacao: "Empacote uma vez, rode em qualquer lugar",
     resumo: "A infraestrutura amadurece em silêncio e prepara o que vem depois.",
     cor: "#22C55E",
-    // A pesquisa desta fase ainda não existe (ver modelagem.md).
-    // A página é construída com estrutura e estética, e o conteúdo
-    // fica com marcadores visíveis de pendência.
-    pendente: true,
   },
   {
     numero: 8,

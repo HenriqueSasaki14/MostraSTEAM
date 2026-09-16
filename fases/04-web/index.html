@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>World Wide Web e popularização da internet — RetroNet</title>
-    <meta name="description" content="Anos 1990: Web, navegadores, bolha pontocom." />
+    <meta
+      name="description"
+      content="Anos 1990: HTML, navegadores e conexão discada. Monte uma página de 1996 com marquee, blink e contador de visitas de verdade."
+    />
 
     <script>
       document.documentElement.classList.add("js");
@@ -19,31 +22,150 @@
     <link rel="stylesheet" href="../../assets/css/tokens.css" />
     <link rel="stylesheet" href="../../assets/css/base.css" />
     <link rel="stylesheet" href="../../assets/css/shell.css" />
-
-    <!-- Provisório: trocar por ./fase.css quando esta fase for construída. -->
-    <link rel="stylesheet" href="../../assets/css/construcao.css" />
+    <link rel="stylesheet" href="./fase.css" />
   </head>
 
   <body>
     <main id="conteudo" class="conteudo-principal">
-      <div class="envoltorio em-construcao">
-        <p class="etiqueta">Fase 4 de 8 &middot; Anos 1990</p>
-        <h1 class="em-construcao__titulo">World Wide Web e popularização da internet</h1>
-        <p class="em-construcao__marco">Web, navegadores, bolha pontocom</p>
-        <div class="em-construcao__faixa" aria-hidden="true"></div>
+      <div class="envoltorio fase4">
+        <!-- ================= capa ================= -->
+        <section>
+          <div class="pagina90">
+            <span class="etiqueta-web">Fase 4 de 8</span>
+            <h1 class="capa4__titulo">World Wide Web e popularização da internet</h1>
+            <p class="capa4__periodo">
+              Anos 1990 &middot; do CERN à bolha pontocom
+            </p>
+            <p style="margin-top: var(--e-5)">
+              Conexão discada de 14,4k a 56k, cobrança por pulso e navegação
+              concentrada à noite e no fim de semana. A tela demorava a montar a
+              imagem linha por linha, e o ruído do modem virou parte da memória
+              coletiva da década.
+            </p>
+          </div>
 
-        <div class="em-construcao__aviso">
-          <p><span class="marcador-pendente">PÁGINA NÃO CONSTRUÍDA</span></p>
-          <p>Etapa 3 do plano: fase 4, com o construtor de página de 1996.</p>
-          <p>
-            A atividade prevista para esta fase é:
-            <strong>Página de 1996</strong>. Uma fase só é considerada pronta
-            quando a atividade dela estiver funcionando.
+          <div class="blocos4">
+            <div class="pagina90">
+              <span class="etiqueta-web">Invenção principal</span>
+              <p>
+                HTML, HTTP e URL, com a tecnologia liberada gratuitamente pelo
+                CERN em 1993. Depois vêm os navegadores gráficos e a guerra entre
+                Netscape e Internet Explorer, os provedores de acesso, os portais
+                e mensageiros como ICQ e mIRC, e o comércio eletrônico da Amazon
+                e do eBay — até a bolha pontocom.
+              </p>
+            </div>
+
+            <div class="pagina90">
+              <span class="etiqueta-web">Impacto</span>
+              <p>
+                Qualquer pessoa passou a poder publicar para o mundo. A web
+                transformou a internet de infraestrutura acadêmica em meio de
+                massa, e a especulação em torno das startups de tecnologia
+                deixou a primeira lição pública sobre expectativa e modelo de
+                negócio.
+              </p>
+            </div>
+          </div>
+
+          <div class="pagina90">
+            <span class="etiqueta-web">Pessoas em destaque</span>
+            <div class="pessoas"></div>
+          </div>
+        </section>
+
+        <!-- ================= atividade ================= -->
+        <section class="pagina90" aria-labelledby="titulo-atividade">
+          <span class="etiqueta-web">Atividade</span>
+          <h2 id="titulo-atividade">Página de 1996</h2>
+          <p style="margin-bottom: var(--e-5)">
+            Arraste as tags da esquerda até a tela (ou apenas clique nelas).
+            Depois compare como a página aparecia no Netscape de 1996 e como um
+            navegador de hoje a exibiria.
           </p>
-        </div>
-      </div>
 
-      <div class="envoltorio"><div data-moldura="navegacao"></div></div>
+          <div class="construtor">
+            <div class="caixa-tags">
+              <p class="caixa-tags__titulo">Caixa de tags</p>
+              <div class="caixa-tags__lista"></div>
+              <p class="caixa-tags__dica">
+                Clique numa tag ligada para desligá-la. A cor de fundo e a cor da
+                linha mudam a cada novo clique.
+              </p>
+            </div>
+
+            <div>
+              <div class="chave-navegador" role="group" aria-label="Escolha a época">
+                <button type="button" data-modo="1996" aria-pressed="true">
+                  Netscape 1996
+                </button>
+                <button type="button" data-modo="hoje" aria-pressed="false">Hoje</button>
+              </div>
+
+              <div class="monitor-web">
+                <div class="navegador-chrome">
+                  <div class="navegador-chrome__barra">
+                    <span class="navegador-chrome__titulo">Netscape Navigator</span>
+                    <div class="navegador-chrome__botoes">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                  <div class="navegador-chrome__endereco">
+                    Endereço:
+                    <input type="text" readonly value="http://www.geocities.com/~seunome/index.html" />
+                  </div>
+                </div>
+                <div class="tela-web">
+                  <div class="pagina-construida">
+                    <p class="pagina-construida__vazio">
+                      Arraste uma tag da esquerda até aqui,<br />ou apenas clique
+                      nela.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="acoes-web">
+                <button type="button" class="botao botao--discreto" data-carregar>
+                  Simular carregamento em 56k
+                </button>
+              </div>
+
+              <div class="carregamento">
+                <div class="carregamento__barra">
+                  <div class="carregamento__preenchimento"></div>
+                </div>
+                <p class="carregamento__texto"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= fontes ================= -->
+        <section class="pagina90">
+          <span class="etiqueta-web">Fontes desta fase</span>
+          <ul class="lista-web">
+            <li>
+              <span class="marcador-pendente">PENDENTE</span> — a pesquisa
+              entregue para esta fase foi um plano de projeto, não um texto
+              histórico com referências. Confirmar cada data em duas fontes
+              independentes antes da amostra.
+            </li>
+            <li>
+              A velocidade real de um modem 56k varia com a linha telefônica; o
+              valor usado no cálculo de carregamento (4,2 KB/s) é uma
+              aproximação didática de uma conexão típica da época, não uma
+              medição.
+            </li>
+            <li>
+              Datas de vida conferidas no Wikidata; crédito das fotos na
+              <a href="../../creditos/index.html">página de créditos</a>.
+            </li>
+          </ul>
+        </section>
+
+        <div data-moldura="navegacao"></div>
+      </div>
     </main>
 
     <div data-moldura="rodape"></div>
@@ -52,5 +174,9 @@
     <script src="../../assets/js/som.js"></script>
     <script src="../../assets/js/shell.js"></script>
     <script src="../../assets/js/inatividade.js"></script>
+    <script src="../../assets/retratos/creditos.js"></script>
+    <script src="../../assets/js/pessoas.js"></script>
+    <script src="./pessoas.js"></script>
+    <script src="./fase.js"></script>
   </body>
 </html>

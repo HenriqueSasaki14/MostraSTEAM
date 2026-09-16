@@ -88,11 +88,14 @@
      Monta a área de trabalho
      ========================================================== */
 
+  /* Espacamento vertical generoso: "Macintosh HD" quebra em duas
+     linhas na legenda, e um espacamento menor que ~90px fazia o
+     icone de baixo desenhar por cima do texto do icone de cima. */
   var POSICOES_INICIAIS = {
-    disquete: { x: 88, y: 12 },
-    pasta: { x: 88, y: 46 },
-    documento: { x: 88, y: 80 },
-    lixeira: { x: 88, y: 118 },
+    disquete: { x: 88, y: 32 },
+    pasta: { x: 88, y: 128 },
+    documento: { x: 88, y: 224 },
+    lixeira: { x: 88, y: 320 },
   };
 
   function montar() {

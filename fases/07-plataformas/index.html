@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Plataformas, nuvem madura e aprendizado de máquina — RetroNet</title>
-    <meta name="description" content="2014 – 2019: Plataformas, nuvem e deep learning." />
+    <title>Plataformas, nuvem e aprendizado de máquina — RetroNet</title>
+    <meta
+      name="description"
+      content="2014 a 2019: containers, Kubernetes e a virada do deep learning. Compare implantar um app antes e depois dos containers."
+    />
 
     <script>
       document.documentElement.classList.add("js");
@@ -19,31 +22,173 @@
     <link rel="stylesheet" href="../../assets/css/tokens.css" />
     <link rel="stylesheet" href="../../assets/css/base.css" />
     <link rel="stylesheet" href="../../assets/css/shell.css" />
-
-    <!-- Provisório: trocar por ./fase.css quando esta fase for construída. -->
-    <link rel="stylesheet" href="../../assets/css/construcao.css" />
+    <link rel="stylesheet" href="./fase.css" />
   </head>
 
   <body>
     <main id="conteudo" class="conteudo-principal">
-      <div class="envoltorio em-construcao">
-        <p class="etiqueta">Fase 7 de 8 &middot; 2014 – 2019</p>
-        <h1 class="em-construcao__titulo">Plataformas, nuvem madura e aprendizado de máquina</h1>
-        <p class="em-construcao__marco">Plataformas, nuvem e deep learning</p>
-        <div class="em-construcao__faixa" aria-hidden="true"></div>
+      <div class="envoltorio fase7">
+        <!-- ================= capa ================= -->
+        <section>
+          <div class="cartao7">
+            <span class="etiqueta7">Fase 7 de 8</span>
+            <h1 class="capa7__titulo">Plataformas, nuvem madura e aprendizado de máquina</h1>
+            <p class="capa7__periodo">2014 &ndash; 2019 &middot; a infraestrutura que prepara a fase 8</p>
+            <p style="margin-top: var(--e-5)">
+              Período entre a consolidação do smartphone e a chegada da IA
+              generativa ao grande público. É a fase em que a infraestrutura
+              amadurece silenciosamente e prepara tudo o que explode na fase
+              seguinte — por isso o visual aqui é o mais discreto das oito
+              páginas: cores chapadas, sem sombra, sem textura.
+            </p>
+          </div>
 
-        <div class="em-construcao__aviso">
-          <p><span class="marcador-pendente">PÁGINA NÃO CONSTRUÍDA</span></p>
-          <p>Etapa 4 do plano: fase 7. A pesquisa desta fase ainda não existe.</p>
-          <p>
-            A atividade prevista para esta fase é:
-            <strong>A definir</strong>. Uma fase só é considerada pronta
-            quando a atividade dela estiver funcionando.
+          <div class="blocos7">
+            <div class="cartao7">
+              <span class="etiqueta7">Invenção principal</span>
+              <p>
+                O Docker (2013) já existia, mas é nesta fase que containers e
+                orquestração viram padrão da indústria: o Google abre o código
+                do Kubernetes em setembro de 2014. Assistentes de voz chegam à
+                casa das pessoas com o Amazon Echo (novembro de 2014).
+              </p>
+              <p>
+                Em aprendizado de máquina, o ResNet vence o desafio ImageNet em
+                2015, a tradução automática do Google dá um salto de qualidade
+                em novembro de 2016, e o artigo "Attention Is All You Need"
+                (2017) descreve a arquitetura Transformer — a mesma que
+                sustenta os modelos de linguagem da fase 8.
+              </p>
+              <div class="temas7">
+                <span class="tema7">Containers</span>
+                <span class="tema7">Kubernetes</span>
+                <span class="tema7">IoT</span>
+                <span class="tema7">Visão computacional</span>
+                <span class="tema7">Transformers</span>
+                <span class="tema7">Vídeo curto</span>
+                <span class="tema7">Blockchain</span>
+                <span class="tema7">GDPR / LGPD</span>
+              </div>
+            </div>
+
+            <div class="cartao7">
+              <span class="etiqueta7">Impacto</span>
+              <p>
+                A nuvem deixa de ser opção e vira padrão: empacotar um
+                aplicativo uma vez e rodá-lo igual em qualquer lugar muda como
+                software é entregue. Do lado social, o ByteDance compra o
+                Musical.ly em 2017 e cria o TikTok que conhecemos, começando a
+                era do vídeo curto.
+              </p>
+              <p>
+                O mesmo período levanta o primeiro debate público sério sobre
+                dados pessoais: a União Europeia aplica o GDPR a partir de 25
+                de maio de 2018, e o Brasil sanciona a LGPD em agosto de 2018,
+                em vigor a partir de 2020.
+              </p>
+            </div>
+          </div>
+
+          <div class="cartao7">
+            <span class="etiqueta7">Pessoa em destaque</span>
+            <div class="pessoas"></div>
+          </div>
+        </section>
+
+        <!-- ================= atividade ================= -->
+        <section class="cartao7" aria-labelledby="titulo-atividade">
+          <span class="etiqueta7">Atividade</span>
+          <h2 id="titulo-atividade">Empacote uma vez, rode em qualquer lugar</h2>
+          <p style="margin-bottom: var(--e-5)">
+            Um mesmo aplicativo precisa rodar em três lugares diferentes.
+            Compare como isso era feito antes dos containers e como é feito
+            depois.
           </p>
-        </div>
-      </div>
 
-      <div class="envoltorio"><div data-moldura="navegacao"></div></div>
+          <div class="chave-epoca7" role="group" aria-label="Escolha o método">
+            <button type="button" data-modo="antes" aria-pressed="false">Antes</button>
+            <button type="button" data-modo="depois" aria-pressed="true">Depois</button>
+          </div>
+
+          <div class="implantacao">
+            <div data-bloco="antes" hidden>
+              <p>
+                Clique em <strong>Configurar</strong> em cada ambiente. Cada um
+                tem seu próprio sistema, suas próprias versões instaladas — e
+                às vezes uma versão não bate com a outra.
+              </p>
+            </div>
+
+            <div data-bloco="depois">
+              <div class="oficina7">
+                <button type="button" class="bloco-app" aria-label="Aplicativo. Arraste até o container, ou clique.">
+                  <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <rect x="4" y="4" width="24" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M11 12h10M11 16h10M11 20h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <span class="bloco-app__rotulo">Seu aplicativo</span>
+                </button>
+
+                <svg class="seta7" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 12h16M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <div class="contentor">
+                  <span class="contentor__app"></span>
+                  <span class="contentor__rotulo">Container</span>
+                </div>
+              </div>
+
+              <div class="acoes7" style="margin-top: var(--e-4)">
+                <button type="button" class="botao7 botao7--principal" data-implantar disabled>
+                  Implantar nos três ambientes
+                </button>
+              </div>
+            </div>
+
+            <div class="ambientes"></div>
+
+            <div class="explicacao7" hidden>
+              <p>
+                Rodando nos três. No modelo antigo, cada ambiente exigia
+                configuração própria — e um deles quase sempre falhava por uma
+                versão incompatível, o problema que ficou conhecido como
+                "funciona na minha máquina". O container leva junto tudo de que
+                o aplicativo precisa, então o resultado é idêntico em
+                qualquer lugar.
+              </p>
+            </div>
+
+            <div class="acoes7">
+              <button type="button" class="botao7" data-reiniciar>Recomeçar</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= fontes ================= -->
+        <section class="cartao7">
+          <span class="etiqueta7">Fontes desta fase</span>
+          <ul class="lista7">
+            <li>Kubernetes — repositório oficial no GitHub, primeira tag (v0.2, 9 de setembro de 2014).</li>
+            <li>Docker, Inc. — data de lançamento do Docker (20 de março de 2013).</li>
+            <li>Amazon — anúncio do Amazon Echo (6 de novembro de 2014).</li>
+            <li>
+              Vaswani et al., "Attention Is All You Need", NeurIPS 2017 — artigo
+              original dos Transformers.
+            </li>
+            <li>Google AI Blog — anúncio do Google Neural Machine Translation (novembro de 2016).</li>
+            <li>União Europeia — Regulamento (UE) 2016/679 (GDPR), aplicável a partir de 25 de maio de 2018.</li>
+            <li>Diário Oficial da União — Lei nº 13.709/2018 (LGPD), sancionada em agosto de 2018.</li>
+            <li>
+              Datas de vida conferidas no Wikidata e cruzadas com a Wikipédia;
+              crédito das fotos na
+              <a href="../../creditos/index.html">página de créditos</a>.
+            </li>
+          </ul>
+        </section>
+
+        <div data-moldura="navegacao"></div>
+      </div>
     </main>
 
     <div data-moldura="rodape"></div>
@@ -52,5 +197,9 @@
     <script src="../../assets/js/som.js"></script>
     <script src="../../assets/js/shell.js"></script>
     <script src="../../assets/js/inatividade.js"></script>
+    <script src="../../assets/retratos/creditos.js"></script>
+    <script src="../../assets/js/pessoas.js"></script>
+    <script src="./pessoas.js"></script>
+    <script src="./fase.js"></script>
   </body>
 </html>

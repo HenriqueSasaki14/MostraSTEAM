@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Web 2.0, redes sociais e nuvem — RetroNet</title>
-    <meta name="description" content="2000 – 2006: Web 2.0, redes sociais, nuvem." />
+    <meta
+      name="description"
+      content="2000 a 2006: Wikipédia, Orkut, Facebook e YouTube. Publique um recado num perfil retrô e veja os comentários chegarem."
+    />
 
     <script>
       document.documentElement.classList.add("js");
@@ -19,31 +22,163 @@
     <link rel="stylesheet" href="../../assets/css/tokens.css" />
     <link rel="stylesheet" href="../../assets/css/base.css" />
     <link rel="stylesheet" href="../../assets/css/shell.css" />
-
-    <!-- Provisório: trocar por ./fase.css quando esta fase for construída. -->
-    <link rel="stylesheet" href="../../assets/css/construcao.css" />
+    <link rel="stylesheet" href="./fase.css" />
   </head>
 
   <body>
     <main id="conteudo" class="conteudo-principal">
-      <div class="envoltorio em-construcao">
-        <p class="etiqueta">Fase 5 de 8 &middot; 2000 – 2006</p>
-        <h1 class="em-construcao__titulo">Web 2.0, redes sociais e nuvem</h1>
-        <p class="em-construcao__marco">Web 2.0, redes sociais, nuvem</p>
-        <div class="em-construcao__faixa" aria-hidden="true"></div>
+      <div class="envoltorio fase5">
+        <!-- ================= capa ================= -->
+        <section>
+          <div class="cartao5">
+            <span class="etiqueta5">Fase 5 de 8</span>
+            <h1 class="capa5__titulo">Web 2.0, redes sociais e nuvem</h1>
+            <p class="capa5__periodo">2000 &ndash; 2006 &middot; da Wikipédia à nuvem</p>
+            <p style="margin-top: var(--e-5)">
+              A internet deixou de ser só leitura. O usuário virou produtor:
+              publicava em blogs, editava artigos colaborativos, enviava vídeos e
+              comentava tudo. No Brasil, o Orkut foi o que levou rede social ao
+              grande público.
+            </p>
+          </div>
 
-        <div class="em-construcao__aviso">
-          <p><span class="marcador-pendente">PÁGINA NÃO CONSTRUÍDA</span></p>
-          <p>Etapa 4 do plano: fase 5, com a micro-interação do perfil retrô.</p>
-          <p>
-            A atividade prevista para esta fase é:
-            <strong>Perfil retrô</strong>. Uma fase só é considerada pronta
-            quando a atividade dela estiver funcionando.
+          <div class="blocos5">
+            <div class="cartao5">
+              <span class="etiqueta5">Invenção principal</span>
+              <p>
+                Wikipédia (2001), Orkut e Facebook (2004), YouTube (2005) e a
+                onda dos blogs. Do lado técnico, AJAX permite atualizar parte da
+                página sem recarregar tudo — é a mesma ideia por trás do mural
+                desta atividade —, as APIs REST conectam serviços entre si, o RSS
+                acompanha atualizações e a AWS lança S3 e EC2 em 2006, criando a
+                computação em nuvem.
+              </p>
+            </div>
+
+            <div class="cartao5">
+              <span class="etiqueta5">Impacto</span>
+              <p>
+                A produção de conteúdo deixou de exigir jornal ou conhecimento de
+                programação. A nuvem tirou dos programadores a necessidade de
+                comprar servidor próprio, o que barateia e acelera tudo o que
+                vem nas fases seguintes.
+              </p>
+            </div>
+          </div>
+
+          <div class="cartao5">
+            <span class="etiqueta5">Pessoas em destaque</span>
+            <div class="pessoas"></div>
+          </div>
+        </section>
+
+        <!-- ================= atividade ================= -->
+        <section class="cartao5" aria-labelledby="titulo-atividade">
+          <span class="etiqueta5">Atividade</span>
+          <h2 id="titulo-atividade">Perfil retrô</h2>
+          <p style="margin-bottom: var(--e-5)">
+            Escreva um recado no mural e veja os comentários chegarem — com o
+            "digitando…" antes de cada um, do jeito que a AJAX tornou possível.
           </p>
-        </div>
-      </div>
 
-      <div class="envoltorio"><div data-moldura="navegacao"></div></div>
+          <div class="perfil">
+            <div class="perfil__capa"></div>
+            <div class="perfil__cabecalho">
+              <div class="perfil__avatar">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="8.5" r="4" fill="#1670a8" />
+                  <path d="M4 21c1.2-4.6 4.8-7 8-7s6.8 2.4 8 7" fill="#1670a8" />
+                </svg>
+              </div>
+              <div class="perfil__identidade">
+                <div class="perfil__nome">Visitante RetroNet</div>
+                <div class="perfil__status">"navegando pela história da internet" :)</div>
+              </div>
+            </div>
+
+            <div class="perfil__stats">
+              <div class="perfil__stat"><strong data-contador-recados>0</strong><span>Recados</span></div>
+              <div class="perfil__stat"><strong>127</strong><span>Amigos</span></div>
+              <div class="perfil__stat"><strong>8</strong><span>Fotos</span></div>
+            </div>
+
+            <div class="comunidades">
+              <p class="comunidades__titulo">Comunidades</p>
+              <div class="comunidades__lista">
+                <div class="comunidade">
+                  <div class="comunidade__icone" style="background:#1670a8">56k</div>
+                  <div class="comunidade__nome">Geração Discada</div>
+                </div>
+                <div class="comunidade">
+                  <div class="comunidade__icone" style="background:#7a3fa0">:)</div>
+                  <div class="comunidade__nome">Eu Amo Emoticons</div>
+                </div>
+                <div class="comunidade">
+                  <div class="comunidade__icone" style="background:#0d8366">MSN</div>
+                  <div class="comunidade__nome">Nudge Nudge</div>
+                </div>
+                <div class="comunidade">
+                  <div class="comunidade__icone" style="background:#b3591b">CD</div>
+                  <div class="comunidade__nome">Gravei um Mix</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mural">
+              <p class="mural__titulo">Mural de recados</p>
+
+              <form class="recado-form">
+                <label class="so-leitor-de-tela" for="texto-recado">Escreva um recado</label>
+                <textarea
+                  id="texto-recado"
+                  placeholder="Escreva algo no meu mural..."
+                  maxlength="200"
+                  spellcheck="false"
+                ></textarea>
+                <div class="recado-form__linha">
+                  <div class="emoticons" role="group" aria-label="Emoticons"></div>
+                  <button type="submit" class="botao-brilhante" data-publicar>Publicar</button>
+                </div>
+              </form>
+
+              <div class="recados">
+                <p class="mural__vazio">Nenhum recado ainda. Seja o primeiro!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="acoes5">
+            <button type="button" class="botao botao--discreto" data-reiniciar>
+              Recomeçar
+            </button>
+          </div>
+        </section>
+
+        <!-- ================= fontes ================= -->
+        <section class="cartao5">
+          <span class="etiqueta5">Fontes desta fase</span>
+          <ul class="lista5">
+            <li>
+              <span class="marcador-pendente">PENDENTE</span> — a pesquisa
+              entregue para esta fase foi escrita em tom didático, sem lista de
+              referências. Confirmar cada data em duas fontes independentes
+              antes da amostra.
+            </li>
+            <li>
+              Os comentários que aparecem depois de publicar um recado são
+              simulados, para mostrar como a atualização parcial de página (a
+              técnica por trás da AJAX) mudou a experiência de usar a web. Não
+              são mensagens de pessoas reais.
+            </li>
+            <li>
+              Datas de vida conferidas no Wikidata; crédito das fotos na
+              <a href="../../creditos/index.html">página de créditos</a>.
+            </li>
+          </ul>
+        </section>
+
+        <div data-moldura="navegacao"></div>
+      </div>
     </main>
 
     <div data-moldura="rodape"></div>
@@ -52,5 +187,9 @@
     <script src="../../assets/js/som.js"></script>
     <script src="../../assets/js/shell.js"></script>
     <script src="../../assets/js/inatividade.js"></script>
+    <script src="../../assets/retratos/creditos.js"></script>
+    <script src="../../assets/js/pessoas.js"></script>
+    <script src="./pessoas.js"></script>
+    <script src="./fase.js"></script>
   </body>
 </html>

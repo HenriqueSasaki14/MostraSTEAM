@@ -1,0 +1,511 @@
+/* ============================================================
+   RetroNet — Fase 5 (2000–2006)
+   Estética: azul e branco das primeiras redes sociais, cantos
+   arredondados, gradientes suaves, botões brilhantes e
+   emoticons. O visual do Orkut e do MSN Messenger da época.
+   ------------------------------------------------------------
+   A moldura escura continua igual. O miolo vira um perfil de
+   rede social de 2004, com mural de recados de verdade.
+   ============================================================ */
+
+.fase5 {
+  --azul-perfil: #e8f4fc;
+  --azul-perfil-borda: #a9d3ef;
+  --azul-forte: #1670a8; /* 4,79:1 sobre --azul-perfil */
+  --texto-perfil: #1c2b36; /* 12,97:1 sobre --azul-perfil */
+  --texto-perfil-fraco: #4c6270; /* 5,71:1 sobre --azul-perfil */
+  --brilho: linear-gradient(180deg, #ffffff, #cdeaf9);
+  padding-block: var(--e-7) var(--e-6);
+}
+
+/* ============================================================
+   Cartões
+   ============================================================ */
+
+.cartao5 {
+  position: relative;
+  background: var(--fundo-elevado);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  padding: clamp(var(--e-5), 4vw, var(--e-6));
+  margin-bottom: var(--e-5);
+}
+
+.cartao5 p,
+.cartao5 li {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.etiqueta5 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--destaque-texto);
+  margin-bottom: var(--e-3);
+}
+
+.capa5__titulo {
+  font-size: clamp(1.75rem, 1.2rem + 2.4vw, 3rem);
+  line-height: 1.1;
+  max-width: 20ch;
+}
+
+.capa5__periodo {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-pequeno);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--texto);
+  margin-top: var(--e-2);
+}
+
+.blocos5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--e-5);
+}
+
+.blocos5 .cartao5 {
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   Pessoas
+   ============================================================ */
+
+.pessoas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--e-4) var(--e-3);
+}
+
+.pessoa {
+  display: grid;
+  gap: var(--e-2);
+}
+
+.pessoa__moldura {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid var(--azul-perfil-borda);
+}
+
+.pessoa__moldura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pessoa__moldura--sem-foto {
+  display: grid;
+  place-items: center;
+  background: var(--fundo-afundado);
+}
+
+.pessoa__iniciais {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--destaque-texto);
+}
+
+.pessoa__nome {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--titulo);
+  text-align: center;
+}
+
+.pessoa__anos {
+  display: block;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-micro);
+  color: var(--texto);
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.pessoa__papel {
+  display: block;
+  font-size: var(--t-micro);
+  line-height: 1.4;
+  color: var(--texto);
+  text-align: center;
+}
+
+/* ============================================================
+   ATIVIDADE — perfil retrô
+   ============================================================ */
+
+.perfil {
+  max-width: 34rem;
+  margin: 0 auto;
+  background: var(--azul-perfil);
+  border: 1px solid var(--azul-perfil-borda);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px -24px rgb(0 0 0 / 0.6);
+}
+
+.perfil__capa {
+  height: 64px;
+  background: linear-gradient(120deg, #1db8e8, #6fd4f5 55%, #a9ecff);
+}
+
+.perfil__cabecalho {
+  display: flex;
+  gap: var(--e-4);
+  align-items: flex-end;
+  padding: 0 var(--e-5) var(--e-4);
+  margin-top: -34px;
+}
+
+.perfil__avatar {
+  width: 76px;
+  height: 76px;
+  flex: none;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background: var(--brilho);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.25);
+}
+
+.perfil__avatar svg {
+  width: 44px;
+  height: 44px;
+}
+
+.perfil__identidade {
+  padding-bottom: 4px;
+}
+
+.perfil__nome {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--texto-perfil);
+}
+
+.perfil__status {
+  font-size: 0.8125rem;
+  color: var(--texto-perfil-fraco);
+}
+
+.perfil__stats {
+  display: flex;
+  gap: var(--e-5);
+  padding: 0 var(--e-5) var(--e-4);
+  border-bottom: 1px solid var(--azul-perfil-borda);
+}
+
+.perfil__stat {
+  text-align: center;
+}
+
+.perfil__stat strong {
+  display: block;
+  font-size: 1.125rem;
+  color: var(--azul-forte);
+  font-family: var(--fonte-titulo);
+}
+
+.perfil__stat span {
+  font-size: var(--t-micro);
+  color: var(--texto-perfil-fraco);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ---------- comunidades (Orkut) ---------- */
+.comunidades {
+  padding: var(--e-4) var(--e-5);
+  border-bottom: 1px solid var(--azul-perfil-borda);
+}
+
+.comunidades__titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--texto-perfil);
+  margin-bottom: var(--e-3);
+}
+
+.comunidades__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: var(--e-2);
+}
+
+.comunidade {
+  display: grid;
+  gap: 4px;
+  text-align: center;
+}
+
+.comunidade__icone {
+  aspect-ratio: 1;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.comunidade__nome {
+  font-size: 0.625rem;
+  color: var(--texto-perfil-fraco);
+  line-height: 1.2;
+}
+
+/* ---------- mural / recados ---------- */
+.mural {
+  padding: var(--e-4) var(--e-5) var(--e-5);
+}
+
+.mural__titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--texto-perfil);
+  margin-bottom: var(--e-3);
+}
+
+.recado-form {
+  display: grid;
+  gap: var(--e-2);
+  margin-bottom: var(--e-4);
+}
+
+.recado-form textarea {
+  width: 100%;
+  min-height: 4.5rem;
+  padding: var(--e-3);
+  border: 1px solid var(--azul-perfil-borda);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--texto-perfil);
+  font-family: var(--fonte-texto);
+  font-size: 0.9375rem;
+  resize: vertical;
+}
+
+.recado-form textarea:focus-visible {
+  outline: none;
+  border-color: var(--azul-forte);
+  box-shadow: 0 0 0 3px rgb(22 112 168 / 0.18);
+}
+
+.recado-form__linha {
+  display: flex;
+  align-items: center;
+  gap: var(--e-2);
+  flex-wrap: wrap;
+}
+
+.emoticons {
+  display: flex;
+  gap: 4px;
+}
+
+.emoticons button {
+  padding: 4px 8px;
+  border: 1px solid var(--azul-perfil-borda);
+  border-radius: var(--raio-total);
+  background: #fff;
+  font-size: 0.9375rem;
+  color: var(--texto-perfil);
+  cursor: pointer;
+  transition: background var(--mov-rapido) var(--curva);
+}
+
+.emoticons button:hover {
+  background: var(--azul-perfil);
+}
+
+.botao-brilhante {
+  margin-left: auto;
+  padding: var(--e-2) var(--e-5);
+  border-radius: var(--raio-total);
+  border: 1px solid #0c5580;
+  /* O gradiente original ia ate #4fc3f7 no topo, que da so 2,0:1
+     contra o texto branco (abaixo do minimo de 4,5:1). Os dois
+     tons abaixo passam nas duas pontas: 4,95:1 e 7,99:1. */
+  background: linear-gradient(180deg, #1478a3, #0c5580);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 2px 0 #0c5580, inset 0 1px 0 rgb(255 255 255 / 0.35);
+  transition: transform var(--mov-rapido) var(--curva);
+}
+
+.botao-brilhante:hover {
+  transform: translateY(-1px);
+}
+
+.botao-brilhante:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5);
+}
+
+.botao-brilhante[disabled] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---------- lista de recados ---------- */
+.recados {
+  display: grid;
+  gap: var(--e-3);
+}
+
+.recado {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: var(--e-3);
+  animation: recado-entrar 360ms var(--curva) both;
+}
+
+@keyframes recado-entrar {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.recado__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-family: var(--fonte-titulo);
+  flex: none;
+}
+
+.recado__corpo {
+  background: #fff;
+  border: 1px solid var(--azul-perfil-borda);
+  border-radius: 10px;
+  padding: var(--e-3);
+  min-width: 0;
+}
+
+.recado__nome {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: var(--azul-forte);
+}
+
+.recado__texto {
+  font-size: 0.9375rem;
+  color: var(--texto-perfil);
+  line-height: 1.5;
+  margin-top: 2px;
+  word-wrap: break-word;
+}
+
+.recado__quando {
+  font-size: 0.6875rem;
+  color: var(--texto-perfil-fraco);
+  margin-top: 4px;
+}
+
+.recado--proprio .recado__corpo {
+  background: #eaf7ff;
+  border-color: var(--azul-forte);
+}
+
+/* "digitando..." enquanto o amigo simulado responde */
+.digitando {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--e-2) var(--e-3);
+  font-size: 0.8125rem;
+  color: var(--texto-perfil-fraco);
+}
+
+.digitando__pontos {
+  display: inline-flex;
+  gap: 3px;
+}
+
+.digitando__pontos span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--texto-perfil-fraco);
+  animation: pontinho 1.1s ease-in-out infinite;
+}
+
+.digitando__pontos span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.digitando__pontos span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes pontinho {
+  0%,
+  60%,
+  100% {
+    opacity: 0.25;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+.mural__vazio {
+  text-align: center;
+  padding: var(--e-5);
+  color: var(--texto-perfil-fraco);
+  font-size: 0.875rem;
+}
+
+.acoes5 {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--e-5);
+}
+
+/* ============================================================
+   Fontes
+   ============================================================ */
+
+.lista5 {
+  display: grid;
+  gap: var(--e-2);
+  font-size: 0.9375rem;
+}
+
+.lista5 li {
+  padding-left: var(--e-4);
+  position: relative;
+}
+
+.lista5 li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--destaque-texto);
+}

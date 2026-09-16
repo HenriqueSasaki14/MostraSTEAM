@@ -292,9 +292,8 @@
   gap: var(--e-4);
 }
 
-.enigma__passo[hidden] {
-  display: none;
-}
+/* [hidden] agora tem uma regra global com !important em base.css,
+   entao esta sobrescrita local nao e mais necessaria. */
 
 .passo-titulo {
   display: flex;
