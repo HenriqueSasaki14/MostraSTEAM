@@ -436,6 +436,31 @@
 .rodape__integrantes {
   max-width: none;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e-2) var(--e-2);
+}
+
+.rodape__integrantes br {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* Mesmo tratamento "monitor de fósforo" da página de créditos,
+   só que em miniatura — o rodapé aparece em toda página, então o
+   brilho precisa chamar atenção sem competir com o resto. */
+.nome-brilhante {
+  display: inline-flex;
+  padding: 2px var(--e-3);
+  border: 1px solid color-mix(in srgb, var(--botao) 45%, transparent);
+  border-radius: var(--raio-total);
+  background: color-mix(in srgb, var(--botao) 8%, transparent);
+  font-family: var(--fonte-mono);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--titulo);
+  text-shadow: 0 0 8px color-mix(in srgb, var(--botao) 55%, transparent);
 }
 
 /* Marcador de conteúdo que ainda não existe. Some quando o

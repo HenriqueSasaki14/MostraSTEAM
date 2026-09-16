@@ -60,6 +60,36 @@
         color: var(--destaque-texto);
         font-family: var(--fonte-mono);
       }
+      /* Os nomes usam o mesmo ".nome-brilhante" do rodapé (definido
+         em shell.css, compartilhado por todas as páginas), só que
+         em tamanho maior aqui — esta é a vitrine principal, o
+         rodapé é só um lembrete discreto do mesmo dado. */
+      .creditos__integrantes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--e-3) var(--e-3);
+        margin: 0 0 var(--e-4);
+      }
+      .creditos__integrantes .nome-brilhante {
+        padding: var(--e-3) var(--e-5);
+        font-size: var(--t-pequeno);
+        border-radius: var(--raio-total);
+        background: linear-gradient(
+          160deg,
+          color-mix(in srgb, var(--botao) 14%, var(--fundo-elevado)),
+          var(--fundo-elevado)
+        );
+        text-shadow: 0 0 12px color-mix(in srgb, var(--botao) 65%, transparent);
+        box-shadow: 0 0 0 1px color-mix(in srgb, var(--botao) 12%, transparent) inset,
+          0 4px 18px -8px color-mix(in srgb, var(--botao) 55%, transparent);
+        transition: transform var(--mov-rapido) var(--curva),
+          box-shadow var(--mov-rapido) var(--curva);
+      }
+      .creditos__integrantes .nome-brilhante:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 0 1px color-mix(in srgb, var(--botao) 25%, transparent) inset,
+          0 8px 24px -6px color-mix(in srgb, var(--botao) 70%, transparent);
+      }
     </style>
   </head>
 
@@ -69,20 +99,11 @@
         <p class="etiqueta">RetroNet</p>
         <h1>Créditos e fontes</h1>
 
-        <div class="em-construcao__aviso">
-          <p><span class="marcador-pendente">PÁGINA INCOMPLETA</span></p>
-          <p>
-            Etapa 5 do plano. Faltam os nomes dos integrantes e a lista de
-            fontes históricas de cada fase. O crédito das imagens, abaixo, já
-            está completo e é gerado automaticamente.
-          </p>
-        </div>
-
         <section>
           <h2>Integrantes</h2>
+          <ul class="creditos__integrantes"></ul>
           <p>
-            <span class="marcador-pendente">PENDENTE: nomes dos integrantes</span>
-            — 3º Ano A, Curso Técnico Integrado ao Ensino Médio. Matéria:
+            3º Ano A, Curso Técnico Integrado ao Ensino Médio. Matéria:
             Modelagem de Sistemas.
           </p>
         </section>
@@ -90,9 +111,13 @@
         <section>
           <h2>Fontes históricas</h2>
           <p>
-            <span class="marcador-pendente">PENDENTE: referências por fase</span>
-            — toda data, nome e invenção precisa estar confirmada em pelo menos
-            duas fontes independentes antes de entrar no site.
+            Cada fase lista as próprias fontes no rodapé da página ("Fontes
+            desta fase"), perto do conteúdo que elas sustentam. Toda data,
+            nome e invenção do site precisa estar confirmada em pelo menos
+            duas fontes independentes; os pontos que ainda não passaram por
+            essa checagem ficam marcados como
+            <span class="marcador-pendente">PENDENTE</span> na própria fase,
+            em vez de aparecer aqui como se estivesse pronto.
           </p>
         </section>
 
@@ -118,6 +143,19 @@
     <script src="../assets/js/shell.js"></script>
     <script src="../assets/retratos/creditos.js"></script>
     <script>
+      /* Monta a lista de integrantes a partir da mesma fonte usada
+         no rodapé (assets/js/shell.js), pra nunca ficar
+         dessincronizada. */
+      (function () {
+        var lista = document.querySelector(".creditos__integrantes");
+        var nomes = (window.RetroNet && window.RetroNet.INTEGRANTES) || [];
+        lista.innerHTML = nomes
+          .map(function (nome) {
+            return '<li><span class="nome-brilhante">' + nome + "</span></li>";
+          })
+          .join("");
+      })();
+
       /* Monta a lista de crédito das imagens. */
       (function () {
         var lista = document.querySelector(".creditos__imagens");

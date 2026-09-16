@@ -318,15 +318,32 @@
   /* ==========================================================
      Rodapé
      ========================================================== */
+  /* Lista única dos integrantes — o rodapé (nas nove páginas) e a
+     página de créditos usam esta mesma fonte, para nunca ficarem
+     dessincronizados. */
+  var INTEGRANTES = (R.INTEGRANTES = [
+    "Arthur Gabriel",
+    "Kallani Santos",
+    "Henrique Sasaki",
+    "Gustavo Nobre",
+    "Victor Morsoletto",
+    "Victor Dias",
+    "Guilherme Weiss",
+    "Guilherme Bruno",
+  ]);
+
   function montarRodape() {
     var alvo = document.querySelector('[data-moldura="rodape"]');
     if (!alvo) return;
     alvo.className = "rodape";
+    var nomes = INTEGRANTES.map(function (nome) {
+      return '<span class="nome-brilhante">' + nome + "</span>";
+    }).join("");
     alvo.innerHTML =
       '<div class="envoltorio rodape__conteudo">' +
       '<p class="rodape__integrantes">' +
-      '<span class="marcador-pendente">PENDENTE: nomes dos integrantes</span> ' +
-      "— 3º Ano A, Curso Técnico Integrado ao Ensino Médio</p>" +
+      nomes +
+      "<br />3º Ano A, Curso Técnico Integrado ao Ensino Médio</p>" +
       '<p><a href="' +
       raiz +
       'creditos/index.html">Créditos e fontes</a></p>' +
