@@ -88,6 +88,8 @@ CATALOGO = [
     (3, "bjarne-stroustrup", "Bjarne Stroustrup", "retrato", "Bjarne Stroustrup"),
     (3, "macintosh-128k", "Macintosh 128K", "objeto", "Apple Macintosh 128K"),
     (3, "amiga-1000", "Amiga 1000", "objeto", "Commodore Amiga 1000"),
+    (3, "xerox-alto", "File:Xerox Alto.jpg", "objeto",
+     "Xerox Alto, o computador que originou a interface gráfica no Xerox PARC"),
     # ---------- Fase 4: web ----------
     (4, "tim-berners-lee", "Tim Berners-Lee", "retrato", "Tim Berners-Lee"),
     (4, "marc-andreessen", "Marc Andreessen", "retrato", "Marc Andreessen"),
@@ -101,12 +103,29 @@ CATALOGO = [
     (5, "chad-hurley", "Chad Hurley", "retrato", "Chad Hurley"),
     (5, "jawed-karim", "Jawed Karim", "retrato", "Jawed Karim"),
     (5, "steve-chen", "Steve Chen (YouTube)", "retrato", "Steve Chen"),
+    (5, "servidores-nuvem", "File:Servers in a Rack.jpg", "objeto",
+     "Servidores em rack, símbolo da computação em nuvem que nasce nesta fase"),
     # ---------- Fase 6: era móvel ----------
     (6, "andy-rubin", "Andy Rubin", "retrato", "Andy Rubin"),
     (6, "iphone-1", "File:IPhone First Generation (cropped).jpg", "objeto",
      "iPhone de primeira geração, 2007"),
+    (6, "htc-dream", "File:HTC Dream (front view).jpg", "objeto",
+     "HTC Dream (T-Mobile G1), o primeiro aparelho Android, 2008"),
+    (6, "ipad-1", "File:IPad First Gen.jpg", "objeto",
+     "iPad de primeira geração, 2010"),
+    (6, "kindle-1", "File:Amazon Kindle - Off.jpg", "objeto",
+     "Amazon Kindle de primeira geração, 2007"),
     # ---------- Fase 7: plataformas ----------
     (7, "satya-nadella", "Satya Nadella", "retrato", "Satya Nadella"),
+    (7, "amazon-echo", "File:Amazon Echo.jpg", "objeto",
+     "Amazon Echo de primeira geração, 2014"),
+    (7, "conteineres", "File:Shipping containers in a port (Unsplash).jpg", "objeto",
+     "Contêineres de transporte, a metáfora por trás do Docker e do Kubernetes"),
+    # ---------- Fase 8: era atual ----------
+    (8, "vision-pro", "File:Apple Vision Pro on display.jpg", "objeto",
+     "Apple Vision Pro, computação espacial apresentada em 2023"),
+    (8, "meta-quest", "File:Meta Quest 3 front View.jpg", "objeto",
+     "Meta Quest 3, óculos de realidade mista"),
 ]
 
 # Pessoas citadas na modelagem para as quais NÃO existe imagem com licença

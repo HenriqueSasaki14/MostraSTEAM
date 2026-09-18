@@ -31,6 +31,56 @@
   line-height: 1.7;
 }
 
+/* Foto de objeto avulsa, mesma moldura das fotos de pessoas. */
+.objeto-foto {
+  float: right;
+  width: clamp(150px, 40%, 250px);
+  margin: 0 0 var(--e-4) var(--e-4);
+}
+
+.objeto-foto__moldura {
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 2px solid var(--borda);
+}
+
+.objeto-foto__moldura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.objeto-foto figcaption {
+  margin-top: var(--e-2);
+  font-size: var(--t-micro);
+  line-height: 1.4;
+  color: var(--texto);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .objeto-foto {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Galeria de duas fotos lado a lado (iPad e Kindle). */
+.galeria-objetos6 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--e-4);
+  margin: var(--e-4) 0;
+}
+
+.galeria-objetos6 .objeto-foto {
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+
 .etiqueta6 {
   display: inline-flex;
   align-items: center;
@@ -166,6 +216,42 @@
   font-weight: 700;
   color: var(--titulo);
   white-space: nowrap;
+}
+
+/* ============================================================
+   Linha do tempo (2007–2013)
+   ============================================================ */
+
+.linha-tempo6 {
+  display: grid;
+  gap: var(--e-3);
+  margin-top: var(--e-4);
+}
+
+.marco6 {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: var(--e-4);
+  padding-bottom: var(--e-3);
+  border-bottom: 1px solid var(--borda);
+}
+
+.marco6:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.marco6 dt {
+  font-family: var(--fonte-mono);
+  font-weight: 700;
+  color: var(--destaque-texto);
+}
+
+.marco6 dd {
+  margin: 0;
+  color: var(--texto);
+  font-size: var(--t-pequeno);
+  line-height: 1.6;
 }
 
 /* ============================================================
@@ -412,12 +498,13 @@
 .lista6 {
   display: grid;
   gap: var(--e-2);
-  font-size: 0.9375rem;
+  font-size: var(--t-micro);
 }
 
 .lista6 li {
   padding-left: var(--e-5);
   position: relative;
+  font-size: var(--t-micro);
 }
 
 .lista6 li::before {

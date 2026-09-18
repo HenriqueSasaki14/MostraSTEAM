@@ -211,6 +211,49 @@
   margin: var(--e-4) 0;
 }
 
+/* ============================================================
+   Galeria de fotos de objetos (máquinas históricas)
+   Mesmo tratamento sépia das fotos de pessoas, para o dossiê
+   parecer um único arquivo fotográfico de época.
+   ============================================================ */
+
+.galeria-objetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--e-4);
+  margin: var(--e-5) 0;
+}
+
+.objeto-foto__moldura {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--papel-sombra);
+  border: 1px solid var(--papel-borda);
+  padding: 4px;
+}
+
+.objeto-foto__moldura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.62) contrast(1.06) brightness(0.98);
+}
+
+.objeto-foto figcaption {
+  margin-top: var(--e-2);
+  font-size: var(--t-micro);
+  line-height: 1.4;
+  color: var(--tinta-fraca);
+  text-align: center;
+}
+
+/* Foto avulsa, fora da grade — cabeçalho de seção. */
+.objeto-foto--destaque {
+  max-width: 360px;
+  margin: 0 auto var(--e-5);
+}
+
 .destaque-invencao p {
   margin: 0;
 }
@@ -828,12 +871,13 @@
 .fontes-lista {
   display: grid;
   gap: var(--e-2);
-  font-size: 0.9375rem;
+  font-size: var(--t-micro);
 }
 
 .fontes-lista li {
   padding-left: var(--e-5);
   position: relative;
+  font-size: var(--t-micro);
 }
 
 .fontes-lista li::before {

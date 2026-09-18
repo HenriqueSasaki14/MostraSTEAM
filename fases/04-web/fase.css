@@ -33,6 +33,42 @@
   line-height: 1.7;
 }
 
+/* Foto de objeto avulsa, mesma moldura das fotos de pessoas. */
+.objeto-foto {
+  float: right;
+  width: clamp(160px, 42%, 280px);
+  margin: 0 0 var(--e-4) var(--e-4);
+}
+
+.objeto-foto__moldura {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  border: 2px solid var(--borda);
+}
+
+.objeto-foto__moldura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.objeto-foto figcaption {
+  margin-top: var(--e-2);
+  font-size: var(--t-micro);
+  line-height: 1.4;
+  color: var(--texto);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .objeto-foto {
+    float: none;
+    width: 100%;
+  }
+}
+
 .pagina90 a {
   /* --destaque-texto, nao uma cor propria: ja esta verificado em
      5,60:1 sobre o fundo escuro da moldura (ver tokens.css). A
@@ -694,12 +730,13 @@
 .lista-web {
   display: grid;
   gap: var(--e-2);
-  font-size: 0.9375rem;
+  font-size: var(--t-micro);
 }
 
 .lista-web li {
   padding-left: var(--e-5);
   position: relative;
+  font-size: var(--t-micro);
 }
 
 .lista-web li::before {
