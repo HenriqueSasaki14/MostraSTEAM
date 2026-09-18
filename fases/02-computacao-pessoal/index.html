@@ -48,7 +48,55 @@
               código.
             </p>
           </div>
+        </section>
 
+        <!-- ==================================================
+             ATIVIDADE — logo no topo, para prender a atenção
+             ================================================== -->
+        <section class="gabinete" aria-labelledby="titulo-atividade">
+          <span class="etiqueta-plastico">Atividade</span>
+          <h2 id="titulo-atividade">Dez linhas de BASIC</h2>
+          <p style="margin-bottom: var(--e-5)">
+            Ao ligar um micro da época, o BASIC já estava lá, gravado na ROM, com
+            o cursor piscando. <strong>Não havia área de trabalho nem
+            ícone</strong>: ou você programava, ou a máquina não fazia nada.
+            Escreva e aperte RUN.
+          </p>
+
+          <div class="computador">
+            <div>
+              <div class="monitor">
+                <div class="tela">
+                  <p class="tela__texto"></p>
+                </div>
+              </div>
+
+              <div class="editor">
+                <label for="programa">Seu programa</label>
+                <textarea
+                  id="programa"
+                  spellcheck="false"
+                  autocomplete="off"
+                  aria-describedby="ajuda-basic"
+                ></textarea>
+                <div class="editor__acoes">
+                  <button type="button" class="tecla tecla--principal" data-rodar>
+                    Run
+                  </button>
+                  <button type="button" class="tecla" data-limpar>New</button>
+                  <button type="button" class="tecla" data-fita>Load (fita)</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="missoes" id="ajuda-basic"></div>
+          </div>
+        </section>
+
+        <!-- ==================================================
+             Invenção, impacto e as máquinas
+             ================================================== -->
+        <section>
           <div class="blocos">
             <div class="gabinete">
               <span class="etiqueta-plastico">Invenção principal</span>
@@ -193,49 +241,6 @@
           <div class="gabinete">
             <span class="etiqueta-plastico">Pessoas em destaque</span>
             <div class="pessoas"></div>
-          </div>
-        </section>
-
-        <!-- ==================================================
-             ATIVIDADE
-             ================================================== -->
-        <section class="gabinete" aria-labelledby="titulo-atividade">
-          <span class="etiqueta-plastico">Atividade</span>
-          <h2 id="titulo-atividade">Dez linhas de BASIC</h2>
-          <p style="margin-bottom: var(--e-5)">
-            Ao ligar um micro da época, o BASIC já estava lá, gravado na ROM, com
-            o cursor piscando. <strong>Não havia área de trabalho nem
-            ícone</strong>: ou você programava, ou a máquina não fazia nada.
-            Escreva e aperte RUN.
-          </p>
-
-          <div class="computador">
-            <div>
-              <div class="monitor">
-                <div class="tela">
-                  <p class="tela__texto"></p>
-                </div>
-              </div>
-
-              <div class="editor">
-                <label for="programa">Seu programa</label>
-                <textarea
-                  id="programa"
-                  spellcheck="false"
-                  autocomplete="off"
-                  aria-describedby="ajuda-basic"
-                ></textarea>
-                <div class="editor__acoes">
-                  <button type="button" class="tecla tecla--principal" data-rodar>
-                    Run
-                  </button>
-                  <button type="button" class="tecla" data-limpar>New</button>
-                  <button type="button" class="tecla" data-fita>Load (fita)</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="missoes" id="ajuda-basic"></div>
           </div>
         </section>
 

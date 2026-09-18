@@ -43,7 +43,80 @@
               sombra, sem textura.
             </p>
           </div>
+        </section>
 
+        <!-- ================= atividade (logo no topo) ================= -->
+        <section class="cartao7" aria-labelledby="titulo-atividade">
+          <span class="etiqueta7">Atividade</span>
+          <h2 id="titulo-atividade">Empacote uma vez, rode em qualquer lugar</h2>
+          <p style="margin-bottom: var(--e-5)">
+            Um mesmo aplicativo precisa rodar em três lugares diferentes.
+            Compare como isso era feito antes dos containers e como é feito
+            depois.
+          </p>
+
+          <div class="chave-epoca7" role="group" aria-label="Escolha o método">
+            <button type="button" data-modo="antes" aria-pressed="false">Antes</button>
+            <button type="button" data-modo="depois" aria-pressed="true">Depois</button>
+          </div>
+
+          <div class="implantacao">
+            <div data-bloco="antes" hidden>
+              <p>
+                Clique em <strong>Configurar</strong> em cada ambiente. Cada um
+                tem seu próprio sistema, suas próprias versões instaladas — e
+                às vezes uma versão não bate com a outra.
+              </p>
+            </div>
+
+            <div data-bloco="depois">
+              <div class="oficina7">
+                <button type="button" class="bloco-app" aria-label="Aplicativo. Arraste até o container, ou clique.">
+                  <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <rect x="4" y="4" width="24" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M11 12h10M11 16h10M11 20h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <span class="bloco-app__rotulo">Seu aplicativo</span>
+                </button>
+
+                <svg class="seta7" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 12h16M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <div class="contentor">
+                  <span class="contentor__app"></span>
+                  <span class="contentor__rotulo">Container</span>
+                </div>
+              </div>
+
+              <div class="acoes7" style="margin-top: var(--e-4)">
+                <button type="button" class="botao7 botao7--principal" data-implantar disabled>
+                  Implantar nos três ambientes
+                </button>
+              </div>
+            </div>
+
+            <div class="ambientes"></div>
+
+            <div class="explicacao7" hidden>
+              <p>
+                Rodando nos três. No modelo antigo, cada ambiente exigia
+                configuração própria — e um deles quase sempre falhava por uma
+                versão incompatível, o problema que ficou conhecido como
+                "funciona na minha máquina". O container leva junto tudo de que
+                o aplicativo precisa, então o resultado é idêntico em
+                qualquer lugar.
+              </p>
+            </div>
+
+            <div class="acoes7">
+              <button type="button" class="botao7" data-reiniciar>Recomeçar</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ================= invenção, impacto e pessoas ================= -->
+        <section>
           <div class="blocos7">
             <div class="cartao7">
               <span class="etiqueta7">Invenção principal</span>
@@ -163,76 +236,6 @@
           <div class="cartao7">
             <span class="etiqueta7">Pessoa em destaque</span>
             <div class="pessoas"></div>
-          </div>
-        </section>
-
-        <!-- ================= atividade ================= -->
-        <section class="cartao7" aria-labelledby="titulo-atividade">
-          <span class="etiqueta7">Atividade</span>
-          <h2 id="titulo-atividade">Empacote uma vez, rode em qualquer lugar</h2>
-          <p style="margin-bottom: var(--e-5)">
-            Um mesmo aplicativo precisa rodar em três lugares diferentes.
-            Compare como isso era feito antes dos containers e como é feito
-            depois.
-          </p>
-
-          <div class="chave-epoca7" role="group" aria-label="Escolha o método">
-            <button type="button" data-modo="antes" aria-pressed="false">Antes</button>
-            <button type="button" data-modo="depois" aria-pressed="true">Depois</button>
-          </div>
-
-          <div class="implantacao">
-            <div data-bloco="antes" hidden>
-              <p>
-                Clique em <strong>Configurar</strong> em cada ambiente. Cada um
-                tem seu próprio sistema, suas próprias versões instaladas — e
-                às vezes uma versão não bate com a outra.
-              </p>
-            </div>
-
-            <div data-bloco="depois">
-              <div class="oficina7">
-                <button type="button" class="bloco-app" aria-label="Aplicativo. Arraste até o container, ou clique.">
-                  <svg viewBox="0 0 32 32" aria-hidden="true">
-                    <rect x="4" y="4" width="24" height="24" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
-                    <path d="M11 12h10M11 16h10M11 20h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                  </svg>
-                  <span class="bloco-app__rotulo">Seu aplicativo</span>
-                </button>
-
-                <svg class="seta7" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 12h16M14 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <div class="contentor">
-                  <span class="contentor__app"></span>
-                  <span class="contentor__rotulo">Container</span>
-                </div>
-              </div>
-
-              <div class="acoes7" style="margin-top: var(--e-4)">
-                <button type="button" class="botao7 botao7--principal" data-implantar disabled>
-                  Implantar nos três ambientes
-                </button>
-              </div>
-            </div>
-
-            <div class="ambientes"></div>
-
-            <div class="explicacao7" hidden>
-              <p>
-                Rodando nos três. No modelo antigo, cada ambiente exigia
-                configuração própria — e um deles quase sempre falhava por uma
-                versão incompatível, o problema que ficou conhecido como
-                "funciona na minha máquina". O container leva junto tudo de que
-                o aplicativo precisa, então o resultado é idêntico em
-                qualquer lugar.
-              </p>
-            </div>
-
-            <div class="acoes7">
-              <button type="button" class="botao7" data-reiniciar>Recomeçar</button>
-            </div>
           </div>
         </section>
 
